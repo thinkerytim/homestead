@@ -18,3 +18,9 @@ Route::get('/', array('as' => 'home', function()
 
 /* Users controller routes */
 Route::controller('users', 'UsersController');
+
+/* Contracts controller routes */
+Route::resource('closing', 'ClosingsController');
+
+/* Tasks controller routes */
+Route::resource('task', 'TasksController');
