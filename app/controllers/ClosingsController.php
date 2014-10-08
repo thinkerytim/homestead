@@ -21,8 +21,8 @@ class ClosingsController extends \BaseController {
 	public function index()
 	{
 		$closings 	= Closing::where('user_id', '=', Auth::user()->id);
-		$count 		= $closings->count();
-		return View::make('contracts.index', array('count' => $count));
+		//$count 		= $closings->count();
+		return View::make('closings.index', array('closings' => $closings));
 	}
 
 
@@ -50,10 +50,10 @@ class ClosingsController extends \BaseController {
 		    // add fields
 		    $Closing->save();
 
-		    return Redirect::to('closing/index')->with('message', 'Closing created.');
+		    return Redirect::to('closings/index')->with('message', 'Closing created.');
 		} else {
 		    // validation has failed, display error messages
-		    return Redirect::to('closing/create')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
+		    return Redirect::to('closings/create')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
 		}
 	}
 

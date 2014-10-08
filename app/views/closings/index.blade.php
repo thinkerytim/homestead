@@ -1,5 +1,5 @@
 @extends('layouts.default')
 
 @section('content')
-	You have {{ $count }} closings.
+	You have {{ $closings->count() }} closings.
 @stop
