@@ -1,11 +1,11 @@
 <?php
 
-class Closing extends Eloquent {
+class Task extends Eloquent {
 	/**
 	 * The database table used by the model.
 	 * @var string
 	 */
-	protected $table 	= 'closings';
+	protected $table 	= 'tasks';
 	protected $guarded 	= array('id');
 
 	// form validation rules
@@ -20,13 +20,13 @@ class Closing extends Eloquent {
 
     /* Define Relations */
 
-    public function tasks()
+    public function closings()
     {
-        return $this->belongsToMany('Task');
+        return $this->belongsToMany('Closing');
     }
 
-    public function documents()
+    public function user()
     {
-        return $this->belongsToMany('Document');
+        return $this->belongsToOne('User');
     }
 }
