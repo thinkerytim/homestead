@@ -5,7 +5,8 @@ class Closing extends Eloquent {
 	 * The database table used by the model.
 	 * @var string
 	 */
-	protected $table = 'closings';
+	protected $table 	= 'closings';
+	protected $guarded 	= array('id');
 
 	// form validation rules
 	public static $rules = array(
