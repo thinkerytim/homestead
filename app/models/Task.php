@@ -9,14 +9,6 @@ class Task extends Eloquent {
 	protected $guarded 	= array('id');
 
 	// form validation rules
-	public static $rules = array(
-    	'firstname'=>'required|alpha|min:2',
-    	'lastname'=>'required|alpha|min:2',
-    	'email'=>'required|email|unique:users',
-    	'company'=>'alpha',
-    	'password'=>'required|alpha_num|between:6,12|confirmed',
-    	'password_confirmation'=>'required|alpha_num|between:6,12'
-    );
 
     /* Define Relations */
 

@@ -12,10 +12,10 @@ class CreateTaskMidTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('task_mid', function($table)
+		Schema::create('closing_task', function($table)
 		{
 			$table->increments('id');
-		    $table->integer('contract_id');
+		    $table->integer('closing_id');
 		    $table->integer('task_id');
 		    $table->timestamps();
 		});
@@ -28,7 +28,7 @@ class CreateTaskMidTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('task_mid');
+		Schema::drop('closing_task');
 	}
 
 }

@@ -12,10 +12,10 @@ class CreateDocumentMidTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('document_mid', function($table)
+		Schema::create('closing_document', function($table)
 		{
 			$table->increments('id');
-		    $table->integer('contract_id');
+		    $table->integer('closing_id');
 		    $table->integer('document_id');
 		    $table->timestamps();
 		});
@@ -28,7 +28,7 @@ class CreateDocumentMidTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('document_mid');
+		Schema::drop('closing_document');
 	}
 
 }
