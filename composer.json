@@ -33,5 +33,8 @@
 	"config": {
 		"preferred-install": "dist"
 	},
+	"require-dev": {
+	  "fzaninotto/faker": "1.4.*@dev"
+	},
 	"minimum-stability": "stable"
 }
