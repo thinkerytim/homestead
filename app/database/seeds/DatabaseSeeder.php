@@ -137,11 +137,14 @@ class TaskMidTableSeeder extends Seeder {
     {
         DB::table('closing_task')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 50; $i++)
+        for ($i = 0; $i < 1500; $i++)
 		{
 			DB::table('closing_task')->insert([
 	            'closing_id' => rand(1,100),
-	            'task_id' => rand(1, 500)
+	            'task_id' => rand(1, 500),
+	            'status' => rand(0, 1),
+	            'notes' => $faker->text(150),
+	            'due_at' => $faker->dateTimeBetween('now', '+1 months')
 	        ]);
 		}
     }

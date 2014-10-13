@@ -14,7 +14,7 @@ class Closing extends Eloquent {
 
     public function tasks()
     {
-        return $this->belongsToMany('Task');
+        return $this->belongsToMany('Task')->withPivot('status', 'notes', 'due_at');
     }
 
     public function documents()
