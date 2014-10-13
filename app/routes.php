@@ -5,6 +5,9 @@ Route::get('/', array('as' => 'home', function()
 	return View::make('pages.home');
 }));
 
+/* Admin controller routes */
+Route::resource('admin', 'AdminController');
+
 /* Users controller routes */
 Route::controller('users', 'UsersController');
 

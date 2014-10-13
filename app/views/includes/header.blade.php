@@ -33,6 +33,6 @@
 <!-- session errors -->
 <div class="container">
     @if(Session::has('message'))
-        <p class="alert">{{ Session::get('message') }}</p>
+        <p class="alert alert-warning">{{ Session::get('message') }}</p>
     @endif
 </div>

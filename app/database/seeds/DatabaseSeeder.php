@@ -24,17 +24,31 @@ class DatabaseSeeder extends Seeder {
 class UserTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('users')->delete();
+        DB::table('users')->truncate();
+        Eloquent::unguard();
+		$user = User::create(array(
+		    'firstname' => 'Tim',
+		    'lastname' => 'Kramer',
+		    'company' => 'Thinkery',
+		    'email' => 'tim@thethinkery.net',
+		    'phone' => '',
+		    'role' => 2,
+		    'password' => Hash::make('sea1sea')
+		  ));
+
+
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 100; $i++)
 		{
+		  Eloquent::unguard();
 		  $user = User::create(array(
 		    'firstname' => $faker->firstName,
 		    'lastname' => $faker->lastName,
 		    'company' => $faker->company,
 		    'email' => $faker->email,
 		    'phone' => $faker->phoneNumber,
-		    'password' => $faker->word
+		    'role' => $faker->numberBetween(0,1),
+		    'password' => Hash::make($faker->word)
 		  ));
 		}
     }
@@ -43,7 +57,7 @@ class UserTableSeeder extends Seeder {
 class TaskTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('tasks')->delete();
+        DB::table('tasks')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 500; $i++)
 		{
@@ -57,7 +71,7 @@ class TaskTableSeeder extends Seeder {
 class SubscriptionTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('subscriptions')->delete();
+        DB::table('subscriptions')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 100; $i++)
 		{
@@ -73,7 +87,7 @@ class SubscriptionTableSeeder extends Seeder {
 class ClosingTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('closings')->delete();
+        DB::table('closings')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 500; $i++)
 		{
@@ -90,7 +104,7 @@ class ClosingTableSeeder extends Seeder {
 class DocumentTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('documents')->delete();
+        DB::table('documents')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 50; $i++)
 		{
@@ -106,7 +120,7 @@ class DocumentTableSeeder extends Seeder {
 class DocMidTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('closing_document')->delete();
+        DB::table('closing_document')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 50; $i++)
 		{
@@ -121,7 +135,7 @@ class DocMidTableSeeder extends Seeder {
 class TaskMidTableSeeder extends Seeder {
     public function run()
     {
-        DB::table('closing_task')->delete();
+        DB::table('closing_task')->truncate();
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 50; $i++)
 		{

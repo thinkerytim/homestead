@@ -6,11 +6,17 @@ class UsersController extends \BaseController {
 		$this->beforeFilter('csrf', array('on'=>'post'));
 		$this->beforeFilter('auth', array('only'=>array('getDashboard')));
 	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+	public function getIndex()
+	{
+		return 'index';
+	}
+
 	public function getRegister()
 	{
 		return View::make('users.register');
@@ -49,7 +55,12 @@ class UsersController extends \BaseController {
 	public function postSignin()
 	{
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
-		    return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+			if (Auth::user()->isAdmin())
+			{
+		    	return Redirect::to('admin')->with('message', 'You are now logged in!');
+		    } else {
+		    	return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+		    }
 		} else {
 		    return Redirect::to('users/login')
 		        ->with('message', 'Your username/password combination was incorrect')

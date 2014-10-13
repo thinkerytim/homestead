@@ -47,6 +47,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    return 'remember_token';
 	}
 
+	public function isAdmin()
+	{
+		// 0 = guest
+		// 1 = agent
+		// 2 = admin
+	    return $this->role === 2;
+	}
+
 	/* Define Relations */
 
 	public function tasks()

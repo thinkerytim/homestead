@@ -65,7 +65,8 @@ class ClosingsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return 'Closing show '.$id;
+		$closing = Closing::find($id);
+		return View::make('closings.show')->with('closing', $closing);
 	}
 
 
