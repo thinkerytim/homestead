@@ -8,16 +8,17 @@ You have {{ $closings->count() }} scheduled closings.
 		<tr>
 			<th>#</th>
 			<th>Name</th>
-			<th>Street</th>
+			<th>Tasks</th>
+			<th>Closes At</th>
 		</tr>
 	</thead>
 	<tbody>
 		@if ($closings->count() > 0)
 			@foreach ($closings as $closing)
-			    @include('view.name', array('some'=>'data'))
+			    @include('closings.closing', array('some'=>'data'))
 			@endforeach
 		@else
-		    <tr><td colspan="3">Nothing to see here</td></tr>
+		    <tr><td colspan="4">Nothing to see here</td></tr>
 		@endif
 	</tbody>
 </table>

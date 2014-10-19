@@ -11,7 +11,7 @@ Route::resource('admin', 'AdminController');
 /* Users controller routes */
 Route::controller('users', 'UsersController');
 
-/* Contracts controller routes */
+/* Closings controller routes */
 Route::resource('closings', 'ClosingsController');
 
 /* Tasks controller routes */

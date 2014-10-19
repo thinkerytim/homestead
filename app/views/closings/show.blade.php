@@ -1,16 +1,15 @@
 @extends('layouts.default')
 
 @section('content')
-<h3>{{ $closing->title }} Closes: {{ $closing->closes_at }}</h3>
-
-
+<h3>{{ $closing->title }} Closes: {{ $closing->closes_at->toFormattedDateString() }}</h3>
 
 <div class="list-group">
-	@foreach ($closing->tasks as $task)
-{{ var_dump($task->pivot->notes)}}	
-		<a class="list-group-item" href="#">{{$task->name}} <span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-trash"></span></a>
-    @endforeach
+	@if ($closing->tasks->count() > 0)
+		@foreach ($closing->tasks as $task)
+		    @include('tasks.task', array('task'=> $task))
+		@endforeach
+	@else
+	    <tr><td colspan="4">Nothing to see here</td></tr>
+	@endif
 </div>
-	
-
 @stop

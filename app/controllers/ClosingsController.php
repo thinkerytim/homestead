@@ -20,7 +20,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$closings 	= Closing::where('user_id', '=', Auth::user()->id)->simplePaginate(20);
+		$closings 	= Closing::where('user_id', '=', Auth::user()->id)->simplePaginate(20);	
 		return View::make('closings.index', array('closings' => $closings));
 	}
 

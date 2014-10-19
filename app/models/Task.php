@@ -7,6 +7,7 @@ class Task extends Eloquent {
 	 */
 	protected $table 	= 'tasks';
 	protected $guarded 	= array('id');
+    protected $dates = array('due_at');
 
 	// form validation rules
 
