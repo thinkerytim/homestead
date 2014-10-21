@@ -38,7 +38,7 @@ class UserTableSeeder extends Seeder {
 
 
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 100; $i++)
+        for ($i = 0; $i < 5; $i++)
 		{
 		  Eloquent::unguard();
 		  $user = User::create(array(
@@ -73,10 +73,10 @@ class SubscriptionTableSeeder extends Seeder {
     {
         DB::table('subscriptions')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 100; $i++)
+        for ($i = 0; $i < 6; $i++)
 		{
 		  $user = Subscription::create(array(
-		    'user_id' => $faker->numberBetween(1, 100),
+		    'user_id' => $faker->numberBetween(1,5),
 		    'level_id' => $faker->numberBetween(1,5),
 		    'expires_at' => $faker->dateTimeBetween('now', '+6 months')
 		  ));
@@ -92,8 +92,8 @@ class ClosingTableSeeder extends Seeder {
         for ($i = 0; $i < 500; $i++)
 		{
 		  $user = Closing::create(array(
-		    'user_id' => $faker->numberBetween(1, 100),
-		    'agent_id' => $faker->numberBetween(1,100),
+		    'user_id' => $faker->numberBetween(1,6),
+		    'agent_id' => $faker->numberBetween(1,6),
 		    'title' => $faker->catchPhrase,
 		    'closes_at' => $faker->dateTimeBetween('now', '+6 months')
 		  ));

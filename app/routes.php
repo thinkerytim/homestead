@@ -15,4 +15,4 @@ Route::controller('users', 'UsersController');
 Route::resource('closings', 'ClosingsController');
 
 /* Tasks controller routes */
-//Route::resource('task', 'TasksController');
+Route::resource('task', 'TasksController');

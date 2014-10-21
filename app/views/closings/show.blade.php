@@ -3,13 +3,18 @@
 @section('content')
 <h3>{{ $closing->title }} Closes: {{ $closing->closes_at->toFormattedDateString() }}</h3>
 
-<div class="list-group">
+<ul class="list-group">
 	@if ($closing->tasks->count() > 0)
 		@foreach ($closing->tasks as $task)
 		    @include('tasks.task', array('task'=> $task))
 		@endforeach
 	@else
-	    <tr><td colspan="4">Nothing to see here</td></tr>
+	    <li class="list-group-item">Nothing to see here</li>
 	@endif
-</div>
+</ul>
+@if (Auth::user()->isAdmin())
+<button type="button" class="btn btn-success btn-sm">
+	<span class="glyphicon glyphicon-plus"></span> New Task
+</button>
+@endif
 @stop
