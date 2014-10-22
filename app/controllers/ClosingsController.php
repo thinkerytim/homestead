@@ -1,6 +1,7 @@
 <?php
 
 class ClosingsController extends \BaseController {
+	
 	public function __construct()
 	{
 		$this->beforeFilter('csrf', array('on'=>'post'));
@@ -13,6 +14,8 @@ class ClosingsController extends \BaseController {
 			}
         });
 	}
+
+
 	/**
 	 * Display a listing of the resource.
 	 *

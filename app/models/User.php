@@ -64,7 +64,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function documents()
     {
-        return $this->hasMany('Documents');
+        return $this->hasMany('Document');
     }
 
     public function closings()
