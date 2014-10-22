@@ -16,3 +16,6 @@ Route::resource('closings', 'ClosingsController');
 
 /* Tasks controller routes */
 Route::resource('task', 'TasksController');
+
+/* Unlink Task from Closing */
+Route::delete('closingtask', 'ClosingsController@unlinkTask');

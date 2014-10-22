@@ -92,7 +92,7 @@ class TasksController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		// first check if user's ID matches & they are admin
 	}
 
 

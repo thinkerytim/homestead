@@ -31,9 +31,12 @@
 	?>
 @endif
 
-<tr class="{{ $style }}">
+<tr id="{{ $task->pivot->task_id }}" class="task-row {{ $style }}">
 	<td>{{ $icon }}</td>
 	<td>{{ $text }}</td>
 	<td>{{ Carbon::parse($task->pivot->due_at)->diffForHumans() }}</td>
 	<td>{{ $task->pivot->due_at }}</td>
+@if (Auth::user()->isAdmin())
+	<td><a href="#"><span id="{{ $task->pivot->task_id }}" class="glyphicon glyphicon-remove delete-task"></span></a></td>
+@endif	
 </tr>

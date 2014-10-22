@@ -109,4 +109,19 @@ class ClosingsController extends \BaseController {
 	}
 
 
+	/**
+	 * Remove the specified task from the closing.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function unlinkTask()
+	{
+		//
+		$closing = Closing::find();
+    	$closing->tasks()->detach($task);
+    
+    return $blogpost->tags;
+	}
+
 }

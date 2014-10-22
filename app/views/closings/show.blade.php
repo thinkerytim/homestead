@@ -2,7 +2,10 @@
 
 @section('content')
 <h3>{{ $closing->title }} Closes: {{ $closing->closes_at->toFormattedDateString() }}</h3>
-
+<div id="values">
+	{{ Form::token() }}
+	<input name="_closing" type="hidden" value="{{ $closing->id }}" />
+</div>
 <div class="table-responsive">
 	<table class="table table-striped">
 	<thead>
