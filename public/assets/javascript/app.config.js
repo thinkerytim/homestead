@@ -31,12 +31,13 @@
  * GLOBAL: Your left nav in your app will no longer fire ajax calls, set 
  * it to false for HTML version
  */	
-	$.navAsAjax = true; 
+	//$.navAsAjax = true; 
+	$.navAsAjax = false; 
 /*
  * GLOBAL: Sound Config
  */
 	$.sound_path = "sound/";
-	$.sound_on = true; 
+	$.sound_on = false; 
 /*
  * Impacts the responce rate of some of the responsive elements (lower 
  * value affects CPU but improves speed)
@@ -72,7 +73,7 @@
  * VOICE COMMAND CONFIG
  * dependency: voicecommand.js
  */
-	voice_command = true,
+	voice_command = false,
 /*
  * Turns on speech without asking
  */	

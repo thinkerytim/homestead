@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
-<head>
 	@include('includes.head')
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 <body>
-<div class="container">
-	<header class="row">
-		@include('includes.header')
-	</header>
-
-	<div id="main" class="row">
+{{-- POSSIBLE BODY CLASSES: minified, fixed-ribbon, fixed-header, fixed-width
+			 You can also add different skin classes such as "smart-skin-1", "smart-skin-2" etc...--}}
+{{-- header menu --}}			 
+@include('includes.header')
+{{-- navbar left --}}
+@include('includes.sidebar')
+<div id="main" role="main">
+	@include('includes.ribbon')
+	<!-- MAIN CONTENT -->
+	<div id="content">
 		@yield('content')
 	</div>
-
-	<footer class="row">
-		@include('includes.footer')
-	</footer>
+	<!-- END MAIN CONTENT -->
 </div>
+<!-- END MAIN PANEL -->
+@include('includes.footer')
 </body>
 </html>
