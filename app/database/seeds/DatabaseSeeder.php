@@ -36,6 +36,15 @@ class UserTableSeeder extends Seeder {
 		    'password' => Hash::make('sea1sea')
 		  ));
 
+		$user = User::create(array(
+		    'firstname' => 'Test',
+		    'lastname' => 'User',
+		    'company' => 'Thinkery',
+		    'email' => 'test@example.com',
+		    'phone' => '',
+		    'role' => 1,
+		    'password' => Hash::make('sea1sea')
+		  ));
 
         $faker = Faker\Factory::create();
         for ($i = 0; $i < 5; $i++)

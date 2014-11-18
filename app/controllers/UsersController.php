@@ -57,7 +57,7 @@ class UsersController extends \BaseController {
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
 			if (Auth::user()->isAdmin())
 			{
-		    	return Redirect::to('admin')->with('message', 'You are now logged in!');
+		    	return Redirect::to('admin')->with('message', 'You are now logged in, King Admin!');
 		    } else {
 		    	return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
 		    }
