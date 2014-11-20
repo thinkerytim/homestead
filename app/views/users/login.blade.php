@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Think Closing</title>
+        <title>ThinkClosing</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -31,7 +31,7 @@
                 </ul>
                 <div class="sign-in-inner">
                     <div class="login-brand text-center">
-                        <i class="fa fa-database m-right-xs"></i> Think <strong class="text-skin">Closing</strong>
+                        <i class="fa fa-lightbulb-o m-right-xs"></i> Think<strong class="text-skin">Closing</strong>
                     </div>
                     {{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
                         <div class="form-group m-bottom-md">
@@ -58,7 +58,7 @@
                                 <a href="#" class="font-12">Forgot password ?</a>
                             </div>
                             <div class="font-12 text-center m-bottom-xs">Do not have an account?</div>
-                            <a href="{{ action('UsersController@getRegister', array()) }}" class="btn btn-default block">Create an accounts</a>
+                            <a href="{{ action('UsersController@getRegister', array()) }}" class="btn btn-default block">Create an account</a>
                         </div>
                     {{ Form::close() }}
                 </div><!-- ./sign-in-inner -->

@@ -7,7 +7,7 @@
 	-->
 	<head>
     	<meta charset="utf-8">
-    	<title>Think Closing</title>
+    	<title>ThinkClosing</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta name="description" content="">
 	    <meta name="author" content="">
@@ -470,7 +470,7 @@
 								data-ys="0"
 								data-ye="0"
 					>
-					SIMPLIFY ADMIN
+					ThinkClosing
 							</div>
 							</div>
 
@@ -493,7 +493,7 @@
 								data-ys="0"
 								data-ye="0"
 					>
-					<a href="#" class="largeredbtn" target="_blank">PURCHASE NOW</a>
+					<a href="#" class="largeredbtn" target="_blank">SIGN UP NOW</a>
 							</div>
 							</div>
 
@@ -620,32 +620,32 @@
 			<div class="section bg-white section-padding" id="about">
 				<div class="container">
 					<div class="text-center">
-						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">RESPONSIVE WEB APPLICATION</span></h3>
-						<p>This web based app template give you much power to build your great application.</p>
+						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">WEB MARKETING EMPIRE!</span></h3>
+						<p>Leverage the power of Intellectual Property to market like a pro!</p>
 					</div>
 
 					<div class="row" style="margin-top:70px;">
 						<div class="col-md-4 text-center">
 							<div class="how-it-work-list fadeInRight animation-element disabled">
 								<div class="how-it-work-icon">
-									<i class="fa fa-edit fa-3x"></i>
+									<i class="fa fa-list-ol fa-3x"></i>
 								</div>
 
-								<h4 class="m-top-md text-upper">Easy To Get Started</h4>
+								<h4 class="m-top-md text-upper">Closing Manager</h4>
 
-								<p style="margin-top:30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.</p>
+								<p style="margin-top:30px;">Schedule tasks, remind buyers and sellers of deadlines and dates, and manager relationships with your customers.</p>
 							</div>
 						</div>
 
 						<div class="col-md-4 text-center">
 							<div class="how-it-work-list fadeInRight animation-delay2 animation-element disabled">
 								<div class="how-it-work-icon">
-									<i class="fa fa-mobile fa-3x"></i>
+									<i class="fa fa-group fa-3x"></i>
 								</div>
 
-								<h4 class="m-top-md text-upper">Responsive Design</h4>
+								<h4 class="m-top-md text-upper">Virtual Tours</h4>
 
-								<p style="margin-top:30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at. Nulla tellus elit, varius non commodo eget.</p>
+								<p style="margin-top:30px;">Simple, effective and beautiful virtual tours-- with no image uploads, no manual data entry, no problem!</p>
 							</div>
 						</div>
 
@@ -827,229 +827,6 @@
 					</div><!-- ./row -->
 				</div><!-- ./container -->
 			</div><!-- section -->	
-
-			<div class="section bg-success section-padding" id="testimonialSection">
-				<div class="container text-center">
-					<div class="text-center">
-						<h3 class="text-upper no-m-top">Millions of Satisfied Customers</h3>
-						<p>What they say about SIMPLIFY template.</p>
-					</div>
-					<div class="row m-top-lg">
-						<div class="col-md-6 col-md-offset-3">
-							<div class="owl-carousel">
-							    <div class="item">
-							    	<h5 style="line-height:30px;">
-							    		“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum. Mauris convallis mauris at pellentesque volutpat. Phasellus at ultricies neque, quis malesuada augue.”
-							    	</h5>
-
-							    	<div class="m-top-md">- Karen Martin, Project Manager</div>
-							    </div>
-							    <div class="item">
-							    	<h5 style="line-height:30px;">
-							    		“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum. Mauris convallis mauris at pellentesque volutpat. Phasellus at ultricies neque, quis malesuada augue.”
-							    	</h5>
-
-							    	<div class="m-top-md">- Sarah Garcia, Web Designer</div>
-							    </div>
-							    <div class="item">
-							    	<h5 style="line-height:30px;">
-							    		“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum. Mauris convallis mauris at pellentesque volutpat. Phasellus at ultricies neque, quis malesuada augue.”
-							    	</h5>
-
-							    	<div class="m-top-md">- Jame Smith, Content Writer</div>
-							    </div>
-							    <div class="item">
-							    	<h5 style="line-height:30px;">
-							    		“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum. Mauris convallis mauris at pellentesque volutpat. Phasellus at ultricies neque, quis malesuada augue.”
-							    	</h5>
-
-							    	<div class="m-top-md">- Elizabeth Carter, System Analysis</div>
-							    </div>
-							</div>
-						</div><!-- ./col -->
-					</div><!-- ./row -->
-				</div><!-- ./container -->
-			</div><!-- ./section -->
-
-			<div class="section bg-white section-padding" id="teamSection">
-				<div class="container">
-					<div class="text-center">
-						<h3 class="text-upper">Meet Our Team</h3>
-						<p>Who we are?</p>
-
-						<div class="row m-top-lg">
-							<div class="col-md-3 text-center">
-								<div class="team-wrapper fadeInLeft animation-element disabled">
-									<div class="team-inner">
-										<div class="team-img-wrapper">
-											<img src="assets/images/profile/profile3.jpg" alt="" class="img-circle team-avatar">
-											<div class="team-profile-overlay"></div>	
-
-											<div class="team-info-icon">
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-pencil"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-facebook"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="h4 no-m-bottom">Karen Martin</div>
-									<small class="text-muted">CEO</small>
-									<p class="m-top-md">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-									</p>
-								</div>
-							</div><!-- ./col -->
-							<div class="col-md-3 text-center">
-								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay2">
-									<div class="team-inner">
-										<div class="team-img-wrapper">
-											<img src="assets/images/profile/profile8.jpg" alt="" class="img-circle team-avatar">
-											<div class="team-profile-overlay"></div>	
-
-											<div class="team-info-icon">
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-pencil"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-facebook"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="h4 no-m-bottom">James Smith</div>
-									<small class="text-muted">Web Designer</small>
-									<p class="m-top-md">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-									</p>
-								</div>
-							</div><!-- ./col -->
-							<div class="col-md-3 text-center">
-								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay4">
-									<div class="team-inner">
-										<div class="team-img-wrapper">
-											<img src="assets/images/profile/profile5.jpg" alt="" class="img-circle team-avatar">
-											<div class="team-profile-overlay"></div>	
-
-											<div class="team-info-icon">
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-pencil"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-facebook"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="h4 no-m-bottom">Sarah Garcia</div>
-									<small class="text-muted">Programmer</small>
-									<p class="m-top-md">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-									</p>
-								</div>
-							</div><!-- ./col -->
-							<div class="col-md-3 text-center">
-								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay6">
-									<div class="team-inner">
-										<div class="team-img-wrapper">
-											<img src="assets/images/profile/profile6.jpg" alt="" class="img-circle team-avatar">
-											<div class="team-profile-overlay"></div>	
-
-											<div class="team-info-icon">
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-pencil"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-facebook"></i></a>
-												<a href="#" class="inline-block m-right-xs"><i class="fa fa-twitter"></i></a>
-											</div>
-										</div>
-									</div>
-									<div class="h4 no-m-bottom">Christopher Brown</div>
-									<small class="text-muted">Marketing</small>
-									<p class="m-top-md">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-									</p>
-								</div>
-							</div><!-- ./col -->
-						</div>
-					</div>
-				</div><!-- ./container -->
-			</div><!-- ./section -->
-
-			<div class="section bg-bg-grey section-padding" id="blogSection">
-				<div class="container">
-					<div class="text-center">
-						<h3 class="text-upper">Recent Blog Post</h3>
-						<p>The Latest News, Blog Posts & Comments.</p>
-					</div>
-
-					<div class="row m-top-lg">
-						<div class="col-md-4">
-							<div class="blog-wrapper fadeInUp animation-element disabled">
-								<div class="blog-img">
-									<img src="assets/images/blog/blog2.jpg" alt="" style="height:240px;">
-									<div class="blog-overlay">
-										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
-										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
-									</div>
-								</div>
-								<div class="blog-detail">
-									<div class="h4">
-										Frontend &amp; Admin Dashboard  
-									</div>
-									<small class="block m-top-xs text-muted">Admin</small>
-									
-									<p class="m-top-md text-muted">orem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.</p>
-									<a href="#" class="block text-success">Continue reading...</a>
-									
-									<div class="m-top-lg text-muted">
-										<span class="m-right-md">March 17, 2014</span> <span class="m-right-md">12 comments</span> <i class="fa fa-heart text-success"></i> 34
-									</div>
-								</div>
-							</div>
-						</div><!-- ./col -->
-						<div class="col-md-4">
-							<div class="blog-wrapper fadeInUp animation-element disabled animation-delay2">
-								<div class="blog-img">
-									<img src="assets/images/blog/blog3.jpg" alt="" style="height:240px;">
-									<div class="blog-overlay">
-										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
-										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
-									</div>
-								</div>
-								<div class="blog-detail">
-									<div class="h4">
-										Flat Design 
-									</div>
-									<small class="block m-top-xs text-muted">John Doe</small>
-									
-									<p class="m-top-md text-muted">orem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.</p>
-									<a href="#" class="block text-success">Continue reading...</a>
-									
-									<div class="m-top-lg text-muted">
-										<span class="m-right-md">March 17, 2014</span> <span class="m-right-md">12 comments</span> <i class="fa fa-heart text-success"></i> 34
-									</div>
-								</div>
-							</div>
-						</div><!-- ./col -->
-						<div class="col-md-4">
-							<div class="blog-wrapper fadeInUp animation-element disabled animation-delay4">
-								<div class="blog-img">
-									<img src="assets/images/blog/blog1.jpg" alt="" style="height:240px;">
-									<div class="blog-overlay">
-										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
-										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
-									</div>
-								</div>
-								<div class="blog-detail">
-									<div class="h4">
-										Fully Responsive
-									</div>
-									<small class="block m-top-xs text-muted">Jane Doe</small>
-									
-									<p class="m-top-md text-muted">orem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.</p>
-									<a href="#" class="block text-success">Continue reading...</a>
-									
-									<div class="m-top-lg text-muted">
-										<span class="m-right-md">March 17, 2014</span> <span class="m-right-md">12 comments</span> <i class="fa fa-heart text-success"></i> 34
-									</div>
-								</div>
-							</div>
-						</div><!-- ./col -->
-					</div>
-				</div><!-- ./container -->
-			</div><!-- ./section -->
 
 			<div class="section bg-white section-padding" id="contact">
 				<div class="container text-center">
