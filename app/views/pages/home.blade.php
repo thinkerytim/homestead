@@ -16,7 +16,7 @@
 	    {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
 		
 		<!-- Font Awesome -->
-		{{ HTML::style("css/font-awesome.min.css") }}
+		{{ HTML::style("css/font-awesome.css") }}
 
 		<!-- ionicons -->
 		{{ HTML::style("css/ionicons.min.css") }}
@@ -27,7 +27,7 @@
 
 		<!-- Revolution Slider -->
 		{{ HTML::style("css/style.css") }}
-		{{ HTML::style("css/settings.css") }}
+		{{ HTML::style("assets/frontend/rs-plugin/css/settings.css") }}
 		{{ HTML::style("css/extralayers.css") }}
 
 		<!-- Simplify -->
@@ -51,24 +51,21 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a href="../index.html" class="navbar-brand"><strong><span class="text-success">Think</span>Closing</strong></a>
+			      <a href="/" class="navbar-brand"><strong><span class="text-success">Think</span>Closing</strong></a>
 			    </div>
 			    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 			      <ul class="nav navbar-nav">
 			        <li>
-			          <a href="#howItWorkSection">How it works</a>
+			          <a href="#about">About</a>
 			        </li>
 			        <li>
-			          <a href="#featureSection">Features</a>
+			          <a href="#features">Features</a>
 			        </li>
 			        <li class="active">
-			          <a href="#pricingSection">Pricing</a>
+			          <a href="#pricing">Pricing</a>
 			        </li>
 			        <li>
-			          <a href="#blogSection">Blog</a>
-			        </li>
-			        <li>
-			          <a href="#subscribeSection">Contact</a>
+			          <a href="#contact">Contact</a>
 			        </li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
@@ -87,9 +84,9 @@
 			<div class="tp-banner-container">
 				<div class="tp-banner" >
 					<ul>	<!-- SLIDE  -->
-						<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="images/homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
+						<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="assets/images/homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
 							<!-- MAIN IMAGE -->
-							<img src="images/dummy.png"  alt="slidebg1" data-lazyload="images/frontend/banner1.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/banner1.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -116,7 +113,8 @@
 								data-easing="Power3.easeInOut"
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
-								style="z-index: 6;"><img src="images/dummy.png" alt="" data-lazyload="images/redbg_big.png">
+								style="z-index: 6;">
+								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/redbg_big.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							</div>
 
 							<!-- LAYER NR. 3 -->
@@ -129,7 +127,8 @@
 								data-easing="Power3.easeInOut"
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
-								style="z-index: 7;"><img src="images/dummy.png" alt="" data-lazyload="images/frontend/macbook.png">
+								style="z-index: 7;">
+								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/macbook.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							</div>
 
 							<!-- LAYER NR. 4 -->
@@ -142,7 +141,8 @@
 								data-easing="Power3.easeInOut"
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
-								style="z-index: 6;"><img src="images/dummy.png" alt="" data-lazyload="images/frontend/iMac.png">
+								style="z-index: 6;">
+								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/iMac.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							</div>
 
 							<!-- LAYER NR. 5 -->
@@ -216,7 +216,8 @@
 								data-easing="Power3.easeInOut"
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
-								style="z-index: 11;"><img src="images/dummy.png" alt="" data-lazyload="images/greyline.png">
+								style="z-index: 11;">
+								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/greyline.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							</div>
 
 							<!-- LAYER NR. 10 -->
@@ -253,9 +254,9 @@
 								<a class="btn btn-default btn-lg text-upper" style="color:#777; line-height:normal;">Live Preview</a>
 							</div>
 						</li>
-						<li data-transition="slideup" data-slotamount="7" data-masterspeed="1000" data-thumb="images/homeslider_thumb3.jpg"  data-saveperformance="on"  data-title="Parallax 3D">
+						<li data-transition="slideup" data-slotamount="7" data-masterspeed="1000" data-thumb="assets/images/homeslider_thumb3.jpg"  data-saveperformance="on"  data-title="Parallax 3D">
 							<!-- MAIN IMAGE -->
-							<img src="images/dummy.png"  alt="3dbg" data-lazyload="images/3dbg.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/3dbg.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -292,7 +293,8 @@
 								data-endelementdelay="0.1"
 								data-end="7000"
 					data-endspeed="1000"
-								style="z-index: 3;"><img src="images/dummy.png" alt="" data-lazyload="images/frontend/3dlayer.png">
+								style="z-index: 3;">
+								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/3dlayer.png"]) }}
 							</div>
 
 							
@@ -428,7 +430,7 @@
 								data-ys="0"
 								data-ye="0"
 					>
-					<img src="images/dummy.png" alt="" data-lazyload="images/redbg.jpg">
+					{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/redbg.jpg"]) }}
 							</div>
 							</div>
 
@@ -513,14 +515,14 @@
 								data-ys="0"
 								data-ye="0"
 					>
-					<a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?ref=themepunch" target="_blank"><img src="images/dummy.png" alt="" data-ww="18" data-hh="11" data-lazyload="images/doublearrow2.png"></a>
+					<a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?ref=themepunch" target="_blank">{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/doublearrow2.png","data-ww"=>"18","data-hh"=>"11"]) }}</a>
 							</div>
 							</div>
 						</li>
 						<!-- SLIDE  -->
-						<li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500" data-thumb="images/homeslider_thumb4.jpg"  data-saveperformance="on"  data-title="Mobile Interaction">
+						<li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500" data-thumb="assets/images/homeslider_thumb4.jpg"  data-saveperformance="on"  data-title="Mobile Interaction">
 							<!-- MAIN IMAGE -->
-							<img src="images/dummy.png"  alt="slidebg2" data-lazyload="images/frontend/banner2.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/banner2.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
@@ -533,7 +535,7 @@
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
 								data-endspeed="300"
-								style="z-index: 2;"><img src="images/dummy.png" alt="" data-lazyload="images/frontend/iPad_black.png">
+								style="z-index: 2;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/iPad_black.png">
 							</div>
 
 							<!-- LAYER NR. 2 -->
@@ -546,7 +548,7 @@
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
 								data-endspeed="300"
-								style="z-index: 5;"><img src="images/dummy.png" alt="" data-lazyload="images/frontend/iPhone_white2.png">
+								style="z-index: 5;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/iPhone_white2.png">
 							</div>
 
 							<!-- LAYER NR. 3 -->
@@ -576,7 +578,7 @@
 								data-elementdelay="0.1"
 								data-endelementdelay="0.1"
 								data-endspeed="600"
-								style="z-index: 7;"><img src="images/dummy.png" alt="" data-lazyload="images/largegreen.png">
+								style="z-index: 7;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/largegreen.png">
 							</div>
 
 							<!-- LAYER NR. 7 -->
@@ -615,7 +617,7 @@
 				</div>	<!-- ./tp-banner -->
 			</div>	<!-- ./tp-banner-container -->
 
-			<div class="section bg-white section-padding" id="howItWorkSection">
+			<div class="section bg-white section-padding" id="about">
 				<div class="container">
 					<div class="text-center">
 						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">RESPONSIVE WEB APPLICATION</span></h3>
@@ -662,11 +664,11 @@
 				</div>
 			</div>
 
-			<div class="section bg-dark-blue section-padding" id="featureSection">
+			<div class="section bg-dark-blue section-padding" id="features">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
-							<img src="images/frontend/mockup1.png" alt="" class="fadeInRight animation-element disabled">
+							<img src="assets/images/mockup1.png" alt="" class="fadeInRight animation-element disabled">
 						</div>
 						<div class="col-sm-6">
 							<h3 class="text-upper">THE FEATURES <span class="text-success">YOU'LL LOVE</span></h3>
@@ -724,7 +726,7 @@
 				</div><!-- ./container -->
 			</div><!-- ./section -->
 
-			<div class="section bg-grey section-padding" id="pricingSection">
+			<div class="section bg-grey section-padding" id="pricing">
 				<div class="container">
 					<div class="text-center">
 						<h3 class="text-upper">Our Pricing Plans</h3>
@@ -756,7 +758,7 @@
 
 						<div class="col-md-3 col-sm-6">
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay2">
-								<div class="pricing-type bg-danger text-center">Professtional</div>
+								<div class="pricing-type bg-danger text-center">Professional</div>
 								<div class="pricing-value bg-grey">
 									<span class="value">$59</span>
 									/Month
@@ -779,7 +781,7 @@
 
 						<div class="col-md-3 col-sm-6">
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay4">
-								<div class="pricing-type bg-purple text-center">Business</div>
+								<div class="pricing-type bg-purple text-center">Broker</div>
 								<div class="pricing-value bg-grey">
 									<span class="value">$99</span>
 									/Month
@@ -880,7 +882,7 @@
 								<div class="team-wrapper fadeInLeft animation-element disabled">
 									<div class="team-inner">
 										<div class="team-img-wrapper">
-											<img src="../images/profile/profile3.jpg" alt="" class="img-circle team-avatar">
+											<img src="assets/images/profile/profile3.jpg" alt="" class="img-circle team-avatar">
 											<div class="team-profile-overlay"></div>	
 
 											<div class="team-info-icon">
@@ -901,7 +903,7 @@
 								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay2">
 									<div class="team-inner">
 										<div class="team-img-wrapper">
-											<img src="../images/profile/profile8.jpg" alt="" class="img-circle team-avatar">
+											<img src="assets/images/profile/profile8.jpg" alt="" class="img-circle team-avatar">
 											<div class="team-profile-overlay"></div>	
 
 											<div class="team-info-icon">
@@ -922,7 +924,7 @@
 								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay4">
 									<div class="team-inner">
 										<div class="team-img-wrapper">
-											<img src="../images/profile/profile5.jpg" alt="" class="img-circle team-avatar">
+											<img src="assets/images/profile/profile5.jpg" alt="" class="img-circle team-avatar">
 											<div class="team-profile-overlay"></div>	
 
 											<div class="team-info-icon">
@@ -943,7 +945,7 @@
 								<div class="team-wrapper fadeInLeft animation-element disabled animation-delay6">
 									<div class="team-inner">
 										<div class="team-img-wrapper">
-											<img src="../images/profile/profile6.jpg" alt="" class="img-circle team-avatar">
+											<img src="assets/images/profile/profile6.jpg" alt="" class="img-circle team-avatar">
 											<div class="team-profile-overlay"></div>	
 
 											<div class="team-info-icon">
@@ -976,7 +978,7 @@
 						<div class="col-md-4">
 							<div class="blog-wrapper fadeInUp animation-element disabled">
 								<div class="blog-img">
-									<img src="../images/blog/blog2.jpg" alt="" style="height:240px;">
+									<img src="assets/images/blog/blog2.jpg" alt="" style="height:240px;">
 									<div class="blog-overlay">
 										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
 										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
@@ -1000,7 +1002,7 @@
 						<div class="col-md-4">
 							<div class="blog-wrapper fadeInUp animation-element disabled animation-delay2">
 								<div class="blog-img">
-									<img src="../images/blog/blog3.jpg" alt="" style="height:240px;">
+									<img src="assets/images/blog/blog3.jpg" alt="" style="height:240px;">
 									<div class="blog-overlay">
 										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
 										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
@@ -1024,7 +1026,7 @@
 						<div class="col-md-4">
 							<div class="blog-wrapper fadeInUp animation-element disabled animation-delay4">
 								<div class="blog-img">
-									<img src="../images/blog/blog1.jpg" alt="" style="height:240px;">
+									<img src="assets/images/blog/blog1.jpg" alt="" style="height:240px;">
 									<div class="blog-overlay">
 										<a href="#" class="blog-link"><i class="fa fa-link"></i></a>
 										<a href="#" class="blog-link"><i class="fa fa-search"></i></a>
@@ -1049,7 +1051,7 @@
 				</div><!-- ./container -->
 			</div><!-- ./section -->
 
-			<div class="section bg-white section-padding" id="subscibeSection">
+			<div class="section bg-white section-padding" id="contact">
 				<div class="container text-center">
 					<h3 class="text-upper">Subscribe to our <span class="b-b b-light">newsletter</span> list</h3>
 					<p>Subscribing to our newsletter you will always be update with the latest news from us.</p>
@@ -1103,28 +1105,28 @@
 
 							<ul class="photo-list m-top-md">
 								<li>
-									<a href="#"><img src="../images/gallery/gallery1.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery1.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery2.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery2.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery3.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery3.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery4.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery4.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery5.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery5.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery6.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery6.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery7.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery7.jpg" alt=""></a>
 								</li>
 								<li>
-									<a href="#"><img src="../images/gallery/gallery8.jpg" alt=""></a>
+									<a href="#"><img src="assets/images/gallery/gallery8.jpg" alt=""></a>
 								</li>
 							</ul>
 						</div><!-- ./col -->
