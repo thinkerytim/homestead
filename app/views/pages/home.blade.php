@@ -69,8 +69,12 @@
 			        </li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
-			        <li class="btn-link"><a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-sm btn-success">Login</a></li>
-			        <li class="btn-link"><a href="{{ action('UsersController@getRegister', array()) }}" class="btn btn-sm btn-purple">Register</a></li>
+			      	@if (Auth::check())
+						<li class="btn-link"><a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-sm btn-success">My Account</a></li>
+			      	@else
+			        	<li class="btn-link"><a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-sm btn-success">Login</a></li>
+			        	<li class="btn-link"><a href="{{ action('UsersController@getRegister', array()) }}" class="btn btn-sm btn-purple">Register</a></li>
+		        	@endif
 			      </ul>
 			    </nav>
 			  </div>
