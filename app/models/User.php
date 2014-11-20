@@ -29,7 +29,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     	'email'=>'required|email|unique:users',
     	'company'=>'alpha',
     	'password'=>'required|alpha_num|between:6,12|confirmed',
-    	'password_confirmation'=>'required|alpha_num|between:6,12'
+    	'password_confirmation'=>'required|alpha_num|between:6,12',
+    	'recaptcha_response_field' => 'required|recaptcha'
     );
 
 	public function getRememberToken()

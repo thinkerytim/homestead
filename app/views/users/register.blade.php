@@ -28,7 +28,13 @@
                     <div class="login-brand text-center">
                         <a href="/"><i class="fa fa-lightbulb-o m-right-xs"></i> Think<strong class="text-skin">Closing</strong></a>
                     </div>
-
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          {{ $error }}
+                        </div>
+                    @endforeach
+                    
                     {{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}
                         <div class="form-group m-bottom-md">
                             <input type="text" class="form-control" placeholder="Email Address">
@@ -47,8 +53,12 @@
                             I accept the agreement
                         </div>
 
+                        <div class="form-group">
+                            {{ Form::captcha() }}
+                        </div>
+
                         <div class="m-top-md p-top-sm">
-                            <a href="#" class="btn btn-success block">Create an accounts</a>
+                            <a href="#" onclick="$(this).closest('form').submit()" class="btn btn-success block">Create an account</a>
                         </div>
 
                         <div class="m-top-md p-top-sm">
