@@ -652,12 +652,12 @@
 						<div class="col-md-4 text-center">
 							<div class="how-it-work-list fadeInRight animation-delay4 animation-element disabled">
 								<div class="how-it-work-icon">
-									<i class="fa fa-desktop fa-3x"></i>
+									<i class="fa fa-laptop fa-3x"></i>
 								</div>
 
-								<h4 class="m-top-md text-upper">Browser Compatibility</h4>
+								<h4 class="m-top-md text-upper">Instant IDX Websites</h4>
 
-								<p style="margin-top:30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.</p>
+								<p style="margin-top:30px;">Create a professional, FlexMLS-powered IDX website in minutes with <a href="https://www.bonfiresites.com">Bonfire Sites</a>.</p>
 							</div>
 						</div>
 					</div>

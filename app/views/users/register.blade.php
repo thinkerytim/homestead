@@ -26,7 +26,7 @@
             <div class="sign-in-wrapper">
                 <div class="sign-in-inner">
                     <div class="login-brand text-center">
-                        <i class="fa fa-lightbulb-o m-right-xs"></i> Think<strong class="text-skin">Closing</strong>
+                        <a href="/"><i class="fa fa-lightbulb-o m-right-xs"></i> Think<strong class="text-skin">Closing</strong></a>
                     </div>
 
                     {{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}

@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="m-top-md p-top-sm">
-                            <a href="index.html" class="btn btn-success block">Sign in</a>
+                            {{ Form::submit('Sign in', array('class'=>'btn btn-success block'))}}
                         </div>
 
                         <div class="m-top-md p-top-sm">
