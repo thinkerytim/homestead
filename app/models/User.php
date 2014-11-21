@@ -20,7 +20,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
-	protected $hidden = array('password', 'remember_token');
+	protected $hidden = array('password', 'password_confirmation','remember_token');
 	protected $guarded = array('id', 'password');
 
 	public static $rules = array(
@@ -29,8 +29,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     	'email'=>'required|email|unique:users',
     	'company'=>'alpha',
     	'password'=>'required|alpha_num|between:6,12|confirmed',
-    	'password_confirmation'=>'required|alpha_num|between:6,12',
-    	'recaptcha_response_field' => 'required|recaptcha'
+    	'password_confirmation'=>'required|same:password',
+    	'recaptcha_response_field' => 'required|recaptcha',
+    	'agreement' => 'required|accepted'
     );
 
 	public function getRememberToken()

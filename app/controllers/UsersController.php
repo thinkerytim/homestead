@@ -45,10 +45,18 @@ class UsersController extends \BaseController {
 		    $user->password = Hash::make(Input::get('password'));
 		    $user->save();
 
+		    if ($user) {
+		    	Auth::login($user);
+		    	return Redirect::to('users/dashboard')->with('message', 'Thanks for registering!');
+		    }
+		    // fallback	
 		    return Redirect::to('users/login')->with('message', 'Thanks for registering!');
 		} else {
 		    // validation has failed, display error messages
-		    return Redirect::to('users/register')->with('message', 'The following errors occurred')->withErrors($validator)->withInput();
+		    return Redirect::to('users/register')
+		    	->with('message', 'The following errors occurred')
+		    	->withErrors($validator)
+		    	->withInput();
 		}
 	}
 
@@ -64,7 +72,7 @@ class UsersController extends \BaseController {
 		} else {
 		    return Redirect::to('users/login')
 		        ->with('message', 'Your username/password combination was incorrect')
-		        ->withInput();
+		        ->withInput(Input::except('password', 'password_confirm'));
 		}
 	}
 
