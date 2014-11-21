@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"manavo/laravel-bootstrap-forms": "~0.0",
-		"greggilbert/recaptcha": "dev-master"
+		"greggilbert/recaptcha": "dev-master",
+		"facebook/php-sdk": "~3.2"
 	},
 	"autoload": {
 		"classmap": [

@@ -1,3 +1,6 @@
+<!-- Firebase -->
+{{ HTML::script("https://cdn.firebase.com/js/client/1.1.1/firebase.js") }}
+
 <!-- Jquery -->
 {{ HTML::script("assets/javascript/jquery-1.11.1.min.js") }}
 

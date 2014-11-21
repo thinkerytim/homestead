@@ -22,6 +22,10 @@
     </div>
 
     <div class="m-top-md p-top-sm">
+        <a href="/login/fb" class="btn block"><i class="fa fa-facebook-square fa-2x"></i> Sign In with Facebook</a>
+    </div>
+
+    <div class="m-top-md p-top-sm">
         <div class="font-12 text-center m-bottom-xs">
             <a href="{{ action('UsersController@getReminder', array()) }}" class="font-12">Forgot password?</a>
         </div>
