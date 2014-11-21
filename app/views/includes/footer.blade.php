@@ -1,5 +1,8 @@
-<div class="footer">
-  <div class="col-xs-12 col-md-8">
-	<p class="text-muted">Copyright &copy; <?php echo date("Y"); ?> The Thinkery, LLC</p>
-  </div>
-</div>
+<footer class="footer">
+	<span class="footer-brand">
+		<strong class="text-danger">Think</strong>Closing
+	</span>
+	<p class="no-margin">
+		&copy; 2014 <strong>The Thinkery LLC</strong>. ALL Rights Reserved. 
+	</p>	
+</footer>

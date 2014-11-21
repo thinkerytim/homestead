@@ -1,109 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>ThinkClosing</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+@extends('layouts.nomenu')
 
-        <!-- Bootstrap core CSS -->
-        {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
-        
-        <!-- Font Awesome -->
-        {{ HTML::style("css/font-awesome.css") }}
+@section('content')
+{{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}
+    <div class="form-group m-bottom-md">
+        <input name="firstname" type="text" class="form-control" placeholder="First Name" value="{{ Input::old('firstname') }}" >
+    </div>
+    <div class="form-group m-bottom-md">
+        <input name="lastname" type="text" class="form-control" placeholder="Last Name" value="{{ Input::old('lastname') }}" >
+    </div>
+    <div class="form-group m-bottom-md">
+        <input name="email" type="text" class="form-control" placeholder="Email Address" value="{{ Input::old('email') }}" >
+    </div>
+    <div class="form-group m-bottom-md">
+        <input name="company" type="text" class="form-control" placeholder="Company" value="{{ Input::old('company') }}" >
+    </div>
+    <div class="form-group m-bottom-md">
+        <input name="phone" type="text" class="form-control" placeholder="Phone" value="{{ Input::old('phone') }}" >
+    </div>
+    <div class="form-group">
+        <input name="password" type="password" class="form-control" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password">
+    </div>
+    <div class="form-group">
+        <div class="custom-checkbox">
+            <input name="agreement" type="checkbox" id="chkAccept">
+            <label for="chkAccept"></label>
+        </div>
+        I accept the <a href="{{ route('tos', array()) }}" target="_blank">terms and conditions</a>.
+    </div>
 
-        <!-- ionicons -->
-        {{ HTML::style("css/ionicons.min.css") }}
-        
-        <!-- Simplify -->
-        {{ HTML::style("css/simplify.min.css") }}
-    
-    </head>
+    <div class="form-group">
+        {{ Form::captcha() }}
+    </div>
 
-    <body class="overflow-hidden light-background">
-        <div class="wrapper no-navigation preload">
-            <div class="sign-in-wrapper">
-                <div class="sign-in-inner">
-                    <div class="login-brand text-center">
-                        <a href="/"><i class="fa fa-lightbulb-o m-right-xs"></i> Think<strong class="text-skin">Closing</strong></a>
-                    </div>
-                    @foreach($errors->all() as $error)
-                        <div class="alert alert-warning alert-dismissible" role="alert">
-                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                          {{ $error }}
-                        </div>
-                    @endforeach
-                    
-                    {{ Form::open(array('url'=>'users/create', 'class'=>'form-signup')) }}
-                        <div class="form-group m-bottom-md">
-                            <input name="firstname" type="text" class="form-control" placeholder="First Name" value="{{ Input::old('firstname') }}" >
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <input name="lastname" type="text" class="form-control" placeholder="Last Name" value="{{ Input::old('lastname') }}" >
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <input name="email" type="text" class="form-control" placeholder="Email Address" value="{{ Input::old('email') }}" >
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <input name="company" type="text" class="form-control" placeholder="Company" value="{{ Input::old('company') }}" >
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <input name="phone" type="text" class="form-control" placeholder="Phone" value="{{ Input::old('phone') }}" >
-                        </div>
-                        <div class="form-group">
-                            <input name="password" type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <input name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password">
-                        </div>
-                        <div class="form-group">
-                            <div class="custom-checkbox">
-                                <input name="agreement" type="checkbox" id="chkAccept">
-                                <label for="chkAccept"></label>
-                            </div>
-                            I accept the agreement
-                        </div>
+    <div class="m-top-md p-top-sm">
+        <a href="#" onclick="$(this).closest('form').submit()" class="btn btn-success block">Create an account</a>
+    </div>
 
-                        <div class="form-group">
-                            {{ Form::captcha() }}
-                        </div>
-
-                        <div class="m-top-md p-top-sm">
-                            <a href="#" onclick="$(this).closest('form').submit()" class="btn btn-success block">Create an account</a>
-                        </div>
-
-                        <div class="m-top-md p-top-sm">
-                            <div class="font-12 text-center m-bottom-xs">Already have an account?</div>
-                            <a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-default block">Sign In</a>
-                        </div>
-                    {{ Form::close() }}
-                </div><!-- ./sign-in-inner -->
-            </div><!-- ./sign-in-wrapper -->
-        </div><!-- /wrapper -->
-
-        <a href="" id="scroll-to-top" class="hidden-print"><i class="icon-chevron-up"></i></a>
-
-        <!-- Le javascript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-    
-        <!-- Jquery -->
-        {{ HTML::script("assets/javascript/jquery-1.11.1.min.js") }}
-
-        <!-- Bootstrap -->
-        {{ HTML::script("assets/bootstrap/js/bootstrap.min.js") }}
-        
-        <!-- Slimscroll -->\
-        {{ HTML::script("assets/javascript/jquery.slimscroll.min.js") }}
-        
-        <!-- Popup Overlay -->
-        {{ HTML::script("assets/javascript/jquery.popupoverlay.min.js") }}
-
-        <!-- Modernizr -->
-        {{ HTML::script("assets/javascript/modernizr.min.js") }}
-        
-        <!-- Simplify -->
-        {{ HTML::script("assets/javascript/simplify/simplify.js") }}    
-    </body>
-</html>
+    <div class="m-top-md p-top-sm">
+        <div class="font-12 text-center m-bottom-xs">Already have an account?</div>
+        <a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-default block">Sign In</a>
+    </div>
+{{ Form::close() }}
+@stop

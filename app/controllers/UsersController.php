@@ -81,4 +81,9 @@ class UsersController extends \BaseController {
 		Auth::logout();
     	return Redirect::to('users/login')->with('message', 'Your are now logged out!');
 	}
+
+	public function getReminder()
+	{
+		return View::make('password.remind');
+	}
 }
