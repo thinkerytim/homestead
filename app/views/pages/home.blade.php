@@ -861,55 +861,17 @@
 								811 N 7th Street<br>
 								Coeur d' Alene ID 83814<br>
 								<div class="seperator"></div>
-								<strong>Email : <span class="theme-font">info@thethinkery.net</span></strong><br>
-								<strong>Website : <span class="theme-font">www.thethinkery.net</span></strong>
+								<strong>Email : <span class="theme-font"><a href="mailto:info@thethinkery.net">info@thethinkery.net</a></span></strong><br>
+								<strong>Website : <span class="theme-font"><a href="http://www.thethinkery.net" target="_blank">www.thethinkery.net</a></span></strong>
 							</address>
 						</div><!-- ./col -->
-						<div class="col-md-3">
+						<div class="col-md-9">
 							<h4>Quick Link</h4>
 							<ul class="list-unstyled m-top-md">
 								<li><a href="#">About Us</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Term & Conditions</a></li>
 								<li><a href="#">FAQS</a></li>
-							</ul>
-						</div><!-- ./col -->
-						<div class="col-md-3">
-							<h4>Quick Link</h4>
-							<ul class="list-unstyled m-top-md">
-								<li><a href="#">How it work</a></li>
-								<li><a href="#">Find Work</a></li>
-								<li><a href="#">Join Us</a></li>
-							</ul>
-						</div><!-- ./col -->
-						<div class="col-md-3">
-							<h4>Flikr Photo</h4>
-
-							<ul class="photo-list m-top-md">
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery1.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery2.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery3.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery4.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery5.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery6.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery7.jpg" alt=""></a>
-								</li>
-								<li>
-									<a href="#"><img src="assets/images/gallery/gallery8.jpg" alt=""></a>
-								</li>
 							</ul>
 						</div><!-- ./col -->
 					</div><!-- ./row -->

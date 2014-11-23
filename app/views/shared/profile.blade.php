@@ -5,7 +5,7 @@
 	<h3 class="header-text m-bottom-md">
 		User Profile
 		<span class="sub-header">
-			Welcome back, {{ Auth::user()->firstname.' '.Auth::user()->lastname }}
+			Welcome back, {{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}
 		</span>
 	</h3>
 
@@ -23,22 +23,22 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-12">
-					<div class="user-name m-top-sm">{{ Auth::user()->firstname.' '.Auth::user()->lastname }}<i class="fa fa-circle text-success m-left-xs font-14"></i></div>
+					<div class="user-name m-top-sm">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}<i class="fa fa-circle text-success m-left-xs font-14"></i></div>
 
 					<div class="m-top-sm">
 						<div>
 							<i class="fa fa-map-marker user-profile-icon"></i>
-							{{ Auth::user()->city.', '.Auth::user()->state }}
+							{{{ Auth::user()->city.', '.Auth::user()->state }}}
 						</div>
 
 						<div class="m-top-xs">
 							<i class="fa fa-briefcase user-profile-icon"></i>
-							{{ Auth::user()->company }}
+							{{{ Auth::user()->company }}}
 						</div>
 
 						<div class="m-top-xs">
 							<i class="fa fa-external-link user-profile-icon"></i>
-							{{ Auth::user()->url }}
+							{{{ Auth::user()->url }}}
 						</div>
 					</div>
 
@@ -65,12 +65,6 @@
 				<div class="smart-widget-inner">
 					<ul class="nav nav-tabs tab-style2 tab-right bg-grey">
 				  		<li>
-				  			<a href="#profileTab3" data-toggle="tab">
-				  				<span class="icon-wrapper"><i class="fa fa-eye"></i></span>
-				  				<span class="text-wrapper">Followers</span>
-				  			</a>
-				  		</li>		
-				  		<li>
 				  			<a href="#profileTab2" data-toggle="tab">
 				  				<span class="icon-wrapper"><i class="fa fa-book"></i></span>
 				  				<span class="text-wrapper">Account</span>
@@ -78,8 +72,8 @@
 				  		</li>
 				  		<li class="active">
 				  			<a href="#profileTab1" data-toggle="tab">
-				  				<span class="icon-wrapper"><i class="fa fa-trophy"></i></span>
-				  				<span class="text-wrapper">Overview</span>
+				  				<span class="icon-wrapper"><i class="glyphicon glyphicon-list-alt"></i></span>
+				  				<span class="text-wrapper">Closings</span>
 				  			</a>
 				  		</li>
 					</ul>
@@ -87,181 +81,31 @@
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="profileTab1">
 								<h4 class="header-text m-bottom-md">
-									My Skill
-									<span class="sub-header">
-										Welocome back, Jane
-									</span>
+									My Closings
 								</h4>
 								<div class="row">
-									<div class="col-sm-3 col-sm-6s">
-										<div class="m-bottom-md">
-											<div class="text-center">HTML5</div>
-											<div class="chart profile-skill chart-skill-red center-block" data-percent="73">73%</div>
-										</div>
-									</div>
-									<div class="col-sm-3 col-sm-6s">
-										<div class="m-bottom-md">
-											<div class="text-center">CSS</div>
-											<div class="chart profile-skill chart-skill-blue center-block" data-percent="54">54%</div>
-										</div>
-									</div>
-									<div class="col-sm-3 col-sms-6">
-										<div class="m-bottom-md">
-											<div class="text-center">Jquery</div>
-											<div class="chart profile-skill chart-skill-green center-block" data-percent="89">89%</div>
-										</div>
-									</div>
-									<div class="col-sm-3 col-sm-6s">
-										<div class="m-bottom-md">
-											<div class="text-center">PHP</div>
-											<div class="chart profile-skill chart-skill-purple center-block" data-percent="92">92%</div>
-										</div>
-									</div>
-								</div><!-- ./row -->
-								
-								<div class="row">
-									<div class="col-lg-6">
-										<h4 class="m-top-md">Recent Activity</h4>
-
-										<div class="recent-activity-list">
-											<ul>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile3.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Karen Martin</span> started following <span class="font-semi-bold">Jame Smith</span>.
-														<small class="text-muted block">36 mins ago</small> 
-													</div>
-												</li>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile3.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Karen Martin</span> just added <span class="font-semi-bold">Simplify Admin</span> to dashboard.
-														<small class="text-muted block">3 hrs ago </small> 
-													</div>
-												</li>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile5.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Sarah Garcia</span> added new photo
-														<small class="text-muted block">Yesterday</small> 
-
-														<div class="m-top-sm">
-															<img src="images/img11.jpg" alt="">
-														</div>
-													</div>
-												</li>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile4.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Jame Smith</span> started following <span class="font-semi-bold">Karen Martin</span>.
-														<small class="text-muted block">36 mins ago</small> 
-													</div>
-												</li>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile6.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Chistopher Brown</span> just purchased <span class="font-semi-bold">your item</span>.
-														<small class="text-muted block">36 mins ago</small> 
-													</div>
-												</li>
-												<li>
-													<div class="activity-user-profile">
-														<img src="images/profile/profile7.jpg" alt="">
-													</div>
-													<div class="activity-detail">
-														<span class="font-semi-bold">Elizabeth Carter</span> uploaded <a class="font-semi-bold">3 photos</a>.
-														<small class="text-muted block">36 mins ago</small> 
-
-														<ul class="uploaded-photo-list m-top-sm clearfix">
-															<li><a href="#"><img src="images/gallery/gallery4.jpg" alt=""></a></li>
-															<li><a href="#"><img src="images/gallery/gallery5.jpg" alt=""></a></li>
-															<li><a href="#"><img src="images/gallery/gallery6.jpg" alt=""></a></li>
-														</ul><!-- ./upload-photo-list -->
-													</div>
-												</li>
-											</ul>
-										</div><!-- ./.recent-activity-list -->
-									</div><!-- ./col -->
-									<div class="col-lg-6">
-										<h4 class="m-top-md">User Statistic</h4>
-
-										<div class="row m-top-md">
-											<div class="col-sm-6">
-												<div class="widget-stat3 bg-primary">
-													<div class="widget-stat-icon">
-														<i class="fa fa-facebook fa-3x"></i>
-													</div>
-													<small class="text-upper">Like</small>
-													<h3 class="no-margin">5123</h3>
-												</div>
-											</div><!-- ./col -->
-											<div class="col-sm-6">
-												<div class="widget-stat3 bg-info">
-													<div class="widget-stat-icon">
-														<i class="fa fa-twitter fa-3x"></i>
-													</div>
-													<small class="text-upper">Follower</small>
-													<h3 class="no-margin">981</h3>
-												</div>	
-											</div><!-- ./col -->
-										</div>
-
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="widget-stat3 text-white" style="background-color:#ea4c89;">
-													<div class="widget-stat-icon">
-														<i class="fa fa-dribbble fa-3x"></i>
-													</div>
-													<small class="text-upper">Follower</small>
-													<h3 class="no-margin">1903</h3>
-												</div>
-											</div><!-- ./col -->
-											<div class="col-sm-6">
-												<div class="widget-stat3 bg-success">
-													<div class="widget-stat-icon">
-														<i class="fa fa-eye fa-3x"></i>
-													</div>
-													<small class="text-upper">Visit</small>
-													<h3 class="no-margin">2176</h3>
-												</div>	
-											</div><!-- ./col -->
-										</div><!-- ./row -->
-
-										<div class="panel panel-default m-top-md">
-											<div class="panel-heading">
-												<i class="fa fa-twitter"></i> Latest Tweets
-											</div>
-											<ul class="list-group"> 
-												<li class="list-group-item"> 
-													<p>Welcome <a href="#" class="text-info">@John Doe</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-													<small class="block text-muted">
-														<i class="fa fa-clock-o"></i> 6 minutes ago
-													</small>
-												</li> 
-												<li class="list-group-item"> 
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="text-info">@Jand Doe</a></p> 
-													<small class="block text-muted">
-														<i class="fa fa-clock-o"></i> 41 minutes ago
-													</small> 
-												</li> 
-												<li class="list-group-item"> <p><a href="#" class="text-info">@Bill Doe</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eros nibh, viverra a dui a, gravida varius velit.</p> 
-													<small class="block text-muted">
-														<i class="fa fa-clock-o"></i> 1 hour ago
-													</small> 
-												</li> 
-											</ul><!-- /list-group -->
-										</div><!-- ./panel -->
-									</div><!-- ./col -->
+								<table class="table table-hover">
+								<thead>
+									<td>ID</td>
+									<td>Title</td>
+									<td>Closes at</td>
+									<td>Delete</td>
+								</thead>
+								<tbody>
+								@forelse($closings as $closing)
+									<tr>
+								    	<td>{{{ $closing->id }}}</td>
+								    	<td><a href="#">{{{ $closing->title }}}</a></td>
+								    	<td>{{{ $closing->closes_at }}}</td>
+								    	<td><a href="#"><i class="glyphicon glyphicon-trash"></i></a></td>
+								    </tr>
+								@empty
+								    <tr>
+								    	<td colspan="3">No closings!</td>
+								    </tr>
+								@endforelse
+								</tbody>
+								</table>
 								</div><!-- ./row -->
 							</div><!-- ./tab-pane -->
 							<div class="tab-pane fade" id="profileTab2">
@@ -355,191 +199,6 @@
 									    </div>
 									</div>								
 								</form>
-							</div><!-- ./tab-pane -->
-							<div class="tab-pane fade" id="profileTab3">
-								<div class="profile-follower-list clearfix">
-									<ul>
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile2.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Karen Martin</div>
-															<small class="block text-muted font-12">Web Designer</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-default btn-sm marginTB-xs" disabled="" data-toggle="modal">following</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile3.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Sarah Garcia</div>
-															<small class="block text-muted font-12">Content Writing</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-default btn-sm marginTB-xs" disabled="" data-toggle="modal">following</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile4.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Jame Smith</div>
-															<small class="block text-muted font-12">Programmer</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile5.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Elizabeth Carter</div>
-															<small class="block text-muted font-12">@Elizabeth</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile6.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Christopher Brown</div>
-															<small class="block text-muted font-12">@Christopher</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-
-										<li>
-											<div class="panel panel-default clearfix">
-												<div class="panel-body">
-													<div class="user-wrapper">
-														<div class="user-avatar">
-															<img class="small-img img-circle img-thumbnail" src="images/profile/profile7.jpg" alt="">
-														</div>
-														<div class="user-detail small-img">
-															<div class="font-16">Jane Doe</div>
-															<small class="block text-muted font-12">janeDoe@company.com</small>
-															<small>
-																<small class="freelancer-rating">
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																	<i class="fa fa-star text-warning"></i>
-																</small>
-															</small>
-
-															<div class="m-top-sm">
-																<button type="button" class="btn btn-primary btn-sm marginTB-xs" data-toggle="modal">follow</button>
-																<button type="button" class="btn btn-success btn-sm marginTB-xs" data-toggle="modal">View Profile</button>
-															</div>
-														</div>
-													</div><!-- ./user-wrapper -->
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div><!-- ./profile-follower-list -->
 							</div><!-- ./tab-pane -->
 						</div><!-- ./tab-content -->
 					</div><!-- ./smart-widget-body -->

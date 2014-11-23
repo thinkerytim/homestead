@@ -15,7 +15,7 @@
                   <li class="user-avatar">
                     <img src="images/profile/profile1.jpg" alt="" class="img-circle">
                     <div class="user-content">
-                      <h5 class="no-m-bottom">{{ Auth::user()->firstname.' '.Auth::user()->lastname }}</h5>
+                      <h5 class="no-m-bottom">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}</h5>
                       <div class="m-top-xs">
                         <a href="{{ action('UsersController@getProfile', array()) }}" class="m-right-sm">Profile</a>
                         <a href="{{ action('UsersController@getLogout', array()) }}">Log out</a>
@@ -73,7 +73,7 @@
                 <a href="#" id="userToggle" data-toggle="dropdown">
                   <img src="{{ Gravatar::src(Auth::user()->email, 200) }}" alt="" class="img-circle inline-block user-profile-pic">
                   <div class="user-detail inline-block">
-                    {{ Auth::user()->firstname.' '.Auth::user()->lastname }}
+                    {{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}
                     <i class="fa fa-angle-down"></i>
                   </div>
                 </a>

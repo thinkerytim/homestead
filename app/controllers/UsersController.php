@@ -89,6 +89,7 @@ class UsersController extends \BaseController {
 
 	public function getProfile()
 	{
-		return View::make('shared.profile');
+		$closings = Closing::where('agent_id', '=', Auth::user()->id)->paginate(20);
+		return View::make('shared.profile')->with('closings', $closings);
 	}
 }

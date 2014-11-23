@@ -8,7 +8,7 @@
 	    <meta name="author" content="The Thinkery LLC">
 
 	    <!-- Bootstrap core CSS -->
-	    {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
+	    {{ HTML::style("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css") }}
 		
 		<!-- Font Awesome -->
 		{{ HTML::style("css/font-awesome.css") }}

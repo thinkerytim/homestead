@@ -5,7 +5,7 @@
 {{ HTML::script("assets/javascript/jquery-1.11.1.min.js") }}
 
 <!-- Bootstrap -->
-{{ HTML::script("assets/bootstrap/js/bootstrap.min.js") }}
+{{ HTML::script("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js") }}
 
 <!-- Slimscroll -->\
 {{ HTML::script("assets/javascript/jquery.slimscroll.min.js") }}

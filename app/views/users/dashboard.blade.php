@@ -8,7 +8,7 @@
 				Dashboard
 			</div>
 			<div class="page-sub-header">
-				Welcome back, {{ Auth::user()->firstname.' '.Auth::user()->lastname }}
+				Welcome back, {{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}
 			</div>
 		</div>
 		<div class="col-sm-6 text-right text-left-sm p-top-sm">
