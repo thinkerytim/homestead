@@ -17,10 +17,10 @@
 					</a>
 				</li>
 				<li class="bg-palette2">
-					<a href="landing/landing.html">
+					<a href="/users/agents">
 						<span class="menu-content block">
-							<span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
-							<span class="text m-left-sm">Landing</span>
+							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
+							<span class="text m-left-sm">Agents</span>
 						</span>
 						<span class="menu-content-hover block">
 							Landing
@@ -28,59 +28,34 @@
 					</a>
 				</li>
 				<li class="openable bg-palette3">
-					<a href="#">
+					<a href="/users/closings">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
-							<span class="text m-left-sm">Form Elements</span>
+							<span class="text m-left-sm">Closings</span>
 							<span class="submenu-icon"></span>
 						</span>
 						<span class="menu-content-hover block">
 							Form
 						</span>
 					</a>
-					<ul class="submenu bg-palette4">
-						<li><a href="form_element.html"><span class="submenu-label">Form Element</span></a></li>
-						<li><a href="form_validation.html"><span class="submenu-label">Form Validation</span></a></li>
-						<li><a href="form_wizard.html"><span class="submenu-label">Form Wizard</span></a></li>
-						<li><a href="dropzone.html"><span class="submenu-label">Dropzone</span></a></li>
-					</ul>
 				</li>
 				<li class="openable bg-palette4">
 					<a href="#">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
-							<span class="text m-left-sm">UI Elements</span>
+							<span class="text m-left-sm">Tasks</span>
 							<span class="submenu-icon"></span>
 						</span>
 						<span class="menu-content-hover block">
 							UI Kits
 						</span>
 					</a>
-					<ul class="submenu">
-						<li><a href="ui_element.html"><span class="submenu-label">Basic Elements</span></a></li>
-						<li><a href="button.html"><span class="submenu-label">Button & Icons</span></a></li>
-						<li class="openable">
-							<a href="#">
-								<small class="badge badge-success badge-square bounceIn animation-delay2 m-left-xs pull-right">2</small>
-								<span class="submenu-label">Tables</span>
-							</a>
-							<ul class="submenu third-level">
-								<li><a href="static_table.html"><span class="submenu-label">Static Table</span></a></li>
-								<li><a href="datatable.html"><span class="submenu-label">DataTables</span></a></li>
-							</ul>
-						</li>
-						<li><a href="widget.html"><span class="submenu-label">Widget</span></a></li>
-						<li><a href="tab.html"><span class="submenu-label">Tab</span></a></li>
-						<li><a href="calendar.html"><span class="submenu-label">Calendar</span></a></li>
-						<li><a href="treeview.html"><span class="submenu-label">Treeview</span></a></li>
-						<li><a href="nestable_list.html"><span class="submenu-label">Nestable Lists</span></a></li>
-					</ul>
 				</li>
 				<li class="bg-palette1">
 					<a href="inbox.html">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
-							<span class="text m-left-sm">Inboxs</span>
+							<span class="text m-left-sm">Messages</span>
 							<small class="badge badge-danger badge-square bounceIn animation-delay5 m-left-xs">5</small>
 						</span>
 						<span class="menu-content-hover block">
@@ -91,8 +66,8 @@
 				<li class="bg-palette2">
 					<a href="timeline.html">
 						<span class="menu-content block">
-							<span class="menu-icon"><i class="block fa fa-clock-o fa-lg"></i></span>
-							<span class="text m-left-sm">Timeline</span>
+							<span class="menu-icon"><i class="block fa fa-calendar fa-lg"></i></span>
+							<span class="text m-left-sm">Calendar</span>
 							<small class="badge badge-warning badge-square bounceIn animation-delay6 m-left-xs pull-right">7</small>
 						</span>
 						<span class="menu-content-hover block">

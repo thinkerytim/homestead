@@ -869,8 +869,8 @@
 							<h4>Quick Link</h4>
 							<ul class="list-unstyled m-top-md">
 								<li><a href="#">About Us</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Term & Conditions</a></li>
+								<li><a href="/privacy">Privacy Policy</a></li>
+								<li><a href="/tos">Term & Conditions</a></li>
 								<li><a href="#">FAQS</a></li>
 							</ul>
 						</div><!-- ./col -->

@@ -6,7 +6,6 @@
 </head>
 <body class="overflow-hidden">
 <div class="wrapper preload">
-	@include('includes.sidebar_right')
 	@include('includes.header')
 	@include('includes.sidebar')
 	<div class="main-container">

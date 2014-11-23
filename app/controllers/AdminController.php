@@ -11,7 +11,7 @@ class AdminController extends BaseController {
 				return Redirect::to('users/login')
 		        ->with('message', 'Please login!');
 			}
-            if ( ! Auth::user()->isAdmin()) 
+            if ( !Auth::user()->isAdmin()) 
             {
 				return Redirect::to('/')
 		        ->with('message', 'You must be an admin to access this area!');

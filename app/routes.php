@@ -5,9 +5,14 @@ Route::get('/', array('as' => 'home', function()
 	return View::make('pages.home');
 }));
 
-Route::get('terms', array('as' => 'tos', function()
+Route::get('tos', array('as' => 'tos', function()
 {
 	return View::make('pages.tos');
+}));
+
+Route::get('privacy', array('as' => 'privacy', function()
+{
+    return View::make('pages.privacy');
 }));
 
 /* Admin controller routes */
@@ -65,7 +70,5 @@ Route::get('login/fb/callback', function() {
     }
 
     Auth::login($user);
-
-
     return Redirect::to('/')->with('message', 'Logged in with Facebook');
 });
