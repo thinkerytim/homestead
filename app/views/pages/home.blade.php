@@ -71,6 +71,7 @@
 			      <ul class="nav navbar-nav navbar-right">
 			      	@if (Auth::check())
 						<li class="btn-link"><a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-sm btn-success">My Account</a></li>
+						<li class="btn-link"><a href="{{ action('UsersController@getLogout', array()) }}" class="btn btn-sm btn-warning">Logout</a></li>
 			      	@else
 			        	<li class="btn-link"><a href="{{ action('UsersController@getLogin', array()) }}" class="btn btn-sm btn-success">Login</a></li>
 			        	<li class="btn-link"><a href="{{ action('UsersController@getRegister', array()) }}" class="btn btn-sm btn-purple">Register</a></li>

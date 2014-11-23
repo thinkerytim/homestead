@@ -8,7 +8,7 @@
 				Dashboard
 			</div>
 			<div class="page-sub-header">
-				Welcome Back, John Doe , <i class="fa fa-map-marker text-danger"></i> London
+				Welcome back, {{ Auth::user()->firstname.' '.Auth::user()->lastname }}
 			</div>
 		</div>
 		<div class="col-sm-6 text-right text-left-sm p-top-sm">

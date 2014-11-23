@@ -123,7 +123,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
-
+		'Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider',
 	),
 
 	/*
@@ -191,7 +191,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'Gravatar' 		  => 'Thomaswelton\LaravelGravatar\Facades\Gravatar',
 	),
 
 );

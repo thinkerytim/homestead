@@ -194,7 +194,7 @@
 					</li>			  	  
 				</ul>
 			</div>
-			<a href="lockscreen.html" class="pull-right font-18"><i class="ion-log-out"></i></a>
+			<a href="{{ action('UsersController@getLogout', array()) }}" class="pull-right font-18"><i class="ion-log-out"></i></a>
 		</div>
 	</div><!-- sidebar-inner -->
 </aside>

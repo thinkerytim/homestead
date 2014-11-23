@@ -86,4 +86,9 @@ class UsersController extends \BaseController {
 	{
 		return View::make('password.remind');
 	}
+
+	public function getProfile()
+	{
+		return View::make('shared.profile');
+	}
 }
