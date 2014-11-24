@@ -32,7 +32,6 @@
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
 							<span class="text m-left-sm">Closings</span>
-							<span class="submenu-icon"></span>
 						</span>
 						<span class="menu-content-hover block">
 							Form
@@ -44,7 +43,6 @@
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
 							<span class="text m-left-sm">Tasks</span>
-							<span class="submenu-icon"></span>
 						</span>
 						<span class="menu-content-hover block">
 							UI Kits

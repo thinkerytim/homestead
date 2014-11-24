@@ -27,7 +27,8 @@
 					<div class="smart-widget-body">
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="profileTab1">
-								<h4 class="header-text m-bottom-md">Closings</h4>
+								<h4 class="header-text m-bottom-md">Closings <button type="button" class="btn btn-success"><i class="fa fa-plus-square-o"></i> New</button>
+								</h4>
 								<div class="row">
 									<div class="col-md-12">
 									@include('partials.closings')
