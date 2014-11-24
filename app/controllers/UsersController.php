@@ -86,10 +86,4 @@ class UsersController extends \BaseController {
 	{
 		return View::make('password.remind');
 	}
-
-	public function getProfile()
-	{
-		$closings = Closing::where('agent_id', '=', Auth::user()->id)->paginate(20);
-		return View::make('shared.profile')->with('closings', $closings);
-	}
 }

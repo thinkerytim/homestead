@@ -17,7 +17,7 @@
                     <div class="user-content">
                       <h5 class="no-m-bottom">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}</h5>
                       <div class="m-top-xs">
-                        <a href="{{ action('UsersController@getProfile', array()) }}" class="m-right-sm">Profile</a>
+                        <a href="{{ action('AdminController@getProfile', array()) }}" class="m-right-sm">Profile</a>
                         <a href="{{ action('UsersController@getLogout', array()) }}">Log out</a>
                       </div>
                     </div>
@@ -81,7 +81,7 @@
                   <div class="panel-body paddingTB-sm">
                     <ul>
                       <li>
-                        <a href="{{ action('UsersController@getProfile', array()) }}">
+                        <a href="{{ action('AdminController@getProfile', array()) }}">
                           <i class="fa fa-edit fa-lg"></i><span class="m-left-xs">My Profile</span>
                         </a>
                       </li>

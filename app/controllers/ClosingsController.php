@@ -21,9 +21,15 @@ class ClosingsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getIndex()
 	{
-		$closings 	= Closing::where('user_id', '=', Auth::user()->id)->simplePaginate(20);	
+		if ( !Auth::user()->isAdmin() ) {
+			$closings = Closing::where('agent_id', '=', Auth::user()->id)
+				->orWhere('agent_id', '=', Auth::user()->parent)
+				->paginate(10);
+		} else {
+			$closings = Closing::where('id', '>', 0)->paginate(10);
+		}
 		return View::make('closings.index', array('closings' => $closings));
 	}
 
@@ -66,7 +72,7 @@ class ClosingsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function getShow($id)
 	{
 		$closing = Closing::find($id);
 		return View::make('closings.show')->with('closing', $closing);

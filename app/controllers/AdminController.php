@@ -11,11 +11,6 @@ class AdminController extends BaseController {
 				return Redirect::to('users/login')
 		        ->with('message', 'Please login!');
 			}
-            if ( !Auth::user()->isAdmin()) 
-            {
-				return Redirect::to('/')
-		        ->with('message', 'You must be an admin to access this area!');
-			}
         });
     }
 
@@ -25,11 +20,21 @@ class AdminController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function getIndex()
 	{
-		$users = DB::table('users')->paginate(15);
-		return View::make('admin.index')->with('users', $users);
+		return View::make('admin.index');
 	}
 
+	public function getProfile()
+	{
+		if ( !Auth::user()->isAdmin() ) {
+			$closings = Closing::where('agent_id', '=', Auth::user()->id)
+				->orWhere('agent_id', '=', Auth::user()->parent)
+				->paginate(10);
+		} else {
+			$closings = Closing::where('id', '>', 0)->paginate(10);
+		}
+		return View::make('shared.profile')->with('closings', $closings);
+	}
 
 }

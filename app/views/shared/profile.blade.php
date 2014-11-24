@@ -80,11 +80,11 @@
 					<div class="smart-widget-body">
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="profileTab1">
-								<h4 class="header-text m-bottom-md">
-									My Closings
-								</h4>
+								<h4 class="header-text m-bottom-md">Closings</h4>
 								<div class="row">
-									@include('partials.closings')
+									<div class="col-md-12">
+										@include('partials.closings')
+									</div>
 								</div><!-- ./row -->
 							</div><!-- ./tab-pane -->
 							<div class="tab-pane fade" id="profileTab2">

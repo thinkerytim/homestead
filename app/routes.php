@@ -16,13 +16,13 @@ Route::get('privacy', array('as' => 'privacy', function()
 }));
 
 /* Admin controller routes */
-Route::resource('admin', 'AdminController');
+Route::controller('admin', 'AdminController');
 
 /* Users controller routes */
 Route::controller('users', 'UsersController');
 
 /* Closings controller routes */
-Route::resource('closings', 'ClosingsController');
+Route::controller('closings', 'ClosingsController');
 
 /* Tasks controller routes */
 Route::resource('task', 'TasksController');

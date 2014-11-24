@@ -27,8 +27,8 @@
 						</span>
 					</a>
 				</li>
-				<li class="openable bg-palette3">
-					<a href="/users/closings">
+				<li class="bg-palette3">
+					<a href="{{ action('ClosingsController@getIndex', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
 							<span class="text m-left-sm">Closings</span>
