@@ -27,6 +27,9 @@ Route::controller('closings', 'ClosingsController');
 /* Tasks controller routes */
 Route::resource('task', 'TasksController');
 
+/* Agents controller routes */
+Route::resource('agent', 'AgentsController');
+
 /* Password controller routes */
 Route::controller('password', 'RemindersController');
 

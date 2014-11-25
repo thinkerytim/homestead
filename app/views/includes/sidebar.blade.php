@@ -5,28 +5,31 @@
 				<li class="menu-header">
 					Main Menu
 				</li>
-				<li class="bg-palette1 active">
+				<!-- todo: make the li class = active based on current page -->
+				<li class="bg-palette1">
 					<a href="{{ action('AdminController@getIndex', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
-							<span class="text m-left-sm">Dashboard</span>
+							<span class="text m-left-sm">Home</span>
 						</span>
 						<span class="menu-content-hover block">
 							Home
 						</span>
 					</a>
 				</li>
+				@if(Auth::user()->role >= 2)
 				<li class="bg-palette2">
-					<a href="/users/agents">
+					<a href="{{ action('AgentsController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
 							<span class="text m-left-sm">Agents</span>
 						</span>
 						<span class="menu-content-hover block">
-							Landing
+							Agents
 						</span>
 					</a>
 				</li>
+				@endif
 				<li class="bg-palette3">
 					<a href="{{ action('ClosingsController@getIndex', array()) }}">
 						<span class="menu-content block">
@@ -34,7 +37,7 @@
 							<span class="text m-left-sm">Closings</span>
 						</span>
 						<span class="menu-content-hover block">
-							Form
+							Closings
 						</span>
 					</a>
 				</li>
@@ -45,7 +48,7 @@
 							<span class="text m-left-sm">Tasks</span>
 						</span>
 						<span class="menu-content-hover block">
-							UI Kits
+							Tasks
 						</span>
 					</a>
 				</li>
@@ -57,7 +60,7 @@
 							<small class="badge badge-danger badge-square bounceIn animation-delay5 m-left-xs">5</small>
 						</span>
 						<span class="menu-content-hover block">
-							Inboxs
+							Messages
 						</span>
 					</a>
 				</li>
@@ -69,7 +72,7 @@
 							<small class="badge badge-warning badge-square bounceIn animation-delay6 m-left-xs pull-right">7</small>
 						</span>
 						<span class="menu-content-hover block">
-							Timeline
+							Calendar
 						</span>
 					</a>
 				</li>
