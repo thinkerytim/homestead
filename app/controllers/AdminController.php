@@ -22,11 +22,13 @@ class AdminController extends BaseController {
 	 */
 	public function getIndex()
 	{
+		View::share('title', 'ThinkClosing - Dashboard');
 		return View::make('admin.index');
 	}
 
 	public function getProfile()
 	{
+		View::share('title', 'ThinkClosing - Profile');
 		if ( !Auth::user()->isAdmin() ) {
 			$closings = Closing::where('agent_id', '=', Auth::user()->id)
 				->orWhere('agent_id', '=', Auth::user()->parent)

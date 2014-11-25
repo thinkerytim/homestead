@@ -32,17 +32,39 @@ class UserTableSeeder extends Seeder {
 		    'company' => 'Thinkery',
 		    'email' => 'tim@thethinkery.net',
 		    'phone' => '',
+		    'role' => 3,
+		    'password' => Hash::make('sea1sea')
+		  ));
+
+		$user = User::create(array(
+		    'firstname' => 'Broker',
+		    'lastname' => 'User',
+		    'company' => 'NW Realty',
+		    'email' => 'broker@example.com',
+		    'phone' => '',
 		    'role' => 2,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
 		$user = User::create(array(
-		    'firstname' => 'Test',
+		    'firstname' => 'Agent',
 		    'lastname' => 'User',
-		    'company' => 'Thinkery',
-		    'email' => 'test@example.com',
+		    'company' => 'NW Realty',
+		    'email' => 'agent@example.com',
 		    'phone' => '',
 		    'role' => 1,
+		    'parent' => 2,
+		    'password' => Hash::make('sea1sea')
+		  ));
+
+		$user = User::create(array(
+		    'firstname' => 'Client',
+		    'lastname' => 'User',
+		    'company' => '',
+		    'email' => 'client@example.com',
+		    'phone' => '',
+		    'role' => 0,
+		    'parent' => 0,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
@@ -134,8 +156,8 @@ class DocMidTableSeeder extends Seeder {
         for ($i = 0; $i < 50; $i++)
 		{
 			DB::table('closing_document')->insert([
-	            'closing_id' => rand(1,100),
-	            'document_id' => rand(1, 50)
+	            'closing_id' => rand(1,10),
+	            'document_id' => rand(1, 10)
 	        ]);
 		}
     }
@@ -149,10 +171,11 @@ class TaskMidTableSeeder extends Seeder {
         for ($i = 0; $i < 1500; $i++)
 		{
 			DB::table('closing_task')->insert([
-	            'closing_id' => rand(1,100),
-	            'task_id' => rand(1, 500),
+	            'closing_id' => rand(1,10),
+	            'task_id' => rand(1, 50),
 	            'status' => rand(0, 1),
 	            'notes' => $faker->text(150),
+	            'priority' => rand(0,3),
 	            'due_at' => $faker->dateTimeBetween('now', '+1 months')
 	        ]);
 		}

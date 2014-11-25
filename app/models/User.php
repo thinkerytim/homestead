@@ -6,6 +6,11 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
+	// user.role:
+	// 0: basic user / client
+	// 1: agent
+	// 2: broker
+	// 3: admin
 
 	use UserTrait, RemindableTrait;
 	/**
@@ -51,10 +56,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function isAdmin()
 	{
-		// 0 = guest
-		// 1 = agent
-		// 2 = admin
-	    return $this->role === 2;
+		// 0: basic user / client
+		// 1: agent
+		// 2: broker
+		// 3: admin
+	    return $this->role === 3;
 	}
 
 	/* Define Relations */

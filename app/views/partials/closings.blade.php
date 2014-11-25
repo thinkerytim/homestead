@@ -9,7 +9,7 @@
 @forelse($closings as $closing)
 	<tr>
     	<td>{{{ $closing->id }}}</td>
-    	<td><a href="#">{{{ $closing->title }}}</a></td>
+    	<td><a href="{{ action('ClosingsController@getShow', array($closing->id)) }}">{{{ $closing->title }}}</a></td>
     	<td>{{{ $closing->closes_at }}}</td>
     	<td><a href="#"><i class="glyphicon glyphicon-trash"></i></a></td>
     </tr>

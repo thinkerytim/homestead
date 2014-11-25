@@ -6,7 +6,7 @@
 					Main Menu
 				</li>
 				<li class="bg-palette1 active">
-					<a href="index.html">
+					<a href="{{ action('AdminController@getIndex', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
 							<span class="text m-left-sm">Dashboard</span>
@@ -38,8 +38,8 @@
 						</span>
 					</a>
 				</li>
-				<li class="openable bg-palette4">
-					<a href="#">
+				<li class="bg-palette4">
+					<a href="{{ action('TasksController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
 							<span class="text m-left-sm">Tasks</span>
@@ -144,12 +144,6 @@
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="inbox.html">
-							Inbox
-							<span class="badge badge-danger bounceIn animation-delay2 pull-right">1</span>
-						</a>
-					</li>			  
-					<li>
 						<a href="#">
 							Notification
 							<span class="badge badge-purple bounceIn animation-delay3 pull-right">2</span>
@@ -157,7 +151,7 @@
 					</li>			  
 					<li>
 						<a href="#" class="sidebarRight-toggle">
-							Message
+							Messages
 							<span class="badge badge-success bounceIn animation-delay4 pull-right">7</span>
 						</a>
 					</li>			  	  

@@ -22,7 +22,14 @@ class TasksController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		View::share('title', 'ThinkClosing - Tasks');
+		if ( !Auth::user()->isAdmin() ) {
+			$tasks = Task::where('user_id', '=', Auth::user()->id)
+				->paginate(10);
+		} else {
+			$tasks = Task::where('id', '>', 0)->paginate(10);
+		}
+		return View::make('tasks.index', array('tasks' => $tasks));
 	}
 
 

@@ -23,6 +23,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function getIndex()
 	{
+		View::share('title', 'ThinkClosing - Closings');
 		if ( !Auth::user()->isAdmin() ) {
 			$closings = Closing::where('agent_id', '=', Auth::user()->id)
 				->orWhere('agent_id', '=', Auth::user()->parent)
@@ -74,6 +75,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function getShow($id)
 	{
+		View::share('title', 'ThinkClosing - Closing: '.$id);
 		$closing = Closing::find($id);
 		return View::make('closings.show')->with('closing', $closing);
 	}

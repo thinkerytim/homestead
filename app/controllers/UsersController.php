@@ -14,21 +14,25 @@ class UsersController extends \BaseController {
 	 */
 	public function getIndex()
 	{
+		View::share('title', 'ThinkClosing');
 		return 'index';
 	}
 
 	public function getRegister()
 	{
+		View::share('title', 'ThinkClosing - Register');
 		return View::make('users.register');
 	}
 
 	public function getLogin()
 	{
+		View::share('title', 'ThinkClosing - Login');
 	    return View::make('users.login');
 	}
 
 	public function getDashboard()
 	{
+		View::share('title', 'ThinkClosing - Dashboard');
 		return View::make('users.dashboard');
 	}
 

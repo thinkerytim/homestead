@@ -1,34 +1,42 @@
-@extends('layouts.default')
+@extends('layouts.admin')
 
 @section('content')
-<h3>{{ $closing->title }} Closes: {{ $closing->closes_at->toFormattedDateString() }}</h3>
-<div id="values">
-	{{ Form::token() }}
-	<input name="_closing" type="hidden" value="{{ $closing->id }}" />
-</div>
-<div class="table-responsive">
-	<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Status</th>
-			<th>Task</th>
-			<th>Due</th>
-		</tr>
-	</thead>
-	<tbody>
-	@if ($closing->tasks->count() > 0)
-		@foreach ($closing->tasks as $task)
-		    @include('tasks.task', array('task'=> $task))
-		@endforeach
-	@else
-	    <tr class="success"><td colspan="3">Nothing to do- you're all set!</td></tr>
-	@endif
-	</tbody>
-	</table>
-</div>
-@if (Auth::user()->isAdmin())
-<button type="button" class="btn btn-success btn-sm">
-	<span class="glyphicon glyphicon-plus"></span> New Task
-</button>
-@endif
+<div class="padding-md">
+	<h3 class="header-text m-bottom-md">
+		{{ $closing->title }} Closes: {{ $closing->closes_at->toFormattedDateString() }}
+	</h3>
+
+	<div class="row user-profile-wrapper">
+		<div class="col-md-12">
+			<div class="smart-widget">
+				<div class="smart-widget-inner">
+					<div class="smart-widget-body">
+						<!-- progress bar -->
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+						    	<span class="sr-only">40% Complete (success)</span>
+						  	</div>
+						</div>
+						<h4 class="header-text m-bottom-md">
+							<button type="button" class="btn btn-success"><i class="fa fa-plus-square-o"></i> Add Task</button>
+						</h4>
+						<div class="row">
+							<div class="col-md-12">
+								{{ Form::token() }}
+								<input name="_closing" type="hidden" value="{{ $closing->id }}" />
+								@forelse($closing->tasks as $task)
+									@include('partials.task', array('task'=> $task))
+								@empty
+								    <tr>
+								    	<td colspan="3">No tasks!</td>
+								    </tr>
+								@endforelse
+							</div>
+						</div><!-- ./row -->
+					</div><!-- ./smart-widget-body -->
+				</div><!-- ./smart-widget-inner -->
+			</div><!-- ./smart-widget -->
+		</div>
+	</div>
+</div><!-- ./padding-md -->
 @stop

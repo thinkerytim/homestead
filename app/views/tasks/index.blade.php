@@ -3,7 +3,7 @@
 @section('content')
 <div class="padding-md">
 	<h3 class="header-text m-bottom-md">
-		My Closings
+		My Tasks
 	</h3>
 
 	<div class="row user-profile-wrapper">
@@ -15,7 +15,7 @@
 						</h4>
 						<div class="row">
 							<div class="col-md-12">
-							@include('partials.closings')
+							@include('partials.tasks')
 							</div>
 						</div><!-- ./row -->
 					</div><!-- ./smart-widget-body -->
