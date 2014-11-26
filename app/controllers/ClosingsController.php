@@ -76,8 +76,12 @@ class ClosingsController extends \BaseController {
 	public function getShow($id)
 	{
 		View::share('title', 'ThinkClosing - Closing: '.$id);
-		$closing = Closing::find($id);
-		return View::make('closings.show')->with('closing', $closing);
+		$closing 	= Closing::find($id);
+
+		// TODO: get real percentage
+		$percentage = rand(0, 100);
+		
+		return View::make('closings.show', compact('closing','percentage'));
 	}
 
 
