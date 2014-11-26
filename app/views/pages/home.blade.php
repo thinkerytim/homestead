@@ -9,8 +9,8 @@
     	<meta charset="utf-8">
     	<title>ThinkClosing</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="description" content="">
-	    <meta name="author" content="">
+	    <meta name="description" content="ThinkClosing-- real estate broker and agent closing tool.">
+	    <meta name="author" content="The Thinkery LLC">
 
 	    <!-- Bootstrap core CSS -->
 	    {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
@@ -625,7 +625,7 @@
 			<div class="section bg-white section-padding" id="about">
 				<div class="container">
 					<div class="text-center">
-						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">WEB MARKETING EMPIRE!</span></h3>
+						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">REAL ESTATE MARKETING EMPIRE!</span></h3>
 						<p>Leverage the power of Intellectual Property to market like a pro!</p>
 					</div>
 
@@ -676,8 +676,8 @@
 							<img src="assets/images/mockup1.png" alt="" class="fadeInRight animation-element disabled">
 						</div>
 						<div class="col-sm-6">
-							<h3 class="text-upper">THE FEATURES <span class="text-success">YOU'LL LOVE</span></h3>
-							<p>Our amazing features & services and others listed below.</p>
+							<h3 class="text-upper">THE FEATURES <span class="text-success">YOU WANT</span></h3>
+							<p>No one knows real estate marketing like we do. Learn more!</p>
 							
 							<div class="feature-wrapper m-top-lg fadeInUp animation-element disabled">
 								<div class="feature-icon">
@@ -686,8 +686,8 @@
 									</div>
 								</div>
 								<div class="feature-detail">
-								    <div class="h4 m-bottom-xs no-m-top">Responsive Layout</div>
-								    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								    <div class="h4 m-bottom-xs no-m-top">Stay in Contact</div>
+								    More legitimate touches on your clients means better relationships.
 								</div>
 							</div>
 
@@ -698,8 +698,8 @@
 									</div>
 								</div>
 								<div class="feature-detail">
-								    <div class="h4 m-bottom-xs">Flat Design</div>
-								    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								    <div class="h4 m-bottom-xs">Virtual Tours</div>
+								    Virtual tours with no data entry! Fully automated, and easier than ever before.
 								</div>
 							</div>
 
@@ -711,7 +711,7 @@
 								</div>
 								<div class="feature-detail">
 								    <div class="h4 m-bottom-xs">Admin Dashboard</div>
-								    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								    Stay up-to-date on what your clients are doing, and when they do it.
 								</div>
 							</div>
 
@@ -722,8 +722,8 @@
 									</div>
 								</div>
 								<div class="feature-detail">
-								    <div class="h4 m-bottom-xs">Lightweight</div>
-								    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								    <div class="h4 m-bottom-xs">Affordable</div>
+								    Plans for agents, brokers, and agencies, starting at FREE!
 								</div>
 							</div>
 						</div><!-- ./col -->
@@ -734,8 +734,8 @@
 			<div class="section bg-grey section-padding" id="pricing">
 				<div class="container">
 					<div class="text-center">
-						<h3 class="text-upper">Our Pricing Plans</h3>
-						<p>Choose a Pricing Plan and Start a Free Trial.</p>
+						<h3 class="text-upper">Pricing Plans</h3>
+						<p>Choose a Pricing Plan or Start a Free Trial.</p>
 					</div>
 
 					<div class="row m-top-lg">
@@ -743,16 +743,16 @@
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled">
 								<div class="pricing-type bg-info text-center">Basic</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$39</span>
+									<span class="value">$0</span>
 									/Month
 								</div>
 
 								<ul class="pricing-service m-top-sm">
-									<li>Amount of space <span class="font-semi-bold">10 GB</span></li>
-									<li>Bandwidth per month  <span class="font-semi-bold">150 GB</span></li>
-									<li>5 Domains</li>
-									<li>10 Email Addresses</li>
-									<li>24/7 Unlimited Support</li>
+									<li>Closings <span class="font-semi-bold">1</span></li>
+									<li>Tasks  <span class="font-semi-bold">10</span></li>
+									<li>SubAgents  <span class="font-semi-bold">No</span></li>
+									<li>Tours  <span class="font-semi-bold">1</span></li>
+									<li>Text Alerts  <span class="font-semi-bold">No</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -763,19 +763,18 @@
 
 						<div class="col-md-3 col-sm-6">
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay2">
-								<div class="pricing-type bg-danger text-center">Professional</div>
+								<div class="pricing-type bg-danger text-center">Agent</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$59</span>
+									<span class="value">$19</span>
 									/Month
 								</div>
 									
-
 								<ul class="pricing-service m-top-sm">
-									<li>Amount of space <span class="font-semi-bold">30 GB</span></li>
-									<li>Bandwidth per month  <span class="font-semi-bold">200 GB</span></li>
-									<li>10 Domains</li>
-									<li>20 Email Addresses</li>
-									<li>24/7 Unlimited Support</li>
+									<li>Closings <span class="font-semi-bold">5</span></li>
+									<li>Tasks  <span class="font-semi-bold">50</span></li>
+									<li>SubAgents  <span class="font-semi-bold">No</span></li>
+									<li>Tours  <span class="font-semi-bold">25</span></li>
+									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -792,13 +791,12 @@
 									/Month
 								</div>
 									
-
 								<ul class="pricing-service m-top-sm">
-									<li>Amount of space <span class="font-semi-bold">100 GB</span></li>
-									<li>Bandwidth per month  <span class="font-semi-bold">500 GB</span></li>
-									<li>20 Domains</li>
-									<li>50 Email Addresses</li>
-									<li>24/7 Unlimited Support</li>
+									<li>Closings <span class="font-semi-bold">50</span></li>
+									<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
+									<li>SubAgents  <span class="font-semi-bold">25</span></li>
+									<li>Tours  <span class="font-semi-bold">100</span></li>
+									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -811,17 +809,16 @@
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay6">
 								<div class="pricing-type bg-success text-center">Unlimited</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$159</span>
+									<span class="value">$149</span>
 									/Month
 								</div>
 									
-
 								<ul class="pricing-service m-top-sm">
-									<li>Amount of space <span class="font-semi-bold">200 GB</span></li>
-									<li>Bandwidth per month  <span class="font-semi-bold">800 GB</span></li>
-									<li>30 Domains</li>
-									<li>100 Email Addresses</li>
-									<li>24/7 Unlimited Support</li>
+									<li>Closings <span class="font-semi-bold">Unlimited</span></li>
+									<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
+									<li>SubAgents  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Tours  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">

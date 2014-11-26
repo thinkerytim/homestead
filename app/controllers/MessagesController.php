@@ -1,6 +1,6 @@
 <?php
 
-class AgentsController extends \BaseController {
+class MessagesController extends \BaseController {
 
 	public function __construct()
 	{
@@ -22,14 +22,16 @@ class AgentsController extends \BaseController {
 	 */
 	public function index()
 	{
-		View::share('title', 'ThinkClosing - Agents');
-		if ( !Auth::user()->isAdmin() && Auth::user()->role >= 2) {
-			$agents = User::where('parent', '=', Auth::user()->id)
-				->paginate(10);
-		} else if (Auth::user()->isAdmin()) {
-			$agents = User::where('id', '>', 0)->paginate(10);
-		}
-		return View::make('agents.index', array('agents' => $agents));
+		View::share('title', 'ThinkClosing - Messages');
+		
+		$messages 	= Message::where('to_id', '=', Auth::user()->id)->paginate(10);
+		$unread 	= Message::where('to_id', '=', Auth::user()->id)
+						->where('status', '=', 0)
+						->count();
+
+		View::share('unread', $unread);
+
+		return View::make('messages.index', array('messages' => $messages));
 	}
 
 

@@ -30,6 +30,9 @@ Route::resource('task', 'TasksController');
 /* Agents controller routes */
 Route::resource('agent', 'AgentsController');
 
+/* Messages controller routes */
+Route::resource('message', 'MessagesController');
+
 /* Password controller routes */
 Route::controller('password', 'RemindersController');
 
