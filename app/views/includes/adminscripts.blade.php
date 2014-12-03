@@ -1,13 +1,10 @@
-<!-- Firebase -->
-{{ HTML::script("https://cdn.firebase.com/js/client/1.1.1/firebase.js") }}
-
 <!-- Jquery -->
 {{ HTML::script("assets/javascript/jquery-1.11.1.min.js") }}
 
 <!-- Bootstrap -->
 {{ HTML::script("//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js") }}
 
-<!-- Slimscroll -->\
+<!-- Slimscroll -->
 {{ HTML::script("assets/javascript/jquery.slimscroll.min.js") }}
 
 <!-- Flot -->
@@ -44,3 +41,6 @@
 <!-- Simplify -->
 {{ HTML::script("assets/javascript/simplify/simplify.js") }}
 {{ HTML::script("assets/javascript/simplify/simplify_dashboard.js") }}
+
+<!-- Custom -->
+{{ HTML::script("assets/javascript/utility.js") }}

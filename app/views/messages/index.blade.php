@@ -3,7 +3,7 @@
 @section('content')
 <div class="padding-md">
 	<h3 class="header-text m-bottom-md">
-		My Tasks
+		My Messages
 	</h3>
 
 	<div class="row user-profile-wrapper">
@@ -11,11 +11,18 @@
 			<div class="smart-widget">
 				<div class="smart-widget-inner">
 					<div class="smart-widget-body">
-						<h4 class="header-text m-bottom-md"><button type="button" class="btn btn-success"><i class="fa fa-plus-square-o"></i> New</button>
+						<h4 class="header-text m-bottom-md">Unread Messages
 						</h4>
 						<div class="row">
 							<div class="col-md-12">
-							@include('partials.tasks')
+							@include('partials.messages')
+							</div>
+						</div><!-- ./row -->
+						<h4 class="header-text m-bottom-md">Read Messages
+						</h4>
+						<div class="row">
+							<div class="col-md-12">
+							@include('partials.messages')
 							</div>
 						</div><!-- ./row -->
 					</div><!-- ./smart-widget-body -->
@@ -25,11 +32,3 @@
 	</div>
 </div><!-- ./padding-md -->
 @stop
-
-<script type="text/javascript">
-jQuery( document ).ready(function($) {
-	$(".task-delete").on('click', function(){
-		alert(this.id);
-	});
-});
-</script>

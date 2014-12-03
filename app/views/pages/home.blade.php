@@ -33,6 +33,116 @@
 		<!-- Simplify -->
 		{{ HTML::style("css/simplify.css") }}
 
+		<style>
+			.container {
+			    margin-top: 20px;
+			}
+
+			/* Carousel Styles */
+			.carousel-indicators .active {
+			    background-color: #2980b9;
+			}
+
+			.carousel-inner img {
+			    width: 100%;
+			    max-height: 460px
+			}
+
+			.carousel-control {
+			    width: 0;
+			}
+
+			.carousel-control.left,
+			.carousel-control.right {
+				opacity: 1;
+				filter: alpha(opacity=100);
+				background-image: none;
+				background-repeat: no-repeat;
+				text-shadow: none;
+			}
+
+			.carousel-control.left span {
+				padding: 15px;
+			}
+
+			.carousel-control.right span {
+				padding: 15px;
+			}
+
+			.carousel-control .glyphicon-chevron-left, 
+			.carousel-control .glyphicon-chevron-right, 
+			.carousel-control .icon-prev, 
+			.carousel-control .icon-next {
+				position: absolute;
+				top: 45%;
+				z-index: 5;
+				display: inline-block;
+			}
+
+			.carousel-control .glyphicon-chevron-left,
+			.carousel-control .icon-prev {
+				left: 0;
+			}
+
+			.carousel-control .glyphicon-chevron-right,
+			.carousel-control .icon-next {
+				right: 0;
+			}
+
+			.carousel-control.left span,
+			.carousel-control.right span {
+				background-color: #000;
+			}
+
+			.carousel-control.left span:hover,
+			.carousel-control.right span:hover {
+				opacity: .7;
+				filter: alpha(opacity=70);
+			}
+
+			/* Carousel Header Styles */
+			.header-text {
+			    position: absolute;
+			    top: 20%;
+			    left: 1.8%;
+			    right: auto;
+			    width: 96.66666666666666%;
+			    color: #fff;
+			}
+
+			.header-text h2 {
+			    font-size: 40px;
+			}
+
+			.header-text h2 span {
+			    background-color: #2980b9;
+				padding: 10px;
+			}
+
+			.header-text h3 span {
+				background-color: #000;
+				padding: 15px;
+			}
+
+			.btn-min-block {
+			    min-width: 170px;
+			    line-height: 26px;
+			}
+
+			.btn-theme {
+			    color: #fff;
+			    background-color: transparent;
+			    border: 2px solid #fff;
+			    margin-right: 15px;
+			}
+
+			.btn-theme:hover {
+			    color: #000;
+			    background-color: #fff;
+			    border-color: #fff;
+			}
+		</style>
+
 	</head>
 
 <!--
@@ -86,541 +196,79 @@
 				- THEMEPUNCH BANNER -
 			#################################
 			-->
-			<div class="tp-banner-container">
-				<div class="tp-banner" >
-					<ul>	<!-- SLIDE  -->
-						<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="assets/images/homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
-							<!-- MAIN IMAGE -->
-							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/banner1.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption black_thin_34 skewfromrightshort tp-resizeme rs-parallaxlevel-0"
-								data-x="939"
-								data-y="164" 
-								data-speed="500"
-								data-start="2250"
-								data-easing="Power3.easeInOut"
-								data-splitin="chars"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Admin
-							</div>
-
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption customin rs-parallaxlevel-0"
-								data-x="746"
-								data-y="204" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="2000"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 6;">
-								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/redbg_big.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							</div>
-
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption skewfromrightshort rs-parallaxlevel-0"
-								data-x="0"
-								data-y="334" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="3300"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 7;">
-								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/macbook.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							</div>
-
-							<!-- LAYER NR. 4 -->
-							<div class="tp-caption sfl rs-parallaxlevel-0"
-								data-x="6"
-								data-y="54" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="3100"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 6;">
-								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/iMac.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							</div>
-
-							<!-- LAYER NR. 5 -->
-							<div class="tp-caption black_heavy_60 skewfromleftshort tp-resizeme rs-parallaxlevel-0"
-								data-x="710"
-								data-y="133" 
-								data-speed="500"
-								data-start="1850"
-								data-easing="Power3.easeInOut"
-								data-splitin="chars"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Think Closing
-							</div>
-
-							<!-- LAYER NR. 6 -->
-							<div class="tp-caption white_heavy_40 customin tp-resizeme rs-parallaxlevel-0"
-								data-x="758"
-								data-y="227" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="2050"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">Responsive
-							</div>
-
-							<!-- LAYER NR. 7 -->
-							<div class="tp-caption grey_regular_18 customin tp-resizeme rs-parallaxlevel-0"
-								data-x="694"
-								data-y="338" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="2600"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.05"
-								data-endelementdelay="0.1"
-								style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap; color:#333;"><div style="text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-								Vestibulum auctor suscipit lobortis. Sed quis ipsum risus. <br/>
-								Mauris vitae justo non felis pulvinar rhoncus.<br/>In quis massa ut risus sagittis luctus.</div>
-							</div>
-
-							<!-- LAYER NR. 8 -->
-							<div class="tp-caption black_thin_34 customin tp-resizeme rs-parallaxlevel-0"
-								data-x="953"
-								data-y="278" 
-								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="500"
-								data-start="2350"
-								data-easing="Back.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">Theme
-							</div>
-
-							<!-- LAYER NR. 9 -->
-							<div class="tp-caption customin rs-parallaxlevel-0"
-								data-x="666"
-								data-y="310" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="300"
-								data-start="2500"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								style="z-index: 11;">
-								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/greyline.png","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							</div>
-
-							<!-- LAYER NR. 10 -->
-							<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0"
-								data-x="733"
-								data-y="522" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="2900"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-linktoslide="next"
-								style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">
-								<a class="btn btn-success btn-lg text-white text-upper m-right-sm" style="color:#fff; line-height:normal;">Purchase Now</a>
-							</div>
-
-							<!-- LAYER NR. 11 -->
-							<div class="tp-caption customin tp-resizeme rs-parallaxlevel-0"
-								data-x="933"
-								data-y="522" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="500"
-								data-start="3000"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-linktoslide="next"
-								style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">
-								<a class="btn btn-default btn-lg text-upper" style="color:#777; line-height:normal;">Live Preview</a>
-							</div>
-						</li>
-						<li data-transition="slideup" data-slotamount="7" data-masterspeed="1000" data-thumb="assets/images/homeslider_thumb3.jpg"  data-saveperformance="on"  data-title="Parallax 3D">
-							<!-- MAIN IMAGE -->
-							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/3dbg.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption fullbg_gradient tp-fade tp-resizeme rs-parallaxlevel-10"
-								data-x="center" data-hoffset="0"
-								data-y="center" data-voffset="0"
-								data-speed="2000"
-								data-start="12200"
-								data-easing="Power4.easeOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
-								data-speed="2"
-								data-xs="0"
-								data-xe="0"
-								data-ys="0"
-								data-ye="0"
-					>
-					&nbsp;
-							</div>
-							</div>
-
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption lft skewtoleftshort rs-parallaxlevel-9"
-								data-x="-109"
-								data-y="119" 
-								data-speed="1000"
-								data-start="1100"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="7000"
-					data-endspeed="1000"
-								style="z-index: 3;">
-								{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/3dlayer.png"]) }}
-							</div>
-
-							
-
-							<!-- LAYER NR. 8 -->
-							<div class="tp-caption light_heavy_70_shadowed lfr randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="620"
-								data-y="162" 
-								data-speed="1000"
-								data-start="2900"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="9000"
-					data-endspeed="1000"
-								style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Feature Packed
-							</div>
-
-							<!-- LAYER NR. 9 -->
-							<div class="tp-caption black_heavy_60 customin randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="825"
-								data-y="230" 
-								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="1000"
-								data-start="3000"
-								data-easing="Power4.easeOut"
-								data-splitin="chars"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="9200"
-					data-endspeed="1000"
-								style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">To the Max!
-							</div>
-
-							<!-- LAYER NR. 10 -->
-							<div class="tp-caption black_bold_bg_20 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="840"
-								data-y="320" 
-								data-speed="1000"
-								data-start="3500"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="9400"
-					data-endspeed="1000"
-								style="z-index: 11; max-width: auto; max-height: auto; white-space: nowrap;">Bootstrap 3
-							</div>
-
-							<!-- LAYER NR. 11 -->
-							<div class="tp-caption black_bold_bg_20 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="840"
-								data-y="360" 
-								data-speed="1000"
-								data-start="3600"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="9600"
-					data-endspeed="1000"
-								style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">Responsive Design
-							</div>
-
-							<!-- LAYER NR. 12 -->
-							<div class="tp-caption black_bold_bg_20 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="840"
-								data-y="400" 
-								data-speed="1000"
-								data-start="3700"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="9750"
-					data-endspeed="1000"
-								style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;">Built with LESS
-							</div>
-
-							<!-- LAYER NR. 13 -->
-							<div class="tp-caption black_bold_bg_20 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="840"
-								data-y="440" 
-								data-speed="1000"
-								data-start="3800"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="10000"
-					data-endspeed="1000"
-								style="z-index: 14; max-width: auto; max-height: auto; white-space: nowrap;">Flat Design
-							</div>
-
-							<!-- LAYER NR. 14 -->
-							<div class="tp-caption green_bold_bg_20 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="840"
-								data-y="480" 
-								data-speed="1000"
-								data-start="3900"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-end="10200"
-					data-endspeed="1000"
-								style="z-index: 15; max-width: auto; max-height: auto; white-space: nowrap;">And Much More ...
-							</div>
-
-							<!-- LAYER NR. 15 -->
-							<div class="tp-caption fullrounded customin rs-parallaxlevel-10"
-								data-x="center" data-hoffset="0"
-								data-y="center" data-voffset="0"
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="600"
-								data-start="10500"
-								data-easing="Power4.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 16;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
-								data-speed="2"
-								data-xs="0"
-								data-xe="0"
-								data-ys="0"
-								data-ye="0"
-					>
-					{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/redbg.jpg"]) }}
-							</div>
-							</div>
-
-							<!-- LAYER NR. 16 -->
-							<div class="tp-caption white_thin_34 customin randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="center" data-hoffset="0"
-								data-y="center" data-voffset="-60"
-								data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-								data-speed="300"
-								data-start="11000"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								style="z-index: 17; max-width: auto; max-height: auto; white-space: nowrap;">Get Started with
-							</div>
-
-							<!-- LAYER NR. 17 -->
-							<div class="tp-caption white_heavy_70 customin randomrotateout tp-resizeme rs-parallaxlevel-10"
-								data-x="center" data-hoffset="0"
-								data-y="center" data-voffset="0"
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:5;scaleY:5;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="300"
-								data-start="11300"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								style="z-index: 18; max-width: auto; max-height: auto; white-space: nowrap;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
-								data-speed="2"
-								data-xs="0"
-								data-xe="0"
-								data-ys="0"
-								data-ye="0"
-					>
-					ThinkClosing
-							</div>
-							</div>
-
-							<!-- LAYER NR. 18 -->
-							<div class="tp-caption noshadow skewfromright randomrotateout tp-resizeme rs-parallaxlevel-0"
-								data-x="center" data-hoffset="0"
-								data-y="center" data-voffset="100"
-								data-speed="300"
-								data-start="11600"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="1000"
-								style="z-index: 19; max-width: auto; max-height: auto; white-space: nowrap;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
-								data-speed="2"
-								data-xs="0"
-								data-xe="0"
-								data-ys="0"
-								data-ye="0"
-					>
-					<a href="#" class="largeredbtn" target="_blank">SIGN UP NOW</a>
-							</div>
-							</div>
-
-							<!-- LAYER NR. 19 -->
-							<div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-0"
-								data-x="666"
-								data-y="444" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="300"
-								data-start="11900"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 20;"><div class=" rs-slideloop" 			data-easing="Power3.easeInOut"
-								data-speed="0.5"
-								data-xs="-5"
-								data-xe="5"
-								data-ys="0"
-								data-ye="0"
-					>
-					<a href="http://codecanyon.net/item/slider-revolution-responsive-wordpress-plugin/2751380?ref=themepunch" target="_blank">{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/doublearrow2.png","data-ww"=>"18","data-hh"=>"11"]) }}</a>
-							</div>
-							</div>
-						</li>
-						<!-- SLIDE  -->
-						<li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500" data-thumb="assets/images/homeslider_thumb4.jpg"  data-saveperformance="on"  data-title="Mobile Interaction">
-							<!-- MAIN IMAGE -->
-							{{ HTML::image('assets/images/dummy.png', 'ALT', ["data-lazyload"=>"assets/images/banner2.jpg","data-bgposition"=>"center top","data-bgfit"=>"cover", "data-bgrepeat"=>"no-repeat"]) }}
-							<!-- LAYERS -->
-
-							<!-- LAYER NR. 1 -->
-							<div class="tp-caption lfb rs-parallaxlevel-9"
-								data-x="center" data-hoffset="-40"
-								data-y="bottom" data-voffset="-10"
-								data-speed="1500"
-								data-start="2400"
-								data-easing="Power4.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 2;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/iPad_black.png">
-							</div>
-
-							<!-- LAYER NR. 2 -->
-							<div class="tp-caption lfb rs-parallaxlevel-9"
-								data-x="600"
-								data-y="361" 
-								data-speed="1500"
-								data-start="2900"
-								data-easing="Power4.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="300"
-								style="z-index: 5;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/iPhone_white2.png">
-							</div>
-
-							<!-- LAYER NR. 3 -->
-							<div class="tp-caption black_heavy_70 customin randomrotateout tp-resizeme rs-parallaxlevel-5"
-								data-x="315"
-								data-y="40" 
-								data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
-								data-speed="500"
-								data-start="1400"
-								data-easing="Power3.easeInOut"
-								data-splitin="chars"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="600"
-								style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Mobile
-							</div>
-
-							<!-- LAYER NR. 4 -->
-							<div class="tp-caption customin randomrotateout rs-parallaxlevel-7"
-								data-x="434"
-								data-y="98" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="300"
-								data-start="1900"
-								data-easing="Power3.easeInOut"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="600"
-								style="z-index: 7;"><img src="assets/images/dummy.png" alt="" data-lazyload="assets/images/largegreen.png">
-							</div>
-
-							<!-- LAYER NR. 7 -->
-							<div class="tp-caption light_heavy_70 customin randomrotateout tp-resizeme rs-parallaxlevel-7"
-								data-x="448"
-								data-y="106" 
-								data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-								data-speed="300"
-								data-start="2200"
-								data-easing="Power3.easeInOut"
-								data-splitin="none"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="600"
-								style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">Device
-							</div>
-
-							<!-- LAYER NR. 8 -->
-							<div class="tp-caption black_bold_40 skewfromrightshort randomrotateout tp-resizeme rs-parallaxlevel-6"
-								data-x="619"
-								data-y="177" 
-								data-speed="500"
-								data-start="2500"
-								data-easing="Power3.easeInOut"
-								data-splitin="chars"
-								data-splitout="none"
-								data-elementdelay="0.1"
-								data-endelementdelay="0.1"
-								data-endspeed="600"
-								style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Interaction
-							</div>
-						</li>
-					</ul>
-					<div class="tp-bannertimer"></div>	
-				</div>	<!-- ./tp-banner -->
-			</div>	<!-- ./tp-banner-container -->
+			<!-- Carousel -->
+	    	<div id="carousel-index" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+				  	<li data-target="#carousel-index" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-index" data-slide-to="1"></li>
+				    <li data-target="#carousel-index" data-slide-to="2"></li>
+				</ol>
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+				    <div class="item active">
+				    	<img src="{{asset('assets/images/slide1.jpg')}}" alt="">
+	                    <!-- Static Header -->
+	                    <div class="header-text hidden-xs">
+	                        <div class="col-md-12 text-center">
+	                            <h2>
+	                            	<span>Welcome to <strong>ThinkClosing!</strong></span>
+	                            </h2>
+	                            <br>
+	                            <h3>
+	                            	<span>Your one-stop shop for advanced real estate marketing tools.</span>
+	                            </h3>
+	                            <br>
+	                            <div class="">
+	                                <a class="btn btn-theme btn-sm btn-min-block" href="{{ action('UsersController@getLogin', array()) }}">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="{{ action('UsersController@getRegister', array()) }}">Register</a></div>
+	                        </div>
+	                    </div><!-- /header-text -->
+				    </div>
+				    <div class="item">
+				    	<img src="{{asset('assets/images/slide2.jpg')}}" alt="">
+				    	<!-- Static Header -->
+	                    <div class="header-text hidden-xs">
+	                        <div class="col-md-12 text-center">
+	                            <h2>
+	                                <span>Manage your <strong>Closings</strong></span>
+	                            </h2>
+	                            <br>
+	                            <h3>
+	                            	<span>Keep in contact with your buyers and sellers-- never miss a close date.</span>
+	                            </h3>
+	                            <br>
+	                            <div class="">
+	                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
+	                        </div>
+	                    </div><!-- /header-text -->
+				    </div>
+				    <div class="item">
+				    	<img src="{{asset('assets/images/slide3.jpg')}}" alt="">
+				    	<!-- Static Header -->
+	                    <div class="header-text hidden-xs">
+	                        <div class="col-md-12 text-center">
+	                            <h2>
+	                                <span><strong>Virtual Tour</strong> System</span>
+	                            </h2>
+	                            <br>
+	                            <h3>
+	                            	<span>Fully integrated with Intellectual Property-- no data entry!</span>
+	                            </h3>
+	                            <br>
+	                            <div class="">
+	                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
+	                        </div>
+	                    </div><!-- /header-text -->
+				    </div>
+				</div>
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-index" data-slide="prev">
+			    	<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-index" data-slide="next">
+			    	<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div><!-- /carousel -->
 
 			<div class="section bg-white section-padding" id="about">
 				<div class="container">
@@ -748,11 +396,11 @@
 								</div>
 
 								<ul class="pricing-service m-top-sm">
-									<li>Closings <span class="font-semi-bold">1</span></li>
-									<li>Tasks  <span class="font-semi-bold">10</span></li>
-									<li>SubAgents  <span class="font-semi-bold">No</span></li>
-									<li>Tours  <span class="font-semi-bold">1</span></li>
-									<li>Text Alerts  <span class="font-semi-bold">No</span></li>
+									<li>Closings: <span class="font-semi-bold">1</span></li>
+									<li>Tasks:  <span class="font-semi-bold">10</span></li>
+									<li>Agents:  <span class="font-semi-bold">No</span></li>
+									<li>Tours:  <span class="font-semi-bold">1</span></li>
+									<li>Text Alerts:  <span class="font-semi-bold">No</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -765,16 +413,16 @@
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay2">
 								<div class="pricing-type bg-danger text-center">Agent</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$19</span>
+									<span class="value">$12</span>
 									/Month
 								</div>
 									
 								<ul class="pricing-service m-top-sm">
-									<li>Closings <span class="font-semi-bold">5</span></li>
-									<li>Tasks  <span class="font-semi-bold">50</span></li>
-									<li>SubAgents  <span class="font-semi-bold">No</span></li>
-									<li>Tours  <span class="font-semi-bold">25</span></li>
-									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
+									<li>Closings: <span class="font-semi-bold">5</span></li>
+									<li>Tasks:  <span class="font-semi-bold">50</span></li>
+									<li>Agents:  <span class="font-semi-bold">No</span></li>
+									<li>Tours:  <span class="font-semi-bold">25</span></li>
+									<li>Text Alerts:  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -787,16 +435,16 @@
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay4">
 								<div class="pricing-type bg-purple text-center">Broker</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$99</span>
+									<span class="value">$49</span>
 									/Month
 								</div>
 									
 								<ul class="pricing-service m-top-sm">
-									<li>Closings <span class="font-semi-bold">50</span></li>
-									<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
-									<li>SubAgents  <span class="font-semi-bold">25</span></li>
-									<li>Tours  <span class="font-semi-bold">100</span></li>
-									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
+									<li>Closings: <span class="font-semi-bold">25</span></li>
+									<li>Tasks:  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Agents:  <span class="font-semi-bold">25</span></li>
+									<li>Tours:  <span class="font-semi-bold">50</span></li>
+									<li>Text Alerts:  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -809,16 +457,16 @@
 							<div class="pricing-widget clean-pricing bounceIn animation-element disabled animation-delay6">
 								<div class="pricing-type bg-success text-center">Unlimited</div>
 								<div class="pricing-value bg-grey">
-									<span class="value">$149</span>
+									<span class="value">$99</span>
 									/Month
 								</div>
 									
 								<ul class="pricing-service m-top-sm">
-									<li>Closings <span class="font-semi-bold">Unlimited</span></li>
-									<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
-									<li>SubAgents  <span class="font-semi-bold">Unlimited</span></li>
-									<li>Tours  <span class="font-semi-bold">Unlimited</span></li>
-									<li>Text Alerts  <span class="font-semi-bold">Yes</span></li>
+									<li>Closings: <span class="font-semi-bold">Unlimited</span></li>
+									<li>Tasks:  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Agents:  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Tours:  <span class="font-semi-bold">Unlimited</span></li>
+									<li>Text Alerts:  <span class="font-semi-bold">Yes</span></li>
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
@@ -899,88 +547,10 @@
 		<!-- Local Scroll -->
 		{{ HTML::script("assets/javascript/jquery.localScroll.min.js") }}
 
-		<!-- Revolution Slider -->
-		{{ HTML::script("assets/rs-plugin/js/jquery.themepunch.tools.min.js") }}
-		{{ HTML::script("assets/rs-plugin/js/jquery.themepunch.revolution.min.js") }}
 
 		<script type="text/javascript">
 
 		jQuery(document).ready(function() {		
-			//Slider Revolution	
-			jQuery('.tp-banner').show().revolution(
-			{
-				dottedOverlay:"none",
-				delay:16000,
-				startwidth:1170,
-				startheight:700,
-				hideThumbs:200,
-				
-				thumbWidth:100,
-				thumbHeight:50,
-				thumbAmount:5,
-				
-				navigationType:"bullet",
-				navigationArrows:"solo",
-				navigationStyle:"preview4",
-				
-				touchenabled:"on",
-				onHoverStop:"on",
-				
-				swipe_velocity: 0.7,
-				swipe_min_touches: 1,
-				swipe_max_touches: 1,
-				drag_block_vertical: false,
-										
-										parallax:"mouse",
-				parallaxBgFreeze:"on",
-				parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-										
-				keyboardNavigation:"off",
-				
-				navigationStyle: "preview2",
-				navigationHAlign:"center",
-				navigationVAlign:"middle",
-				navigationHOffset:0,
-				navigationVOffset:20,
-
-				soloArrowLeftHalign:"left",
-				soloArrowLeftValign:"center",
-				soloArrowLeftHOffset:20,
-				soloArrowLeftVOffset:0,
-
-				soloArrowRightHalign:"right",
-				soloArrowRightValign:"center",
-				soloArrowRightHOffset:20,
-				soloArrowRightVOffset:0,
-						
-				shadow:0,
-				fullWidth:"on",
-				fullScreen:"off",
-
-				spinner:"spinner4",
-				
-				stopLoop:"off",
-				stopAfterLoops:-1,
-				stopAtSlide:-1,
-
-				shuffle:"off",
-				
-				autoHeight:"off",						
-				forceFullWidth:"off",						
-													
-				hideThumbsOnMobile:"off",
-				hideNavDelayOnMobile:1500,						
-				hideBulletsOnMobile:"off",
-				hideArrowsOnMobile:"off",
-				hideThumbsUnderResolution:0,
-				
-				hideSliderAtLimit:0,
-				hideCaptionAtLimit:0,
-				hideAllCaptionAtLilmit:0,
-				startWithSlide:0,
-				fullScreenOffsetContainer: ".header"	
-			});		
-			//End Slider Revolution
 
 			//Section Animation
 			if (Modernizr.mq('(min-width: 1349px)')) {

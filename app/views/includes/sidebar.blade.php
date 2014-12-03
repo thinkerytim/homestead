@@ -53,7 +53,7 @@
 					</a>
 				</li>
 				<li class="bg-palette1">
-					<a href="inbox.html">
+					<a href="{{ action('MessagesController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
 							<span class="text m-left-sm">Messages</span>

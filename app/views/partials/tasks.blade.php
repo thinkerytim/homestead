@@ -9,11 +9,11 @@
 	<tr>
     	<td>{{{ $task->id }}}</td>
     	<td><a href="#">{{{ $task->name }}}</a></td>
-    	<td><a href="#"><i class="glyphicon glyphicon-trash"></i></a></td>
+    	<td><a href="#"><i id="{{ $task->id }}" class="glyphicon glyphicon-trash task-delete"></i></a></td>
     </tr>
 @empty
     <tr>
-    	<td colspan="3">No closings!</td>
+    	<td colspan="3">No tasks!</td>
     </tr>
 @endforelse
 </tbody>

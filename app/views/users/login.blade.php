@@ -1,7 +1,7 @@
 @extends('layouts.nomenu')
 
 @section('content')
-{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin')) }}
+{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin', 'id' => 'login-form')) }}
     <div class="form-group m-bottom-md">
         <input name="email" type="text" class="form-control" placeholder="Email Address">
     </div>
@@ -11,7 +11,7 @@
 
     <div class="form-group">
         <div class="custom-checkbox">
-            <input type="checkbox" id="chkRemember">
+            <input name="remember" type="checkbox" id="chkRemember">
             <label for="chkRemember"></label>
         </div>
         Remember me
@@ -34,3 +34,15 @@
     </div>
 {{ Form::close() }}
 @stop
+
+<script type="text/javascript">
+    function submitForm(){
+        $("#login-form").submit();
+    }
+
+    document.onkeydown=function(){
+        if(window.event.keyCode=='13'){
+            submitForm();
+        }
+    }
+</script>

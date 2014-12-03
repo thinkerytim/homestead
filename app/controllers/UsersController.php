@@ -66,12 +66,15 @@ class UsersController extends \BaseController {
 
 	public function postSignin()
 	{
-		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')))) {
+		// check for remember me
+		$remember = Input::get('remember') ? true : false;
+
+		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')), $remember)) {
 			if (Auth::user()->isAdmin())
 			{
 		    	return Redirect::to('admin')->with('message', 'You are now logged in, King Admin!');
 		    } else {
-		    	return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+		    	return Redirect::to('admin')->with('message', 'You are now logged in!');
 		    }
 		} else {
 		    return Redirect::to('users/login')
