@@ -25,11 +25,3 @@
 	</div>
 </div><!-- ./padding-md -->
 @stop
-
-<script type="text/javascript">
-jQuery( document ).ready(function($) {
-	$(".task-delete").on('click', function(){
-		alert(this.id);
-	});
-});
-</script>

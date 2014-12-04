@@ -622,3 +622,9 @@
 	</div><!-- ./row -->
 </div><!-- ./padding-md -->
 @stop
+@section('page_scripts')
+	<!-- Flot -->
+	{{ HTML::script("assets/javascript/jquery.flot.min.js") }}
+	<!-- Simplify -->
+	{{ HTML::script("assets/javascript/simplify/simplify_dashboard.js") }}
+@stop

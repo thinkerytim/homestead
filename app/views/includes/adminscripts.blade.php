@@ -7,9 +7,6 @@
 <!-- Slimscroll -->
 {{ HTML::script("assets/javascript/jquery.slimscroll.min.js") }}
 
-<!-- Flot -->
-{{ HTML::script("assets/javascript/jquery.flot.min.js") }}
-
 <!-- Morris -->
 {{ HTML::script("assets/javascript/rapheal.min.js") }}
 {{ HTML::script("assets/javascript/morris.min.js") }}
@@ -40,7 +37,6 @@
 
 <!-- Simplify -->
 {{ HTML::script("assets/javascript/simplify/simplify.js") }}
-{{ HTML::script("assets/javascript/simplify/simplify_dashboard.js") }}
 
 <!-- Custom -->
 {{ HTML::script("assets/javascript/utility.js") }}

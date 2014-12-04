@@ -6,10 +6,10 @@
 </thead>
 <tbody>
 @forelse($tasks as $task)
-	<tr>
+	<tr id="row{{ $task->id }}">
     	<td>{{{ $task->id }}}</td>
     	<td><a href="#">{{{ $task->name }}}</a></td>
-    	<td><a href="#"><i id="{{ $task->id }}" class="glyphicon glyphicon-trash task-delete"></i></a></td>
+    	<td><a href="#"><i id="{{ $task->id }}" class="glyphicon glyphicon-trash list-delete" data-action="task"></i></a></td>
     </tr>
 @empty
     <tr>
