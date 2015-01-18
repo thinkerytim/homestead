@@ -1,4 +1,19 @@
 <?php
+/*
+*
+* FILTERS
+*
+*/
+// check that the user owns the resource
+Route::filter('own', function($route, $request, $response)
+{
+    if (Auth::user()->id)
+    {
+        return Redirect::to('home');
+    }
+});
+
+// END FILTERS
 
 Route::get('/', array('as' => 'home', function()
 {

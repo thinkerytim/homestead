@@ -117,7 +117,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		return($id);
 	}
 
 

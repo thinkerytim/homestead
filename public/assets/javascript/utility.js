@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 	var delete_id = false;
     // delete item from list
     $(".list-delete").on('click', function(){  	
-var url = $(this).data('action')+'/'+this.id;
+var url = '/'+$(this).data('action')+'/'+this.id;
 delete_id = this.id;
 $.ajax({
 	type: "post",
