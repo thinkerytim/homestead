@@ -90,7 +90,7 @@ class TaskTableSeeder extends Seeder {
     {
         DB::table('tasks')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 500; $i++)
+        for ($i = 0; $i < 50; $i++)
 		{
 		  $user = Task::create(array(
 		    'name' => $faker->catchPhrase
@@ -120,7 +120,7 @@ class ClosingTableSeeder extends Seeder {
     {
         DB::table('closings')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 500; $i++)
+        for ($i = 0; $i < 50; $i++)
 		{
 		  $user = Closing::create(array(
 		    'user_id' => $faker->numberBetween(1,6),
@@ -137,7 +137,7 @@ class DocumentTableSeeder extends Seeder {
     {
         DB::table('documents')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 50; $i++)
+        for ($i = 0; $i < 10; $i++)
 		{
 		  $user = Document::create(array(
 		    'title' => $faker->company,
@@ -153,7 +153,7 @@ class DocMidTableSeeder extends Seeder {
     {
         DB::table('closing_document')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 50; $i++)
+        for ($i = 0; $i < 10; $i++)
 		{
 			DB::table('closing_document')->insert([
 	            'closing_id' => rand(1,10),
@@ -168,7 +168,7 @@ class TaskMidTableSeeder extends Seeder {
     {
         DB::table('closing_task')->truncate();
         $faker = Faker\Factory::create();
-        for ($i = 0; $i < 1500; $i++)
+        for ($i = 0; $i < 100; $i++)
 		{
 			DB::table('closing_task')->insert([
 	            'closing_id' => rand(1,10),

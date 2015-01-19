@@ -14,7 +14,6 @@ class AdminController extends BaseController {
         });
     }
 
- 
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -23,7 +22,34 @@ class AdminController extends BaseController {
 	public function getIndex()
 	{
 		View::share('title', 'ThinkClosing - Dashboard');
-		return View::make('admin.index');
+		$closings = Closing::where('closes_at', '>=', 'now()')
+				->where('agent_id', '=', Auth::user()->id)
+				->orWhere('agent_id', '=', Auth::user()->parent)->get();
+		$past_closings = Closing::where('closes_at', '<=', 'now()')
+				->where('agent_id', '=', Auth::user()->id)
+				->orWhere('agent_id', '=', Auth::user()->parent)
+				->count();
+
+		$tours = 10;
+		$agents = 10;
+		$clients = 10;
+		$tasks = 10;
+		$overdue_tasks = 10;
+		$messages = Message::where('to_id', Auth::id())->get()->groupBy('read');
+
+		return View::make('admin.index', [
+		    'messages' => [
+		        'unread' => array_get($messages, '0', []),
+		        'read' => array_get($messages, '1', []),
+		    ],
+		    'closings' => $closings,
+		    'past_closings' => $past_closings,
+		    'tours' => $tours,
+		    'clients' => $clients,
+		    'tasks' => $tasks,
+		    'agents' => $agents,
+		    'overdue_tasks' => $overdue_tasks
+		]);
 	}
 
 	public function getProfile()

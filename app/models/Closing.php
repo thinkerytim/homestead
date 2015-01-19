@@ -6,8 +6,7 @@ class Closing extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'closings';
-	protected $guarded 	= array('id');
-    protected $dates = array('closes_at');
+    protected $dates    = array('closes_at');
 
 	// form validation rules
 
@@ -21,5 +20,10 @@ class Closing extends Eloquent {
     public function documents()
     {
         return $this->belongsToMany('Document');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('User');
     }
 }

@@ -6,7 +6,6 @@ class Subscription extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'subscriptions';
-	protected $guarded 	= array('id');
 
 	// form validation rules
 

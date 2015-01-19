@@ -14,14 +14,14 @@
 		<div class="col-sm-6 text-right text-left-sm p-top-sm">
 			<div class="btn-group">
 			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			    Select Project <span class="caret"></span>
+			    Select Closing <span class="caret"></span>
 			  </button>
 			  <ul class="dropdown-menu pull-right" role="menu">
-			    <li><a href="#">Project1</a></li>
-			    <li><a href="#">Project2</a></li>
-			    <li><a href="#">Project3</a></li>
-			    <li class="divider"></li>
-			    <li><a href="#">Setting</a></li>
+				@forelse($closings as $closing)
+			    	<li><a href="#">{{$closing->title}}</a></li>
+				@empty
+					<li><a href="#">No results</a></li>
+				@endforelse
 			  </ul>
 			</div>
 
@@ -33,14 +33,14 @@
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-danger m-bottom-md">
 				<div class="statistic-title">
-					Today Visitors
+					Upcoming Closings
 				</div>
 
 				<div class="statistic-value">
-					96.7k
+					{{ count($closings) }}
 				</div>
 
-				<div class="m-top-md">11% Higher than last week</div>
+				<div class="m-top-md">{{ $past_closings }} in the past 6 months </div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-eye"></i>
@@ -51,14 +51,14 @@
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-info m-bottom-md">
 				<div class="statistic-title">
-					Today Sales
+					Upcoming Tasks
 				</div>
 
 				<div class="statistic-value">
-					751
+					{{ $tasks }}
 				</div>
 
-				<div class="m-top-md">8% Higher than last week</div>
+				<div class="m-top-md">{{ $overdue_tasks }} Overdue</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-ios7-cart-outline"></i>
@@ -69,14 +69,14 @@
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-purple m-bottom-md">
 				<div class="statistic-title">
-					Today Users
+					Total Clients
 				</div>
 
 				<div class="statistic-value">
-					129
+					{{ $clients }}
 				</div>
 
-				<div class="m-top-md">3% Higher than last week</div>
+				<div class="m-top-md">{{ $agents }} Agents</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-person-add"></i>
@@ -87,14 +87,14 @@
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-success m-bottom-md">
 				<div class="statistic-title">
-					Today Earnings
+					Total Tours
 				</div>
 
 				<div class="statistic-value">
-					$124.45k
+					{{ $tours }}
 				</div>
 
-				<div class="m-top-md">7% Higher than last week</div>
+				<div class="m-top-md"></div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-stats-bars"></i>
@@ -107,7 +107,7 @@
 		<div class="col-lg-6">
 			<div class="smart-widget widget-dark-blue">
 				<div class="smart-widget-header">
-					TOTAL VISITS
+					CLOSING TASKS COMPLETED
 					<span class="smart-widget-option">
 						<span class="refresh-icon-animated">
 							<i class="fa fa-circle-o-notch fa-spin"></i>
@@ -169,7 +169,7 @@
 		<div class="col-lg-6">
 			<div class="smart-widget widget-dark-blue">
 				<div class="smart-widget-header">
-					TOTAL SALES
+					TOTAL TOUR VIEWS
 					<span class="smart-widget-option">
 						<span class="refresh-icon-animated">
 							<i class="fa fa-circle-o-notch fa-spin"></i>
@@ -398,118 +398,7 @@
 				</div><!-- ./col -->
 			</div><!-- ./row -->
 
-			<div class="smart-widget">
-				<div class="smart-widget-header">
-					Website Statistic
-					<span class="smart-widget-option">
-						<span class="refresh-icon-animated">
-							<i class="fa fa-circle-o-notch fa-spin"></i>
-						</span>
-                        <a href="#" class="widget-toggle-hidden-option">
-                            <i class="fa fa-cog"></i>
-                        </a>
-                        <a href="#" class="widget-collapse-option" data-toggle="collapse">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a href="#" class="widget-refresh-option">
-                            <i class="fa fa-refresh"></i>
-                        </a>
-                        <a href="#" class="widget-remove-option">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </span>
-				</div>
-				<div class="smart-widget-inner table-responsive">
-					<div class="smart-widget-hidden-section">
-						<ul class="widget-color-list clearfix">
-							<li style="background-color:#20232b;" data-color="widget-dark"></li>
-							<li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
-							<li style="background-color:#23b7e5;" data-color="widget-blue"></li>
-							<li style="background-color:#2baab1;" data-color="widget-green"></li>
-							<li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
-							<li style="background-color:#fbc852;" data-color="widget-orange"></li>
-							<li style="background-color:#e36159;" data-color="widget-red"></li>
-							<li style="background-color:#7266ba;" data-color="widget-purple"></li>
-							<li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
-							<li style="background-color:#fff;" data-color="reset"></li>
-						</ul>
-					</div>
-					<table class="table table-striped no-margin">
-						<thead>
-							<tr>
-								<th class="text-right">Date</th>
-								<th class="text-right">Database Usage</th>
-								<th class="text-right">CPU Usage</th>
-								<th class="text-right">Memory Usage</th>
-								<th class="text-right">Total Disk Usage</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="text-right">July, 11</td>
-								<td class="text-right">31.05%</td>
-								<td class="text-right">65.12%</td>
-								<td class="text-right">86.41%</td>
-								<td class="text-right">
-									<div class="progress progress-sm inline-block m-bottom-none" style="width:100px; margin-top:6px">
-									  <div class="progress-bar progress-bar-success" style="width: 54.41%;">
-									    <span class="sr-only">54.41% Complete</span>
-									  </div>
-									</div>
-
-									<span class="m-left-sm vertical-top">54.41%</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-right">July, 12</td>
-								<td class="text-right">48.99%</td>
-								<td class="text-right">72.31%</td>
-								<td class="text-right">74.21%</td>
-								<td class="text-right">
-									<div class="progress progress-sm inline-block m-bottom-none" style="width:100px; margin-top:6px">
-									  <div class="progress-bar progress-bar-warning" style="width: 69.92%;">
-									    <span class="sr-only">69.92% Complete</span>
-									  </div>
-									</div>
-
-									<span class="m-left-sm vertical-top">69.92%</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-right">July, 13</td>
-								<td class="text-right">13.68%</td>
-								<td class="text-right">32.31%</td>
-								<td class="text-right">50.82%</td>
-								<td class="text-right">
-									<div class="progress progress-sm inline-block m-bottom-none" style="width:100px; margin-top:6px">
-									  <div class="progress-bar progress-bar-danger" style="width: 43.17%;">
-									    <span class="sr-only">43.17% Complete</span>
-									  </div>
-									</div>
-
-									<span class="m-left-sm vertical-top">43.17%</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="text-right">July, 14</td>
-								<td class="text-right">9.23%</td>
-								<td class="text-right">11.91%</td>
-								<td class="text-right">10.21%</td>
-								<td class="text-right">
-									<div class="progress progress-sm inline-block m-bottom-none" style="width:100px; margin-top:6px">
-									  <div class="progress-bar progress-bar-success" style="width: 12.11%;">
-									    <span class="sr-only">12.11% Complete</span>
-									  </div>
-									</div>
-
-									<span class="m-left-sm vertical-top">12.11%</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- ./smart-widget-inner -->
-			</div><!-- ./smart-widget -->
-		</div><!-- ./col -->
+			
 		<div class="col-lg-4">
 			<div class="smart-widget">
 				<div class="smart-widget-header">
