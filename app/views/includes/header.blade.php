@@ -13,7 +13,7 @@
                 <span class="badge badge-danger bounceIn">1</span>
                 <ul class="dropdown-menu dropdown-sm pull-right">
                   <li class="user-avatar">
-                    <img src="images/profile/profile1.jpg" alt="" class="img-circle">
+                    <img src="" alt="" class="img-circle">
                     <div class="user-content">
                       <h5 class="no-m-bottom">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}</h5>
                       <div class="m-top-xs">

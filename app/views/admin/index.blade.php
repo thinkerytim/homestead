@@ -18,7 +18,7 @@
 			  </button>
 			  <ul class="dropdown-menu pull-right" role="menu">
 				@forelse($closings as $closing)
-			    	<li><a href="#">{{$closing->title}}</a></li>
+			    	<li><a href="<a href="{{ action('ClosingsController@getShow', array($closing->id)) }}">{{$closing->title}}</a></li>
 				@empty
 					<li><a href="#">No results</a></li>
 				@endforelse

@@ -52,7 +52,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette1">
+				<li class="bg-palette5">
 					<a href="{{ action('MessagesController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
@@ -64,7 +64,19 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette2">
+				<li class="bg-palette6">
+					<a href="{{ action('ToursController@index', array()) }}">
+						<span class="menu-content block">
+							<span class="menu-icon"><i class="block fa fa-play-circle-o fa-lg"></i></span>
+							<span class="text m-left-sm">Tours</span>
+							<small class="badge badge-danger badge-square bounceIn animation-delay5 m-left-xs">5</small>
+						</span>
+						<span class="menu-content-hover block">
+							Tours
+						</span>
+					</a>
+				</li>
+				<li class="bg-palette7">
 					<a href="timeline.html">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-calendar fa-lg"></i></span>
