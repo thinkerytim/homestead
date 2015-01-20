@@ -18,6 +18,7 @@ class CreateSubscriptionsTable extends Migration {
 		    $table->integer('user_id');
 		    $table->integer('level_id');
 		    $table->datetime('expires_at');
+		    $table->boolean('status')->default(0); // invalid: 0 / valid: 1
 		    $table->timestamps();
 		});
 	}

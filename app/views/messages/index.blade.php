@@ -15,14 +15,44 @@
 						</h4>
 						<div class="row">
 							<div class="col-md-12">
-							@include('partials.messages')
+							<table class="table table-hover">
+								<thead>
+								    <td>From</td>
+								    <td>Subject</td>
+								    <td>Date</td>
+								</thead>
+								<tbody>
+									@forelse($messages as $message)
+										@include('partials.message')
+									@empty
+										<tr>
+											<td colspan="3">No unread messages!</td>
+										</tr>
+									@endforelse
+								</tbody>
+							</table>
 							</div>
 						</div><!-- ./row -->
 						<h4 class="header-text m-bottom-md">Read Messages
 						</h4>
 						<div class="row">
 							<div class="col-md-12">
-							@include('partials.messages')
+							<table class="table table-hover">
+								<thead>
+								    <td>From</td>
+								    <td>Subject</td>
+								    <td>Date</td>
+								</thead>
+								<tbody>
+									@forelse($messages as $message)
+										@include('partials.message')
+									@empty
+										<tr>
+											<td colspan="3">No read messages!</td>
+										</tr>
+									@endforelse
+								</tbody>
+							</table>
 							</div>
 						</div><!-- ./row -->
 					</div><!-- ./smart-widget-body -->

@@ -48,6 +48,9 @@ Route::resource('agent', 'AgentsController');
 /* Messages controller routes */
 Route::resource('message', 'MessagesController');
 
+/* Messages controller routes */
+Route::resource('tour', 'ToursController');
+
 /* Password controller routes */
 Route::controller('password', 'RemindersController');
 

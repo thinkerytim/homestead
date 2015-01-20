@@ -6,7 +6,6 @@ class Document extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'documents';
-	protected $guarded 	= array('id');
 
 	// form validation rules
 

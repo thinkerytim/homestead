@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-sm-4 col-md-12">
 					<div class="user-profile-pic">
-						<img src="images/profile/profile1.jpg" alt="">
+						<img src="{{ Gravatar::src(Auth::user()->email, 300) }}" alt="">
 						<div class="ribbon-wrapper">
 							<div class="ribbon-inner shadow-pulse bg-success">
 								Elite
@@ -67,7 +67,7 @@
 				  		<li>
 				  			<a href="#profileTab2" data-toggle="tab">
 				  				<span class="icon-wrapper"><i class="fa fa-book"></i></span>
-				  				<span class="text-wrapper">Account</span>
+				  				<span class="text-wrapper">Profile</span>
 				  			</a>
 				  		</li>
 				  		<li class="active">
@@ -91,48 +91,58 @@
 								<h4 class="header-text m-top-md">General Information</h4>
 								<form class="form-horizontal m-top-md">
 									<div class="form-group">
-									    <label class="col-sm-3 control-label">Name</label>
+									    <label class="col-sm-3 control-label">First Name</label>
 									    <div class="col-sm-9">
-									      	<input type="text" class="form-control" value="Jane Doe">
+									      	<input type="text" class="form-control" value="{{{ Auth::user()->firstname }}}">
 									    </div>
 									</div>
 									<div class="form-group">
-									    <label class="col-sm-3 control-label">Surname</label>
+									    <label class="col-sm-3 control-label">Last Name</label>
 									    <div class="col-sm-9">
-									      	<input type="text" class="form-control">
+									      	<input type="text" class="form-control" value="{{{ Auth::user()->lastname }}}">
 									    </div>
 									</div>
 									<div class="form-group">
-									    <label class="col-sm-3 control-label">Gender</label>
+									    <label class="col-sm-3 control-label">Email</label>
 									    <div class="col-sm-9">
-									      	<div class="radio inline-block">
-												<div class="custom-radio m-right-xs">
-													<input type="radio" id="inlineRadio1" name="profileGender">
-													<label for="inlineRadio1"></label>
-												</div>
-												<div class="inline-block vertical-top">Male</div>
-											</div>
-											<div class="radio inline-block m-left-sm">
-												<div class="custom-radio m-right-xs">
-													<input type="radio" id="inlineRadio2" name="profileGender">
-													<label for="inlineRadio2"></label>
-												</div>
-												<div class="inline-block vertical-top">Female</div>
-											</div>
+									      	<input type="text" class="form-control" value="{{{ Auth::user()->email }}}">
 									    </div>
 									</div>
-
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Address</label>
 									    <div class="col-sm-9">
-									      	<textarea rows="4" class="form-control"></textarea>
+									      	<input type="text" rows="4" class="form-control" value="{{{ Auth::user()->address1 }}}">
+									    </div>
+									</div>
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">Address2</label>
+									    <div class="col-sm-9">
+									      	<input type="text" rows="4" class="form-control" value="{{{ Auth::user()->address2 }}}">
+									    </div>
+									</div>
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">City</label>
+									    <div class="col-sm-9">
+									      	<input type="text" rows="4" class="form-control" value="{{{ Auth::user()->city }}}">
+									    </div>
+									</div>
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">State</label>
+									    <div class="col-sm-9">
+									      	<input type="text" rows="4" class="form-control" value="{{{ Auth::user()->state }}}">
+									    </div>
+									</div>
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">Zip</label>
+									    <div class="col-sm-9">
+									      	<input type="text" rows="4" class="form-control" value="{{{ Auth::user()->zip }}}">
 									    </div>
 									</div>
 
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Phone</label>
 									    <div class="col-sm-9">
-									      	<input type="text" class="form-control" value="">
+									      	<input type="text" class="form-control" value="{{{ Auth::user()->phone }}}">
 									    </div>
 									</div>
 
