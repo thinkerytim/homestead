@@ -252,7 +252,7 @@
 	                            </h2>
 	                            <br>
 	                            <h3>
-	                            	<span>Fully integrated with Intellectual Property-- no data entry!</span>
+	                            	<span>Fully integrated with <a href="http://iproperty.thethinkery.net" target="_blank">Intellectual Property</a>-- no data entry!</span>
 	                            </h3>
 	                            <br>
 	                            <div class="">
@@ -274,7 +274,7 @@
 				<div class="container">
 					<div class="text-center">
 						<h3 class="text-upper no-m-top">START BUILDING YOUR <span class="text-success">REAL ESTATE MARKETING EMPIRE!</span></h3>
-						<p>Leverage the power of Intellectual Property to market like a pro!</p>
+						<p>Leverage the power of <a href="http://iproperty.thethinkery.net" target="_blank">Intellectual Property</a> to market like a pro!</p>
 					</div>
 
 					<div class="row" style="margin-top:70px;">
@@ -335,7 +335,7 @@
 								</div>
 								<div class="feature-detail">
 								    <div class="h4 m-bottom-xs no-m-top">Stay in Contact</div>
-								    More legitimate touches on your clients means better relationships.
+								    More legitimate touches on your clients means better relationships, happy customers and repeat business.
 								</div>
 							</div>
 
@@ -359,7 +359,7 @@
 								</div>
 								<div class="feature-detail">
 								    <div class="h4 m-bottom-xs">Admin Dashboard</div>
-								    Stay up-to-date on what your clients are doing, and when they do it.
+								    Stay up-to-date on what your clients are doing, and when they do it. Keep track of upcoming closing tasks.
 								</div>
 							</div>
 
