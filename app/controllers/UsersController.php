@@ -4,7 +4,7 @@ class UsersController extends \BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('csrf', array('on'=>'post'));
-		$this->beforeFilter('auth', array('only'=>array('getDashboard')));
+		$this->beforeFilter('auth', array('only'=>array('getDashboard','putUpdate')));
 	}
 
 	/**
@@ -63,6 +63,29 @@ class UsersController extends \BaseController {
 		    	->withInput();
 		}
 	}
+
+	public function putUpdate($id)
+	{
+		$validator = Validator::make(Input::all(), User::$rules);
+	    if ($validator->passes()) {
+	        $user = User::find($id);
+		    $user->firstname = Input::get('firstname');
+		    $user->lastname = Input::get('lastname');
+		    $user->email = Input::get('email');
+		    $user->company = Input::get('company');
+		    $user->phone = Input::get('phone');
+		    $user->save();
+
+		    if ($user) {
+		    	return Response::json(array('success' => true, 'message' => 'User updated.'));
+		    }
+		    // fallback	
+		    return Response::json(array('success' => false, 'message' => 'User update failed.'));
+		} else {
+		    // validation has failed, display error messages
+		    return Response::json(array('success' => false, 'message' => 'User update failed.'));
+		}
+	}	
 
 	public function postSignin()
 	{

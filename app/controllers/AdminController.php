@@ -30,6 +30,7 @@ class AdminController extends BaseController {
 				->orWhere('agent_id', '=', Auth::user()->parent)
 				->count();
 
+
 		$tours = 10;
 		$agents = 10;
 		$clients = 10;
