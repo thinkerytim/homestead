@@ -507,6 +507,7 @@
 					</ul><!-- ./row -->
 				</div>
 			</div><!-- ./task-widget -->
+			</div><!-- ./task-widget -->
 		</div><!-- ./col -->
 	</div><!-- ./row -->
 </div><!-- ./padding-md -->
