@@ -63,7 +63,9 @@ class TasksController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		View::share('title', 'ThinkClosing - Task');
+		$task = Task::find($id);
+		return View::make('tasks.show')->with('task', $task);
 	}
 
 

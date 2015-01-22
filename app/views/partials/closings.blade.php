@@ -13,7 +13,7 @@
         <td><a href="{{ action('ClosingsController@getShow', array($closing->id)) }}">{{{ $closing->title }}}</a></td>
     	<td>{{ $closing->user->firstname }} {{ $closing->user->lastname }}</td>
     	<td>{{{ $closing->closes_at }}}</td>
-    	<td><a href="#"><i id="{{ $closing->id }}" class="glyphicon glyphicon-trash list-delete" data-action="closing"></i></a></td>
+    	<td><a href="#"><i id="{{ $closing->id }}" class="glyphicon glyphicon-trash list-delete" data-action="closings"></i></a></td>
     </tr>
 @empty
     <tr>
