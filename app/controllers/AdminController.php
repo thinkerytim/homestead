@@ -63,7 +63,11 @@ class AdminController extends BaseController {
 		} else {
 			$closings = Closing::where('id', '>', 0)->paginate(10);
 		}
-		return View::make('shared.profile')->with('closings', $closings);
+
+		// get the user object
+		$user = User::find(Auth::id());
+
+		return View::make('shared.profile')->with('closings', $closings)->with('user', $user);
 	}
 
 }

@@ -3,7 +3,7 @@
 class UsersController extends \BaseController {
 	public function __construct()
 	{
-		$this->beforeFilter('csrf', array('on'=>'post'));
+		$this->beforeFilter('csrf', array('on' => array('post', 'put', 'patch', 'delete')));
 		$this->beforeFilter('auth', array('only'=>array('getDashboard','putUpdate')));
 	}
 
@@ -38,7 +38,7 @@ class UsersController extends \BaseController {
 
 	public function postCreate()
 	{
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), User::$signup_rules);
 	    if ($validator->passes()) {
 	        $user = new User;
 		    $user->firstname = Input::get('firstname');
@@ -67,6 +67,22 @@ class UsersController extends \BaseController {
 	public function putUpdate($id)
 	{
 		$validator = Validator::make(Input::all(), User::$rules);
+
+$icon = Input::file('image');
+$destinationPath = 'assets/images/profile';
+// If the uploads fail due to file system, you can try doing public_path().'/uploads' 
+$filename = str_random(12);
+//$filename = $file->getClientOriginalName();
+//$extension =$file->getClientOriginalExtension(); 
+$upload_success = Input::file('file')->move($destinationPath, $filename);
+
+if( $upload_success ) {
+   return Response::json('success', 200);
+} else {
+   return Response::json('error', 400);
+}
+
+
 	    if ($validator->passes()) {
 	        $user = User::find($id);
 		    $user->firstname = Input::get('firstname');
@@ -83,7 +99,12 @@ class UsersController extends \BaseController {
 		    return Response::json(array('success' => false, 'message' => 'User update failed.'));
 		} else {
 		    // validation has failed, display error messages
-		    return Response::json(array('success' => false, 'message' => 'User update failed.'));
+		    //return Response::json(array('success' => false, 'message' => 'User update failed.'));
+dd($validator);
+		    return Redirect::to('admin/profile')
+		    	->with('message', 'The following errors occurred')
+		    	->withErrors($validator)
+		    	->withInput();
 		}
 	}	
 
