@@ -47,7 +47,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     	'website'=>'url',
     	'facebook'=>'url',
     	'twitter'=>'url',
-    	'pinterest'=>'url'
+    	'pinterest'=>'url',
+    	'icon' => 'image|max:3000'
     );    
 
 	public function getRememberToken()

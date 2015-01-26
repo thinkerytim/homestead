@@ -66,24 +66,20 @@ class UsersController extends \BaseController {
 
 	public function putUpdate($id)
 	{
-		$validator = Validator::make(Input::all(), User::$rules);
-
-$icon = Input::file('image');
-$destinationPath = 'assets/images/profile';
-// If the uploads fail due to file system, you can try doing public_path().'/uploads' 
-$filename = str_random(12);
-//$filename = $file->getClientOriginalName();
-//$extension =$file->getClientOriginalExtension(); 
-$upload_success = Input::file('file')->move($destinationPath, $filename);
-
-if( $upload_success ) {
-   return Response::json('success', 200);
-} else {
-   return Response::json('error', 400);
-}
-
+		$validator = Validator::make(Input::all(), User::$edit_rules);
+		$destinationPath = 'assets/images/profile';
 
 	    if ($validator->passes()) {
+	    	// handle the image here
+	    	if (Input::file('icon')){
+	    		$file = Input::file('file');
+	    		$filename = str_random(12).$file->getClientOriginalExtension();
+	    		$upload_success = Input::file('icon')->move($destinationPath, $filename);
+				if( !$upload_success ) {
+				   return Response::json('error', 400);
+				}
+	    	}
+
 	        $user = User::find($id);
 		    $user->firstname = Input::get('firstname');
 		    $user->lastname = Input::get('lastname');
@@ -100,7 +96,7 @@ if( $upload_success ) {
 		} else {
 		    // validation has failed, display error messages
 		    //return Response::json(array('success' => false, 'message' => 'User update failed.'));
-dd($validator);
+dd($validator->messages());
 		    return Redirect::to('admin/profile')
 		    	->with('message', 'The following errors occurred')
 		    	->withErrors($validator)
