@@ -48,15 +48,14 @@
 
 					<h4 class="m-top-md m-bottom-sm">About Me</h4>
 					<p class="m-top-sm">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
+						{{{ $user->bio }}}
 					<p>
 
 					<h4 class="m-top-md m-bottom-sm">Get Social</h4>	
-
-					<a class="social-link facebook-hover" href="{{ $user->facebook }}"><i class="fa fa-facebook"></i></a>
-					<a class="social-link twitter-hover" href="{{ $user->twitter }}"><i class="fa fa-twitter"></i></a>
-					<a class="social-link pinterest-hover" href="{{ $user->pinterest }}"><i class="fa fa-pinterest"></i></a>
-					<a class="social-link linkedin-hover" href="{{ $user->facebook }}"><i class="fa fa-linkedin"></i></a>
+					<a class="social-link facebook-hover" href="{{{ $user->facebook }}}"><i class="fa fa-facebook"></i></a>
+					<a class="social-link twitter-hover" href="{{{ $user->twitter }}}"><i class="fa fa-twitter"></i></a>
+					<a class="social-link pinterest-hover" href="{{{ $user->pinterest }}}"><i class="fa fa-pinterest"></i></a>
+					<a class="social-link linkedin-hover" href="{{{ $user->facebook }}}"><i class="fa fa-linkedin"></i></a>
 
 				</div>
 			</div><!-- ./row -->

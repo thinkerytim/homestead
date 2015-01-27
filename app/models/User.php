@@ -39,17 +39,19 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     	'agreement' => 'required|accepted'
     );
 
-	public static $edit_rules = array(
-    	'firstname'=>'required|alpha|min:2',
-    	'lastname'=>'required|alpha|min:2',
-    	'email'=>'required|email|unique:users',
-    	'company'=>'alpha',
-    	'website'=>'url',
-    	'facebook'=>'url',
-    	'twitter'=>'url',
-    	'pinterest'=>'url',
-    	'icon' => 'image|max:3000'
-    );    
+	public static function edit_rules($id) {
+		return array(
+	    	'firstname'=>'required|alpha|min:2',
+	    	'lastname'=>'required|alpha|min:2',
+	    	'email'=>'required|email|unique:users,email,'.$id,
+	    	'company'=>'alpha',
+	    	'website'=>'url',
+	    	'facebook'=>'url',
+	    	'twitter'=>'url',
+	    	'pinterest'=>'url',
+	    	'icon' => 'image|max:3000'
+	    );
+	}
 
 	public function getRememberToken()
 	{

@@ -66,7 +66,8 @@ class UsersController extends \BaseController {
 
 	public function putUpdate($id)
 	{
-		$validator = Validator::make(Input::all(), User::$edit_rules);
+		$rules = User::edit_rules(Auth::user()->id);
+		$validator = Validator::make(Input::all(), $rules);
 		$destinationPath = 'assets/images/profile';
 
 	    if ($validator->passes()) {
@@ -85,18 +86,34 @@ class UsersController extends \BaseController {
 		    $user->lastname = Input::get('lastname');
 		    $user->email = Input::get('email');
 		    $user->company = Input::get('company');
-		    $user->phone = Input::get('phone');
+		    $user->address1 = Input::get('address1');
+		    $user->address2 = Input::get('address2');
+		    $user->city = Input::get('city');
+		    $user->state = Input::get('state');
+		    $user->zip = Input::get('zip');
+		    $user->website = Input::get('website');
+		    $user->facebook = Input::get('facebook');
+		    $user->twitter = Input::get('twitter');
+		    $user->pinterest = Input::get('pinterest');
+		    $user->linkedin = Input::get('linkedin');
+		    $user->bio = Input::get('bio');
+		    $user->mobile = Input::get('mobile');
 		    $user->save();
 
 		    if ($user) {
-		    	return Response::json(array('success' => true, 'message' => 'User updated.'));
+		    	return Redirect::to('admin/profile')
+		    	->with('message', 'User updated.')
+		    	->withErrors($validator)
+		    	->withInput();
 		    }
 		    // fallback	
-		    return Response::json(array('success' => false, 'message' => 'User update failed.'));
+		    return Redirect::to('admin/profile')
+		    	->with('message', 'User update failed.')
+		    	->withErrors($validator)
+		    	->withInput();
 		} else {
 		    // validation has failed, display error messages
 		    //return Response::json(array('success' => false, 'message' => 'User update failed.'));
-dd($validator->messages());
 		    return Redirect::to('admin/profile')
 		    	->with('message', 'The following errors occurred')
 		    	->withErrors($validator)
