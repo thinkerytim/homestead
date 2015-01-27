@@ -8,13 +8,23 @@
 			Welcome back, {{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}
 		</span>
 	</h3>
-
+@if ($errors->has())
+<div class="alert alert-danger">
+    @foreach ($errors->all() as $error)
+        {{ $error }}<br>        
+    @endforeach
+</div>
+@endif
 	<div class="row user-profile-wrapper">
 		<div class="col-md-3 user-profile-sidebar m-bottom-md">
 			<div class="row">
 				<div class="col-sm-4 col-md-12">
 					<div class="user-profile-pic">
-						<img src="{{ Gravatar::src(Auth::user()->email, 300) }}" alt="">
+						@if ($user->photo)
+						    {{ HTML::image('assets/images/profile/'.$user->photo) }}
+						@else
+						    <img src="{{ Gravatar::src(Auth::user()->email, 300) }}" alt="">
+						@endif
 						<div class="ribbon-wrapper">
 							<div class="ribbon-inner shadow-pulse bg-success">
 								Elite
@@ -23,27 +33,23 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-12">
-					<div class="user-name m-top-sm">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}<i class="fa fa-circle text-success m-left-xs font-14"></i></div>
+					<div class="user-name m-top-sm">{{{ $user->firstname.' '.$user->lastname }}}<i class="fa fa-circle text-success m-left-xs font-14"></i></div>
 
 					<div class="m-top-sm">
 						<div>
 							<i class="fa fa-map-marker user-profile-icon"></i>
-							{{{ Auth::user()->city.', '.Auth::user()->state }}}
+							{{{ $user->city.', '.Auth::user()->state }}}
 						</div>
 
 						<div class="m-top-xs">
 							<i class="fa fa-briefcase user-profile-icon"></i>
-							{{{ Auth::user()->company }}}
+							{{{ $user->company }}}
 						</div>
 
 						<div class="m-top-xs">
 							<i class="fa fa-external-link user-profile-icon"></i>
-							{{{ Auth::user()->url }}}
+							{{{ $user->website }}}
 						</div>
-					</div>
-
-					<div class="m-top-sm text-centers">
-						<a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
 					</div>
 
 					<h4 class="m-top-md m-bottom-sm">About Me</h4>
@@ -52,29 +58,20 @@
 					<p>
 
 					<h4 class="m-top-md m-bottom-sm">Get Social</h4>	
-					<a class="social-link facebook-hover" href="{{{ $user->facebook }}}"><i class="fa fa-facebook"></i></a>
-					<a class="social-link twitter-hover" href="{{{ $user->twitter }}}"><i class="fa fa-twitter"></i></a>
-					<a class="social-link pinterest-hover" href="{{{ $user->pinterest }}}"><i class="fa fa-pinterest"></i></a>
-					<a class="social-link linkedin-hover" href="{{{ $user->facebook }}}"><i class="fa fa-linkedin"></i></a>
-
+					<a class="social-link facebook-hover" href="{{{ $user->facebook }}}" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a class="social-link twitter-hover" href="{{{ $user->twitter }}}" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a class="social-link pinterest-hover" href="{{{ $user->pinterest }}}" target="_blank"><i class="fa fa-pinterest"></i></a>
+					<a class="social-link linkedin-hover" href="{{{ $user->facebook }}}" target="_blank"><i class="fa fa-linkedin"></i></a>
 				</div>
 			</div><!-- ./row -->
 		</div><!-- ./col -->
 		<div class="col-md-9">
 			<div class="smart-widget">
 				<div class="smart-widget-inner">
-					<ul class="nav nav-tabs tab-style2 tab-right bg-grey">
-				  		<li>
-				  			<a href="#profileTab2" data-toggle="tab">
-				  				<span class="icon-wrapper"><i class="fa fa-book"></i></span>
-				  				<span class="text-wrapper">Profile</span>
-				  			</a>
-				  		</li>
-					</ul>
 					<div class="smart-widget-body">
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="profileTab2">
-								<h4 class="header-text m-top-md">General Information</h4>
+								<h4 class="header-text m-top-md">Profile Information</h4>
 								{{ Form::model($user, array('action' => array('UsersController@putUpdate', $user->id), 'class' => 'form-horizontal m-top-md', 'files' => true, 'method' => 'put' )) }}
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">First Name</label>
@@ -122,6 +119,13 @@
 									    <label class="col-sm-3 control-label">Zip</label>
 									    <div class="col-sm-9">
 									      	{{ Form::text('zip', $user->zip, array('class' => 'form-control')) }}
+									    </div>
+									</div>
+
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">Mobile</label>
+									    <div class="col-sm-9">
+									      	{{ Form::text('mobile', $user->mobile, array('class' => 'form-control')) }}
 									    </div>
 									</div>
 
@@ -184,34 +188,30 @@
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Photo</label>
 									    <div class="col-sm-9">
-									      	{{ Form::file('icon', array('class' => 'form-control')) }}
+									      	{{ Form::file('photo', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 
-									<h4 class="header-text m-top-lg">Security Setting</h4>
+									<h4 class="header-text m-top-lg">Password Settings</h4>
 
 									<div class="form-group">
-									    <label class="col-sm-3 control-label">Security Question</label>
+									    <label class="col-sm-3 control-label">Current Password</label>
 									    <div class="col-sm-9">
-									      	<input type="text" class="form-control" value="">
+									      	{{ Form::text('current_password', '', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 
 									<div class="form-group">
-										<label class="col-sm-3 control-label">Security Browsing</label>
+									    <label class="col-sm-3 control-label">New Password</label>
 									    <div class="col-sm-9">
-									    	<div class="m-top-xs">
-										      	<div class="custom-checkbox">
-													<input type="checkbox" id="securityChk1">
-													<label for="securityChk1"></label>
-												</div>
-												Yes
-												<div class="custom-checkbox m-left-sm">
-													<input type="checkbox" id="securityChk2">
-													<label for="securityChk2"></label>
-												</div>
-												No
-											</div>
+									      	{{ Form::text('new_password', '', array('class' => 'form-control')) }}
+									    </div>
+									</div>
+
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">Confirm Password</label>
+									    <div class="col-sm-9">
+									      	{{ Form::text('confirm_password', '', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 

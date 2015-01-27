@@ -71,17 +71,18 @@ class UsersController extends \BaseController {
 		$destinationPath = 'assets/images/profile';
 
 	    if ($validator->passes()) {
+	    	$user = User::find($id);
 	    	// handle the image here
-	    	if (Input::file('icon')){
-	    		$file = Input::file('file');
-	    		$filename = str_random(12).$file->getClientOriginalExtension();
-	    		$upload_success = Input::file('icon')->move($destinationPath, $filename);
+	    	if (Input::file('photo')){
+	    		$file = Input::file('photo');	    			    		
+	    		$filename = str_random(12).'.'.$file->getClientOriginalExtension();
+	    		$upload_success = Input::file('photo')->move($destinationPath, $filename);
 				if( !$upload_success ) {
 				   return Response::json('error', 400);
-				}
+				} else {
+					$user->photo = $filename;
+				} 
 	    	}
-
-	        $user = User::find($id);
 		    $user->firstname = Input::get('firstname');
 		    $user->lastname = Input::get('lastname');
 		    $user->email = Input::get('email');
@@ -98,20 +99,38 @@ class UsersController extends \BaseController {
 		    $user->linkedin = Input::get('linkedin');
 		    $user->bio = Input::get('bio');
 		    $user->mobile = Input::get('mobile');
+		    $user->reminders = Input::get('reminders');
+
+		    // are we resetting the password?
+		    if (Input::get('current_password') && Input::get('new_password') && Input::get('confirm_password')){
+		    	if ( Hash::make(Input::get('current_password')) !== $user->password ){
+		    		return Redirect::to('admin/profile')
+				    	->with('message', 'Incorrect password.')
+				    	->withErrors($validator)
+				    	->withInput();
+		    	} else if ( Input::get('new_password') !== Input::get('confirm_password') ){
+		    		return Redirect::to('admin/profile')
+				    	->with('message', 'Passwords did not match.')
+				    	->withErrors($validator)
+				    	->withInput();
+				} else {
+					$user->password = Hash::make(Input::get('new_password'));
+				}
+		    }
+
 		    $user->save();
 
 		    if ($user) {
 		    	return Redirect::to('admin/profile')
 		    	->with('message', 'User updated.')
-		    	->withErrors($validator)
-		    	->withInput();
+		    	->with('user', $user);
 		    }
 		    // fallback	
 		    return Redirect::to('admin/profile')
 		    	->with('message', 'User update failed.')
 		    	->withErrors($validator)
 		    	->withInput();
-		} else {
+		} else {				
 		    // validation has failed, display error messages
 		    //return Response::json(array('success' => false, 'message' => 'User update failed.'));
 		    return Redirect::to('admin/profile')

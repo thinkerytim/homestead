@@ -48,7 +48,7 @@
               </li>
             </ul>
 
-            <a href="/" class="brand">
+            <a href="{{ action('AdminController@getIndex', array()) }}" class="brand">
               <i class="fa fa-lightbulb-o fa-lg"></i><span class="footer-brand"> <strong class="text-danger">Think</strong>Closing</span>
             </a>
           </div>
@@ -86,7 +86,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="inbox.html">
+                        <a href="{{ action('MessagesController@index', array()) }}">
                           <i class="fa fa-inbox fa-lg"></i><span class="m-left-xs">Inboxes</span>
                           <span class="badge badge-danger bounceIn animation-delay3">2</span>
                         </a>

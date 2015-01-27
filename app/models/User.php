@@ -49,6 +49,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    	'facebook'=>'url',
 	    	'twitter'=>'url',
 	    	'pinterest'=>'url',
+	    	'linkedin'=>'url',
 	    	'icon' => 'image|max:3000'
 	    );
 	}
