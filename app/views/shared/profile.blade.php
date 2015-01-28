@@ -85,6 +85,14 @@
 									    	{{ Form::text('lastname', $user->lastname, array('class' => 'form-control')) }}
 									    </div>
 									</div>
+									@if ($user->isAdmin())
+									<div class="form-group">
+									    <label class="col-sm-3 control-label">Company</label>
+									    <div class="col-sm-9">
+									    	{{ Form::text('company', $user->company, array('class' => 'form-control')) }}
+									    </div>
+									</div>
+									@endif
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Email</label>
 									    <div class="col-sm-9">

@@ -104,7 +104,7 @@ class UsersController extends \BaseController {
 
 		    // are we resetting the password?
 		    if (Input::get('current_password') && Input::get('new_password') && Input::get('confirm_password')){
-		    	if ( Hash::make(Input::get('current_password')) !== $user->password ){
+		    	if ( !Hash::check(Input::get('current_password'), $user->password) ){
 		    		return Redirect::to('admin/profile')
 				    	->with('message', 'Incorrect password.')
 				    	->withErrors($validator)
