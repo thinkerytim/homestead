@@ -11,7 +11,7 @@
 @if ($errors->has())
 <div class="alert alert-danger">
     @foreach ($errors->all() as $error)
-        {{ $error }}<br>        
+        {{ $error }}<br>
     @endforeach
 </div>
 @endif
@@ -197,21 +197,21 @@
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Current Password</label>
 									    <div class="col-sm-9">
-									      	{{ Form::text('current_password', '', array('class' => 'form-control')) }}
+									      	{{ Form::password('current_password', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">New Password</label>
 									    <div class="col-sm-9">
-									      	{{ Form::text('new_password', '', array('class' => 'form-control')) }}
+									      	{{ Form::password('new_password', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 
 									<div class="form-group">
 									    <label class="col-sm-3 control-label">Confirm Password</label>
 									    <div class="col-sm-9">
-									      	{{ Form::text('confirm_password', '', array('class' => 'form-control')) }}
+									      	{{ Form::password('confirm_password', array('class' => 'form-control')) }}
 									    </div>
 									</div>
 

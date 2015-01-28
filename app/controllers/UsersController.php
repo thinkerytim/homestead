@@ -74,7 +74,7 @@ class UsersController extends \BaseController {
 	    	$user = User::find($id);
 	    	// handle the image here
 	    	if (Input::file('photo')){
-	    		$file = Input::file('photo');	    			    		
+	    		$file = Input::file('photo');
 	    		$filename = str_random(12).'.'.$file->getClientOriginalExtension();
 	    		$upload_success = Input::file('photo')->move($destinationPath, $filename);
 				if( !$upload_success ) {
@@ -98,6 +98,7 @@ class UsersController extends \BaseController {
 		    $user->pinterest = Input::get('pinterest');
 		    $user->linkedin = Input::get('linkedin');
 		    $user->bio = Input::get('bio');
+		    $user->phone = Input::get('phone');
 		    $user->mobile = Input::get('mobile');
 		    $user->reminders = Input::get('reminders');
 
@@ -130,7 +131,7 @@ class UsersController extends \BaseController {
 		    	->with('message', 'User update failed.')
 		    	->withErrors($validator)
 		    	->withInput();
-		} else {				
+		} else {
 		    // validation has failed, display error messages
 		    //return Response::json(array('success' => false, 'message' => 'User update failed.'));
 		    return Redirect::to('admin/profile')
