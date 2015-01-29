@@ -149,7 +149,7 @@ class UsersController extends \BaseController {
 		if (Auth::attempt(array('email'=>Input::get('email'), 'password'=>Input::get('password')), $remember)) {
 			if (Auth::user()->isAdmin())
 			{
-		    	return Redirect::to('admin')->with('message', 'You are now logged in, King Admin!');
+		    	return Redirect::to('admin')->with('message', 'You are now logged in, admin!');
 		    } else {
 		    	return Redirect::to('admin')->with('message', 'You are now logged in!');
 		    }

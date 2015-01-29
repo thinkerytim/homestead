@@ -15,4 +15,9 @@ class Subscription extends Eloquent {
     {
         return $this->belongsToOne('User');
     }
+
+    public function level()
+    {
+    	return $this->hasOne('Level');
+    }
 }
