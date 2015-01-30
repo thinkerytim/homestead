@@ -31,7 +31,7 @@
 				</li>
 				@endif
 				<li class="bg-palette3">
-					<a href="{{ action('ClosingsController@getIndex', array()) }}">
+					<a href="{{ action('ClosingsController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
 							<span class="text m-left-sm">Closings</span>

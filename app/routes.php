@@ -37,7 +37,7 @@ Route::controller('admin', 'AdminController');
 Route::controller('users', 'UsersController');
 
 /* Closings controller routes */
-Route::controller('closings', 'ClosingsController');
+Route::resource('closings', 'ClosingsController');
 
 /* Tasks controller routes */
 Route::resource('task', 'TasksController');

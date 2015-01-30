@@ -11,7 +11,7 @@
 			<div class="smart-widget">
 				<div class="smart-widget-inner">
 					<div class="smart-widget-body">
-						<h4 class="header-text m-bottom-md"><button type="button" class="btn btn-success"><i class="fa fa-plus-square-o"></i> New</button>
+						<h4 class="header-text m-bottom-md"><a href="{{ action('ClosingsController@create', array()) }}"><button type="button" class="btn btn-success"><i class="fa fa-plus-square-o"></i> New</button></a>
 						</h4>
 						<div class="row">
 							<div class="col-md-12">

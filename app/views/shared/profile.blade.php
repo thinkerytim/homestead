@@ -231,7 +231,7 @@
 									    </div>
 									</div>
 									{{ Form::token() }}			
-								</form>
+								{{ Form::close() }}
 							</div><!-- ./tab-pane -->
 						</div><!-- ./tab-content -->
 					</div><!-- ./smart-widget-body -->

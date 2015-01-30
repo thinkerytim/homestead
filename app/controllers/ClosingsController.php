@@ -21,7 +21,7 @@ class ClosingsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function index()
 	{
 		View::share('title', 'ThinkClosing - Closings');
 		if ( !Auth::user()->isAdmin() ) {
@@ -42,7 +42,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function create()
 	{
-		
+		return View::make('closings.new');
 	}
 
 
@@ -73,7 +73,7 @@ class ClosingsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function getShow($id)
+	public function show($id)
 	{
 		View::share('title', 'ThinkClosing - Closing: '.$id);
 		$closing 	= Closing::find($id);
