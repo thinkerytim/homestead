@@ -42,6 +42,7 @@ class ClosingsController extends \BaseController {
 	 */
 	public function create()
 	{
+		
 		return View::make('closings.new');
 	}
 

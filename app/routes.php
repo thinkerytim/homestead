@@ -40,16 +40,19 @@ Route::controller('users', 'UsersController');
 Route::resource('closings', 'ClosingsController');
 
 /* Tasks controller routes */
-Route::resource('task', 'TasksController');
+Route::resource('tasks', 'TasksController');
 
 /* Agents controller routes */
-Route::resource('agent', 'AgentsController');
+Route::resource('agents', 'AgentsController');
 
 /* Messages controller routes */
-Route::resource('message', 'MessagesController');
+Route::resource('messages', 'MessagesController');
 
-/* Messages controller routes */
-Route::resource('tour', 'ToursController');
+/* Tours controller routes */
+Route::resource('tours', 'ToursController');
+
+/* Contacts controller routes */
+Route::resource('contacts', 'ContactsController');
 
 /* Password controller routes */
 Route::controller('password', 'RemindersController');

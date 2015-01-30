@@ -17,19 +17,6 @@
 						</span>
 					</a>
 				</li>
-				@if(Auth::user()->role >= 2)
-				<li class="bg-palette2">
-					<a href="{{ action('AgentsController@index', array()) }}">
-						<span class="menu-content block">
-							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
-							<span class="text m-left-sm">Agents</span>
-						</span>
-						<span class="menu-content-hover block">
-							Agents
-						</span>
-					</a>
-				</li>
-				@endif
 				<li class="bg-palette3">
 					<a href="{{ action('ClosingsController@index', array()) }}">
 						<span class="menu-content block">
@@ -52,6 +39,33 @@
 						</span>
 					</a>
 				</li>
+				@if(Auth::user()->role >= 2)
+				<li class="bg-palette2">
+					<a href="{{ action('AgentsController@index', array()) }}">
+						<span class="menu-content block">
+							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
+							<span class="text m-left-sm">Agents</span>
+						</span>
+						<span class="menu-content-hover block">
+							Agents
+						</span>
+					</a>
+				</li>
+				@endif
+				<!-- change this to < 3 -->
+				@if(Auth::user()->role > 0)
+				<li class="bg-palette2">
+					<a href="{{ action('ContactsController@index', array()) }}">
+						<span class="menu-content block">
+							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
+							<span class="text m-left-sm">Contacts</span>
+						</span>
+						<span class="menu-content-hover block">
+							Contacts
+						</span>
+					</a>
+				</li>
+				@endif
 				<li class="bg-palette5">
 					<a href="{{ action('MessagesController@index', array()) }}">
 						<span class="menu-content block">
@@ -90,31 +104,6 @@
 				</li>
 				<li class="menu-header">
 					Others
-				</li>
-				<li class="openable bg-palette3">
-					<a href="#">
-						<span class="menu-content block">
-							<span class="menu-icon"><i class="block fa fa-gift fa-lg"></i></span>
-							<span class="text m-left-sm">Extra Pages</span>
-							<span class="submenu-icon"></span>
-						</span>
-						<span class="menu-content-hover block">
-							Pages
-						</span>
-					</a>
-					<ul class="submenu">
-						<li><a href="signin.html"><span class="submenu-label">Sign in</span></a></li>
-						<li><a href="signup.html"><span class="submenu-label">Sign Up</span></a></li>
-						<li><a href="lockscreen.html"><span class="submenu-label">Lock Screen</span></a></li>
-						<li><a href="profile.html"><span class="submenu-label">Profile</span></a></li>
-						<li><a href="gallery.html"><span class="submenu-label">Gallery</span></a></li>
-						<li><a href="blog.html"><span class="submenu-label">Blog</span></a></li>
-						<li><a href="single_post.html"><span class="submenu-label">Single Post</span></a></li>
-						<li><a href="pricing.html"><span class="submenu-label">Pricing</span></a></li>
-						<li><a href="invoice.html"><span class="submenu-label">Invoice</span></a></li>
-						<li><a href="error404.html"><span class="submenu-label">Error404</span></a></li>
-						<li><a href="blank.html"><span class="submenu-label">Blank</span></a></li>
-					</ul>
 				</li>
 				<li class="openable bg-palette4">
 					<a href="#">
