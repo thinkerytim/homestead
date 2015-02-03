@@ -9,7 +9,11 @@
 	<tr id="row{{ $task->id }}">
     	<td>{{{ $task->id }}}</td>
     	<td><a href="{{ action('TasksController@show', array($task->id)) }}">{{{ $task->name }}}</a></td>
-    	<td><a href="#"><i id="{{ $task->id }}" class="glyphicon glyphicon-trash list-delete" data-action="task"></i></a></td>
+    	<td>
+        {{ Form::open(['data-remote', 'method' => 'DELETE', 'action' => ['TasksController@destroy', $task->id] ]) }}
+            {{ HTML::decode(Form::button('<i class="glyphicon glyphicon-trash"></i>', array('class' => 'btn btn-xs btn-danger', 'type' => 'submit', 'data-confirm' => 'Are you sure?'))) }}
+        {{ Form::close() }}
+        </td>
     </tr>
 @empty
     <tr>

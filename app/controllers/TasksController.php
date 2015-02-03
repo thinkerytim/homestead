@@ -101,8 +101,17 @@ class TasksController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		// first check if user's ID matches & they are admin
-		return $id;
+		// TODO: first check if user's ID matches & they are admin
+		$task = Task::find($id);
+		if ($task->delete()){
+			Session::flash('alert-class', 'alert-info');
+			Session::flash('flash_content', 'Task deleted.');
+			return Response::json(['success' => true]);
+		} else {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'Task not deleted.');
+			return Response::json(['success' => false]);
+		}
 	}
 
 
