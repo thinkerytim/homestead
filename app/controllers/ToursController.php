@@ -2,6 +2,19 @@
 
 class ToursController extends \BaseController {
 
+	public function __construct()
+	{
+		$this->beforeFilter('ajax', array('on' => array('destroy')));
+        $this->beforeFilter(function()
+        {
+            if(!Auth::check())
+			{
+				return Redirect::to('users/login')
+		        ->with('message', 'Please login!');
+			}
+        });
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +22,14 @@ class ToursController extends \BaseController {
 	 */
 	public function index()
 	{
-		return 'blah';
+		View::share('title', 'ThinkClosing - Tours');
+		if ( !Auth::user()->isAdmin() ) {
+			$tours = Tour::where('user_id', '=', Auth::user()->id)
+				->paginate(10);
+		} else {
+			$tours = Tour::where('id', '>', 0)->paginate(10);
+		}
+		return View::make('tours.index', array('tours' => $tours));
 	}
 
 

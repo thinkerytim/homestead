@@ -7,12 +7,16 @@
 </thead>
 <tbody>
 @forelse($agents as $agent)
-	<tr>
+	<tr id="row{{ $agent->id }}">
     	<td>{{{ $agent->id }}}</td>
     	<td><a href="{{ action('AgentsController@show', array($agent->id)) }}">{{{ $agent->firstname }}} {{{ $agent->lastname }}}</a></td>
         <td>{{{ $agent->email }}}</td>
-    	<td>#closings</td>
-    	<td><a href="#"><i class="glyphicon glyphicon-trash"></i></a></td>
+    	<td>{{ $agent->closings->count() }}</td>
+    	<td>
+        {{ Form::open(['data-remote', 'method' => 'DELETE', 'action' => ['AgentsController@destroy', $agent->id] ]) }}
+            {{ HTML::decode(Form::button('<i class="glyphicon glyphicon-trash"></i>', array('class' => 'btn btn-xs btn-danger', 'type' => 'submit', 'data-confirm' => 'Are you sure?'))) }}
+        {{ Form::close() }}
+        </td>
     </tr>
 @empty
     <tr>

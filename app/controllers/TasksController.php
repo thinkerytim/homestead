@@ -103,6 +103,12 @@ class TasksController extends \BaseController {
 	{
 		// TODO: first check if user's ID matches & they are admin
 		$task = Task::find($id);
+		if (Auth::user()->id !== $task->user_id && !Auth::user()->isAdmin) {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'You are not the task owner.');
+			return Response::json(['success' => true]);
+		}
+
 		if ($task->delete()){
 			Session::flash('alert-class', 'alert-info');
 			Session::flash('flash_content', 'Task deleted.');

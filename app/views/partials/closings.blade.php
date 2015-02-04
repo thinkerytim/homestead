@@ -8,12 +8,16 @@
 </thead>
 <tbody>
 @forelse($closings as $closing)
-	<tr>
+	<tr id="row{{ $closing->id }}">
     	<td>{{{ $closing->id }}}</td>
         <td><a href="{{ action('ClosingsController@show', array($closing->id)) }}">{{{ $closing->title }}}</a></td>
     	<td>{{ $closing->user->firstname }} {{ $closing->user->lastname }}</td>
     	<td>{{{ $closing->closes_at }}}</td>
-    	<td><a href="#"><i id="{{ $closing->id }}" class="glyphicon glyphicon-trash list-delete" data-action="closings"></i></a></td>
+    	<td>
+        {{ Form::open(['data-remote', 'method' => 'DELETE', 'action' => ['ClosingsController@destroy', $closing->id] ]) }}
+            {{ HTML::decode(Form::button('<i class="glyphicon glyphicon-trash"></i>', array('class' => 'btn btn-xs btn-danger', 'type' => 'submit', 'data-confirm' => 'Are you sure?'))) }}
+        {{ Form::close() }}
+        </td>
     </tr>
 @empty
     <tr>
