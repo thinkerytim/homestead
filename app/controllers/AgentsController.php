@@ -101,8 +101,23 @@ class AgentsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		// first check if user's ID matches & they are admin
-	}
+		// TODO: first check if user's ID matches & they are admin
+		$agent = Agent::find($id);
+		if (Auth::user()->id !== $agent->user_id && !Auth::user()->isAdmin()) {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'You are not the agent owner.');
+			return Response::json(['success' => false]);
+		}
 
+		if ($agent->delete()){
+			Session::flash('alert-class', 'alert-info');
+			Session::flash('flash_content', 'Agent deleted.');
+			return Response::json(['success' => true]);
+		} else {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'Agent not deleted.');
+			return Response::json(['success' => false]);
+		}
+	}
 
 }

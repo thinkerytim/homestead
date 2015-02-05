@@ -17,7 +17,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette3">
+				<li class="bg-palette2">
 					<a href="{{ action('ClosingsController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
@@ -28,7 +28,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette4">
+				<li class="bg-palette3">
 					<a href="{{ action('TasksController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
@@ -40,7 +40,7 @@
 					</a>
 				</li>
 				@if(Auth::user()->role >= 2)
-				<li class="bg-palette2">
+				<li class="bg-palette4">
 					<a href="{{ action('AgentsController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
@@ -54,7 +54,7 @@
 				@endif
 				<!-- change this to < 3 -->
 				@if(Auth::user()->role > 0)
-				<li class="bg-palette2">
+				<li class="bg-palette5">
 					<a href="{{ action('ContactsController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-group fa-lg"></i></span>
@@ -66,7 +66,7 @@
 					</a>
 				</li>
 				@endif
-				<li class="bg-palette5">
+				<li class="bg-palette6">
 					<a href="{{ action('MessagesController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
@@ -78,7 +78,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette6">
+				<li class="bg-palette7">
 					<a href="{{ action('ToursController@index', array()) }}">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-play-circle-o fa-lg"></i></span>
@@ -90,7 +90,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="bg-palette7">
+				<li class="bg-palette8">
 					<a href="timeline.html">
 						<span class="menu-content block">
 							<span class="menu-icon"><i class="block fa fa-calendar fa-lg"></i></span>

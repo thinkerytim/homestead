@@ -12,6 +12,14 @@
             url: url,
             data: form.serialize(),
             success: function(data){
+                if (data.success){
+                    var parts   = url.split('/');
+                    var id      = parts.pop();
+                    // remove the deleted item
+                    $('#row'+id).addClass('danger').fadeOut("slow", function() {
+                        $(this).remove();
+                    });
+                }
                 $('#flash').toggle();
             },
             error: function(data){
