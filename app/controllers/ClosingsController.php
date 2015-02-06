@@ -4,15 +4,8 @@ class ClosingsController extends \BaseController {
 	
 	public function __construct()
 	{
-		$this->beforeFilter('csrf', array('on'=>'post'));
-        $this->beforeFilter(function()
-        {
-            if(!Auth::check())
-			{
-				return Redirect::to('users/login')
-		        ->with('message', 'Please login!');
-			}
-        });
+		$this->beforeFilter('ajax', array('on' => array('destroy')));
+        $this->beforeFilter('auth'); // defined in filters/filters.php
 	}
 
 

@@ -5,14 +5,7 @@ class ToursController extends \BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('ajax', array('on' => array('destroy')));
-        $this->beforeFilter(function()
-        {
-            if(!Auth::check())
-			{
-				return Redirect::to('users/login')
-		        ->with('message', 'Please login!');
-			}
-        });
+        $this->beforeFilter('auth', array('except' => array('show')));
 	}
 
 	/**

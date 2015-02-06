@@ -3,7 +3,6 @@
 class UsersController extends \BaseController {
 	public function __construct()
 	{
-		$this->beforeFilter('csrf', array('on' => array('post', 'put', 'patch', 'delete')));
 		$this->beforeFilter('auth', array('only'=>array('getDashboard','putUpdate', 'getIndex', 'getShow')));
 	}
 

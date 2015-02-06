@@ -30,6 +30,11 @@ Route::get('privacy', array('as' => 'privacy', function()
     return View::make('pages.privacy');
 }));
 
+Route::get('signup', array('as' => 'signup', function()
+{
+    return View::make('pages.signup');
+}));
+
 /* Admin controller routes */
 Route::controller('admin', 'AdminController');
 

@@ -40,36 +40,28 @@
                           {{ Session::get('message') }}
                         </div>
                     @endif
+                </div><!-- ./sign-in-inner -->
                     <!-- MAIN CONTENT AREA -->
                     @yield('content')
                     <!-- END MAIN CONTENT -->
 
-                </div><!-- ./sign-in-inner -->
+                
             </div><!-- ./sign-in-wrapper -->
         </div><!-- /wrapper -->
 
         <a href="" id="scroll-to-top" class="hidden-print"><i class="icon-chevron-up"></i></a>
 
-        <!-- Le javascript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-    
         <!-- Jquery -->
         {{ HTML::script("assets/javascript/jquery-1.11.1.min.js") }}
-
         <!-- Bootstrap -->
         {{ HTML::script("assets/bootstrap/js/bootstrap.min.js") }}
-        
-        <!-- Slimscroll -->\
+        <!-- Slimscroll -->
         {{ HTML::script("assets/javascript/jquery.slimscroll.min.js") }}
-        
         <!-- Popup Overlay -->
         {{ HTML::script("assets/javascript/jquery.popupoverlay.min.js") }}
-
         <!-- Modernizr -->
         {{ HTML::script("assets/javascript/modernizr.min.js") }}
-        
         <!-- Simplify -->
-        {{ HTML::script("assets/javascript/simplify/simplify.js") }}    
+        {{ HTML::script("assets/javascript/simplify/simplify.js") }}
     </body>
 </html>

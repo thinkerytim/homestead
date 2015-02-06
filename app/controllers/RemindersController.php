@@ -56,7 +56,6 @@ class RemindersController extends Controller {
 		$response = Password::reset($credentials, function($user, $password)
 		{
 			$user->password = Hash::make($password);
-
 			$user->save();
 		});
 
@@ -68,7 +67,8 @@ class RemindersController extends Controller {
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::PASSWORD_RESET:
-				return Redirect::to('/');
+				Auth::login($user);
+		    	return Redirect::to('users/dashboard')->with('message', 'Your password has been reset.');
 		}
 	}
 

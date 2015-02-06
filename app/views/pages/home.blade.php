@@ -14,13 +14,13 @@
 
 	    <!-- Bootstrap core CSS -->
 	    {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
-		
+
 		<!-- Font Awesome -->
 		{{ HTML::style("css/font-awesome.css") }}
 
 		<!-- ionicons -->
 		{{ HTML::style("css/ionicons.min.css") }}
-		
+
 		<!-- Owl -->
 		{{ HTML::style("css/owl.carousel.min.css") }}
 		{{ HTML::style("css/owl.theme.default.min.css") }}

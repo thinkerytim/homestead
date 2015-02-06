@@ -45,6 +45,8 @@ Route::filter('auth', function()
 		{
 			return Redirect::guest('users/login');
 		}
+	} else if (!Auth::user()->status) {
+		return Redirect::guest('signup')->with('message', 'Your subscription is expired or invalid.');
 	}
 });
 
