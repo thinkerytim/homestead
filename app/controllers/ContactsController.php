@@ -1,6 +1,18 @@
 <?php
 
 class ContactsController extends \BaseController {
+	public function __construct()
+	{
+		$this->beforeFilter('csrf');
+        $this->beforeFilter(function()
+        {
+            if(!Auth::check())
+			{
+				return Redirect::to('users/login')
+		        ->with('message', 'Please login!');
+			}
+        });
+	}
 
 	/**
 	 * Display a listing of the resource.

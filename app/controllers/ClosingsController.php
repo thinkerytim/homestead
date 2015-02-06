@@ -118,7 +118,23 @@ class ClosingsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return($id);
+		// TODO: first check if user's ID matches & they are admin
+		$closing = Closing::find($id);
+		if ( ( Auth::user()->id !== $closing->user_id || Auth::user()->id !== $closing->user->parent ) && !Auth::user()->isAdmin()) {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'You are not the closing owner.');
+			return Response::json(['success' => false]);
+		}
+
+		if ($closing->delete()){
+			Session::flash('alert-class', 'alert-info');
+			Session::flash('flash_content', 'Closing deleted.');
+			return Response::json(['success' => true]);
+		} else {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'Closing not deleted.');
+			return Response::json(['success' => false]);
+		}
 	}
 
 

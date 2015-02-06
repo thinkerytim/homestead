@@ -4,7 +4,7 @@ class UsersController extends \BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('csrf', array('on' => array('post', 'put', 'patch', 'delete')));
-		$this->beforeFilter('auth', array('only'=>array('getDashboard','putUpdate')));
+		$this->beforeFilter('auth', array('only'=>array('getDashboard','putUpdate', 'getIndex', 'getShow')));
 	}
 
 	/**
@@ -16,6 +16,19 @@ class UsersController extends \BaseController {
 	{
 		View::share('title', 'ThinkClosing');
 		return 'index';
+	}
+
+	public function getShow($id)
+	{
+		$user = User::find($id);
+		if (!$user) {
+			Session::flash('alert-class', 'alert-error');
+			Session::flash('flash_content', 'User not found.');
+			// make an empty user
+			$user = array();
+		}
+		View::share('title', 'ThinkClosing - '.$user->firstname.' '.$user->lastname);
+		return View::make('users.show')->with('user', $user);
 	}
 
 	public function getRegister()

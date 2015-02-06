@@ -103,7 +103,7 @@ class AgentsController extends \BaseController {
 	{
 		// TODO: first check if user's ID matches & they are admin
 		$agent = Agent::find($id);
-		if (Auth::user()->id !== $agent->user_id && !Auth::user()->isAdmin()) {
+		if (Auth::user()->id !== $agent->parent && !Auth::user()->isAdmin()) {
 			Session::flash('alert-class', 'alert-error');
 			Session::flash('flash_content', 'You are not the agent owner.');
 			return Response::json(['success' => false]);
