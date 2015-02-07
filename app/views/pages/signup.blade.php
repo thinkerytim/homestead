@@ -1,13 +1,8 @@
 @extends('layouts.nomenu')
 
-@section('content')
-<div class="span2">&nbsp;</div>
-<div class="span8 center-block">
+@section('big_content')
+<div id="main_content" class="span8 center-block">
 	<div class="padding-md">
-		<h3 class="header-text">
-			Pricing Table
-		</h3>
-
 		<div class="row">
 			<div class="col-md-3 col-sm-6">
 				<div class="pricing-widget bg-danger colorful-widget">
@@ -19,7 +14,7 @@
 
 					<div class="text-center">
 						<h4>Basic</h4>
-						<h4 class="pricing-value">$29/Month</h4>
+						<h4 class="pricing-value">FREE!</h4>
 					</div>
 
 					<ul class="pricing-service m-top-sm">
@@ -205,5 +200,4 @@
 		</div><!-- ./row -->
 	</div><!-- ./padding-md -->
 </div><!-- /main-container -->
-<div class="span2">&nbsp;</div>
 @stop

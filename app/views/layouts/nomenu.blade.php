@@ -18,6 +18,17 @@
         
         <!-- Simplify -->
         {{ HTML::style("css/simplify.min.css") }}
+
+        <!-- set the footer to no left margin -->
+        <style>
+        footer.footer {
+            margin-left: 0px;
+        } 
+        #main_content {
+            margin-right: 150px;
+            margin-left: 150px;
+        } 
+        </style>
     
     </head>
 
@@ -40,13 +51,13 @@
                           {{ Session::get('message') }}
                         </div>
                     @endif
+                    @yield('content')
                 </div><!-- ./sign-in-inner -->
                     <!-- MAIN CONTENT AREA -->
-                    @yield('content')
+                    @yield('big_content')
                     <!-- END MAIN CONTENT -->
-
-                
             </div><!-- ./sign-in-wrapper -->
+            @include('includes.footer')
         </div><!-- /wrapper -->
 
         <a href="" id="scroll-to-top" class="hidden-print"><i class="icon-chevron-up"></i></a>

@@ -220,7 +220,7 @@
 	                            </h3>
 	                            <br>
 	                            <div class="">
-	                                <a class="btn btn-theme btn-sm btn-min-block" href="{{ action('UsersController@getLogin', array()) }}">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="{{ action('UsersController@getRegister', array()) }}">Register</a></div>
+	                                <a class="btn btn-theme btn-sm btn-min-block btn-warning" href="{{ action('UsersController@getLogin', array()) }}">Login</a><a class="btn btn-theme btn-sm btn-min-block btn-success" href="{{ action('UsersController@getRegister', array()) }}">Register</a></div>
 	                        </div>
 	                    </div><!-- /header-text -->
 				    </div>
@@ -238,7 +238,7 @@
 	                            </h3>
 	                            <br>
 	                            <div class="">
-	                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
+	                                <a class="btn btn-theme btn-sm btn-min-block btn-warning" href="{{ action('UsersController@getLogin', array()) }}">Login</a><a class="btn btn-theme btn-sm btn-min-block btn-success" href="{{ action('UsersController@getRegister', array()) }}">Register</a></div>
 	                        </div>
 	                    </div><!-- /header-text -->
 				    </div>
@@ -256,7 +256,7 @@
 	                            </h3>
 	                            <br>
 	                            <div class="">
-	                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
+	                                <a class="btn btn-theme btn-sm btn-min-block btn-warning" href="{{ action('UsersController@getLogin', array()) }}">Login</a><a class="btn btn-theme btn-sm btn-min-block btn-success" href="{{ action('UsersController@getRegister', array()) }}">Register</a></div>
 	                        </div>
 	                    </div><!-- /header-text -->
 				    </div>

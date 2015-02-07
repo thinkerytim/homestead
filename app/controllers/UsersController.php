@@ -39,13 +39,16 @@ class UsersController extends \BaseController {
 	public function getLogin()
 	{
 		View::share('title', 'ThinkClosing - Login');
+		if (Auth::user()){
+			return Redirect::to('users/dashboard');
+		}
 	    return View::make('users.login');
 	}
 
 	public function getDashboard()
 	{
 		View::share('title', 'ThinkClosing - Dashboard');
-		return View::make('users.dashboard');
+		return Redirect::to('users/dashboard');
 	}
 
 	public function postCreate()
