@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('DocumentTableSeeder');
 		$this->call('DocMidTableSeeder');
 		$this->call('TaskMidTableSeeder');
+		$this->call('ToursTableSeeder');
 	}
 
 }
@@ -33,6 +34,7 @@ class UserTableSeeder extends Seeder {
 		    'email' => 'tim@thethinkery.net',
 		    'phone' => '',
 		    'role' => 3,
+		    'status' => 1,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
@@ -43,6 +45,7 @@ class UserTableSeeder extends Seeder {
 		    'email' => 'broker@example.com',
 		    'phone' => '',
 		    'role' => 2,
+		    'status' => 1,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
@@ -54,6 +57,7 @@ class UserTableSeeder extends Seeder {
 		    'phone' => '',
 		    'role' => 1,
 		    'parent' => 2,
+		    'status' => 1,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
@@ -65,6 +69,7 @@ class UserTableSeeder extends Seeder {
 		    'phone' => '',
 		    'role' => 0,
 		    'parent' => 0,
+		    'status' => 1,
 		    'password' => Hash::make('sea1sea')
 		  ));
 
@@ -93,7 +98,9 @@ class TaskTableSeeder extends Seeder {
         for ($i = 0; $i < 50; $i++)
 		{
 		  $user = Task::create(array(
-		    'name' => $faker->catchPhrase
+		    'name' => $faker->catchPhrase,
+		    'user_id' => $faker->numberBetween(1,5),
+		    'description' => $faker->paragraph(3)
 		  ));
 		}
     }
@@ -141,7 +148,8 @@ class DocumentTableSeeder extends Seeder {
 		{
 		  $user = Document::create(array(
 		    'title' => $faker->company,
-		    'description' => $faker->bs
+		    'description' => $faker->bs,
+		    'user_id' => $faker->numberBetween(1,6)
 		    //'path' => $faker->file('/tmp', '/tmp')
 		  ));
 		}
@@ -178,6 +186,21 @@ class TaskMidTableSeeder extends Seeder {
 	            'priority' => rand(0,3),
 	            'due_at' => $faker->dateTimeBetween('now', '+1 months')
 	        ]);
+		}
+    }
+}
+
+class ToursTableSeeder extends Seeder {
+    public function run()
+    {
+        DB::table('tours')->truncate();
+        $faker = Faker\Factory::create();
+        for ($i = 0; $i < 75; $i++)
+		{
+		  $user = Tour::create(array(
+		    'user_id' => $faker->numberBetween(1,5),
+		    'listing_id' => $faker->numberBetween(1,10)
+		  ));
 		}
     }
 }

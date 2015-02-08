@@ -48,7 +48,7 @@ class UsersController extends \BaseController {
 	public function getDashboard()
 	{
 		View::share('title', 'ThinkClosing - Dashboard');
-		return Redirect::to('users/dashboard');
+		return Redirect::to('admin/index');
 	}
 
 	public function postCreate()

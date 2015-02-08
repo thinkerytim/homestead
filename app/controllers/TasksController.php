@@ -27,38 +27,32 @@ class TasksController extends \BaseController {
 
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		return View::make( 'tasks/new' );
-	}
-
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
-	}
+		$validator = Validator::make(Input::all(), Task::$rules);
+		if ($validator->passes()) {
+			$task = new Task;
+			$task->name = Input::get('name');
+			$task->description = Input::get('description');
+			$task->user_id = Auth::user()->id;
+			$task->save();
 
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		View::share('title', 'ThinkClosing - Task');
-		$task = Task::find($id);
-		return View::make('tasks.show')->with('task', $task);
+			if ($task) {			
+		    	return Redirect::to('tasks')->with('message', 'Task added.');
+		    }
+		    // fallback	
+		    return Redirect::to('tasks')->with('message', 'Task added.');
+		} else {
+		    // validation has failed, display error messages
+		    return Redirect::to('tasks')
+		    	->with('message', 'The following errors occurred')
+		    	->withErrors($validator)
+		    	->withInput();
+		}
 	}
 
 
@@ -70,7 +64,9 @@ class TasksController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		View::share('title', 'ThinkClosing - Task');
+		$task = Task::find($id);
+		return View::make('tasks.edit')->with('task', $task);
 	}
 
 
@@ -82,7 +78,17 @@ class TasksController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+	    $task = Task::find($id);
+	    $task->user_id = Auth::user()->id;
+
+	    if (!$task->update(Input::all())) {
+	        return Redirect::back()
+            	->with('message', 'Something wrong happened while saving your model')
+                ->withInput();
+	    }
+
+	    return Redirect::route('tasks.index')
+            ->with('message', 'Task updated.');
 	}
 
 

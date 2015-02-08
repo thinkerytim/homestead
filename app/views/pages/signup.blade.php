@@ -18,11 +18,11 @@
 					</div>
 
 					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">10 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">150 GB</span></li>
-						<li>5 Domains</li>
-						<li>10 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
+						<li>Closings <span class="font-semi-bold">1</span></li>
+						<li>Tasks  <span class="font-semi-bold">10</span></li>
+						<li>Agents <span class="font-semi-bold">No</span></li>
+						<li>Tours <span class="font-semi-bold">1</span></li>
+						<li>Text Alerts <span class="font-semi-bold">No</span></li>
 					</ul>
 
 					<div class="m-top-md text-center">
@@ -40,16 +40,16 @@
 					</div>
 
 					<div class="text-center">
-						<h4>Professtional</h4>
-						<h4 class="pricing-value">$59/Month</h4>
+						<h4>Agent</h4>
+						<h4 class="pricing-value">$12/Month</h4>
 					</div>
 
 					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">30 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">200 GB</span></li>
-						<li>10 Domains</li>
-						<li>20 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
+						<li>Closings <span class="font-semi-bold">5</span></li>
+						<li>Tasks  <span class="font-semi-bold">50</span></li>
+						<li>Agents <span class="font-semi-bold">No</span></li>
+						<li>Tours <span class="font-semi-bold">25</span></li>
+						<li>Text Alerts <span class="font-semi-bold">Yes</span></li>
 					</ul>
 
 					<div class="m-top-md text-center">
@@ -67,16 +67,16 @@
 					</div>
 
 					<div class="text-center">
-						<h4>Business</h4>
-						<h4 class="pricing-value">$99/Month</h4>
+						<h4>Broker</h4>
+						<h4 class="pricing-value">$49/Month</h4>
 					</div>
 
 					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">100 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">500 GB</span></li>
-						<li>20 Domains</li>
-						<li>50 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
+						<li>Closings <span class="font-semi-bold">25</span></li>
+						<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
+						<li>Agents <span class="font-semi-bold">25</span></li>
+						<li>Tours <span class="font-semi-bold">50</span></li>
+						<li>Text Alerts <span class="font-semi-bold">Yes</span></li>
 					</ul>
 
 					<div class="m-top-md text-center">
@@ -95,105 +95,19 @@
 
 					<div class="text-center">
 						<h4>Unlimited</h4>
-						<h4 class="pricing-value">$159/Month</h4>
+						<h4 class="pricing-value">$99/Month</h4>
 					</div>
 
 					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">200 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">800 GB</span></li>
-						<li>30 Domains</li>
-						<li>100 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
+						<li>Closings <span class="font-semi-bold">Unlimited</span></li>
+						<li>Tasks  <span class="font-semi-bold">Unlimited</span></li>
+						<li>Agents <span class="font-semi-bold">Unlimited</span></li>
+						<li>Tours <span class="font-semi-bold">Unlimited</span></li>
+						<li>Text Alerts <span class="font-semi-bold">Yes</span></li>
 					</ul>
 
 					<div class="m-top-md text-center">
 						<a class="btn btn-info">Sign Up</a>
-					</div>
-				</div><!-- ./pricing-widget -->
-			</div><!-- .col -->
-		</div><!-- ./row -->
-
-		<div class="row m-top-md">
-			<div class="col-md-3 col-sm-6">
-				<div class="pricing-widget clean-pricing">
-					<div class="pricing-type bg-info text-center">Basic</div>
-					<div class="pricing-value bg-grey">
-						<span class="value">$39</span>
-						/Month
-					</div>
-
-					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">10 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">150 GB</span></li>
-						<li>5 Domains</li>
-						<li>10 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
-					</ul>
-
-					<div class="m-top-md m-bottom-md text-center">
-						<a class="btn btn-info">Sign Up</a>
-					</div>
-				</div><!-- ./pricing-widget -->
-			</div><!-- .col -->
-
-			<div class="col-md-3 col-sm-6">
-				<div class="pricing-widget clean-pricing">
-					<div class="pricing-type bg-danger text-center">Professtional</div>
-					<div class="pricing-value bg-grey">
-						<span class="value">$59</span>
-						/Month
-					</div>
-					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">30 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">200 GB</span></li>
-						<li>10 Domains</li>
-						<li>20 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
-					</ul>
-
-					<div class="m-top-md m-bottom-md text-center">
-						<a class="btn btn-danger">Sign Up</a>
-					</div>
-				</div><!-- ./pricing-widget -->
-			</div><!-- .col -->
-			<div class="col-md-3 col-sm-6">
-				<div class="pricing-widget clean-pricing">
-					<div class="pricing-type bg-purple text-center">Business</div>
-					<div class="pricing-value bg-grey">
-						<span class="value">$99</span>
-						/Month
-					</div>
-					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">100 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">500 GB</span></li>
-						<li>20 Domains</li>
-						<li>50 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
-					</ul>
-
-					<div class="m-top-md m-bottom-md text-center">
-						<a class="btn btn-purple">Sign Up</a>
-					</div>
-				</div><!-- ./pricing-widget -->
-			</div><!-- .col -->
-
-			<div class="col-md-3 col-sm-6">
-				<div class="pricing-widget clean-pricing">
-					<div class="pricing-type bg-success text-center">Unlimited</div>
-					<div class="pricing-value bg-grey">
-						<span class="value">$159</span>
-						/Month
-					</div>
-					<ul class="pricing-service m-top-sm">
-						<li>Amount of space <span class="font-semi-bold">200 GB</span></li>
-						<li>Bandwidth per month  <span class="font-semi-bold">800 GB</span></li>
-						<li>30 Domains</li>
-						<li>100 Email Addresses</li>
-						<li>24/7 Unlimited Support</li>
-					</ul>
-
-					<div class="m-top-md m-bottom-md text-center">
-						<a class="btn btn-success">Sign Up</a>
 					</div>
 				</div><!-- ./pricing-widget -->
 			</div><!-- .col -->

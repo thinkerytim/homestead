@@ -8,7 +8,7 @@
 @forelse($tasks as $task)
 	<tr id="row{{ $task->id }}">
     	<td>{{{ $task->id }}}</td>
-    	<td><a href="{{ action('TasksController@show', array($task->id)) }}">{{{ $task->name }}}</a></td>
+    	<td><a href="{{ action('TasksController@edit', array($task->id)) }}">{{{ $task->name }}}</a></td>
     	<td>
         {{ Form::open(['data-remote', 'method' => 'DELETE', 'action' => ['TasksController@destroy', $task->id] ]) }}
             {{ HTML::decode(Form::button('<i class="glyphicon glyphicon-trash"></i>', array('class' => 'btn btn-xs btn-danger', 'type' => 'submit', 'data-confirm' => 'Are you sure?'))) }}

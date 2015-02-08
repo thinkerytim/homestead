@@ -6,8 +6,12 @@ class Tour extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'tours';
+	protected $fillable = array('listing_id');
 
 	// form validation rules
+    public static $rules = array(
+        'listing_id'=>'required|alpha|min:2'
+    );
 
     /* Define Relations */
     public function user()

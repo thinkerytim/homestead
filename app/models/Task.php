@@ -6,9 +6,12 @@ class Task extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'tasks';
-    protected $dates = array('due_at');
+    protected $fillable = array('name', 'description');
 
 	// form validation rules
+    public static $rules = array(
+        'name'=>'required|min:2'
+    );
 
     /* Define Relations */
 
