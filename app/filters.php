@@ -90,3 +90,20 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*
+|--------------------------------------------------------------------------
+| Stripe Subscription Filter
+|--------------------------------------------------------------------------
+|
+| Check if user is subscribed, the agent parent is subscribed, or redirect to signup page
+|
+*/
+
+Route::filter('subscribed', function()
+{
+    if (Auth::user() && ( !Auth::user()->subscribed() && !Auth::user()->getParent()->subscribed() ))
+    {
+        return Redirect::to('pages.signup');
+    }
+});

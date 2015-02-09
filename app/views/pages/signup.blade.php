@@ -26,7 +26,7 @@
 					</ul>
 
 					<div class="m-top-md text-center">
-						<a class="btn btn-danger">Sign Up</a>
+						{{ Form::button('Sign Up', array('class' => 'btn btn-danger', 'id' => 'basic-subscription')); }}
 					</div>
 				</div><!-- ./pricing-widget -->
 			</div><!-- .col -->
@@ -53,7 +53,7 @@
 					</ul>
 
 					<div class="m-top-md text-center">
-						<a class="btn btn-warning">Sign Up</a>
+						{{ Form::button('Sign Up', array('class' => 'btn btn-warning', 'id' => 'agent-subscription')); }}
 					</div>
 				</div><!-- ./pricing-widget -->
 			</div><!-- .col -->
@@ -80,7 +80,7 @@
 					</ul>
 
 					<div class="m-top-md text-center">
-						<a class="btn btn-success">Sign Up</a>
+						{{ Form::button('Sign Up', array('class' => 'btn btn-success', 'id' => 'broker-subscription')); }}
 					</div>
 				</div><!-- ./pricing-widget -->
 			</div><!-- .col -->
@@ -107,11 +107,75 @@
 					</ul>
 
 					<div class="m-top-md text-center">
-						<a class="btn btn-info">Sign Up</a>
+						{{ Form::button('Sign Up', array('class' => 'btn btn-info', 'id' => 'unlimited-subscription')); }}
 					</div>
 				</div><!-- ./pricing-widget -->
 			</div><!-- .col -->
 		</div><!-- ./row -->
 	</div><!-- ./padding-md -->
 </div><!-- /main-container -->
+@stop
+
+@section('extra_scripts')
+<!-- Stripe checkout scripts -->
+{{ HTML::script("https://checkout.stripe.com/checkout.js") }}
+<script>
+(function ($) {
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_r9dklGb4ky4bd5rVVcxYwrXZ',
+    image: '/square-image.png',
+    token: function(token) {
+		$.post( "test.php", { token: token.id, email: token.email })
+			.done(function( data ) {
+				alert( "Data Loaded: " + data );
+			});
+    }
+  });
+
+  $('#basic-subscription').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Basic Subscription',
+      description: '',
+      amount: 0
+    });
+    e.preventDefault();
+  });
+
+  $('#agent-subscription').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Agent Subscription',
+      description: '',
+      amount: 900
+    });
+    e.preventDefault();
+  });
+
+  $('#broker-subscription').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Broker Subscription',
+      description: '',
+      amount: 4900
+    });
+    e.preventDefault();
+  });
+
+  $('#unlimited-subscription').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Unlimited Subscription',
+      description: '',
+      amount: 9900
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+})(jQuery);  
+</script>
 @stop

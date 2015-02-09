@@ -125,6 +125,7 @@ return array(
 		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
 		'Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
+		'Laravel\Cashier\CashierServiceProvider',
 	),
 
 	/*

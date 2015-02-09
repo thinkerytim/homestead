@@ -53,7 +53,7 @@ class UsersController extends \BaseController {
 
 	public function postCreate()
 	{
-		$validator = Validator::make(Input::all(), User::$signup_rules);
+		$validator = Validator::make(Input::all(), User::$rules);
 	    if ($validator->passes()) {
 	        $user = new User;
 		    $user->firstname = Input::get('firstname');

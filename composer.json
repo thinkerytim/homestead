@@ -6,10 +6,11 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"manavo/laravel-bootstrap-forms": "~0.0",
-		"greggilbert/recaptcha": "dev-master",
+		"greggilbert/recaptcha": "~1.1.5",
 		"facebook/php-sdk": "~3.2",
 		"thomaswelton/laravel-gravatar": "0.1.x",
-		"intervention/image": "dev-master"
+		"intervention/image": "dev-master",
+		"laravel/cashier": "~2.0"
 	},
 	"autoload": {
 		"classmap": [

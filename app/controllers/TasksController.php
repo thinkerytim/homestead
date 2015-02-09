@@ -5,7 +5,7 @@ class TasksController extends \BaseController {
 	public function __construct()
 	{
 		$this->beforeFilter('ajax', array('on' => array('destroy')));
-        $this->beforeFilter('authFilter'); // defined in filters/filters.php
+        $this->beforeFilter('auth'); // defined in filters/filters.php
 	}
 
 	/**
@@ -66,6 +66,15 @@ class TasksController extends \BaseController {
 	{
 		View::share('title', 'ThinkClosing - Task');
 		$task = Task::find($id);
+		if (!$task) {
+			return Redirect::route('tasks.index')
+            	->with('message', 'Task not found.')
+            	->with('alert-class', 'alert-error');
+		} else if($task->user_id !== Auth::user()->id || !Auth::user()->isAdmin()) {
+			return Redirect::route('tasks.index')
+            	->with('message', "You don't have permission to edit this task.")
+            	->with('alert-class', 'alert-error');
+		}
 		return View::make('tasks.edit')->with('task', $task);
 	}
 

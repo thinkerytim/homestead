@@ -14,4 +14,9 @@ class Contact extends Eloquent {
     {
         return $this->belongsTo('User');
     }
+
+    public function contacttype()
+    {
+        return $this->hasOne('ContactType', 'role');
+    }
 }

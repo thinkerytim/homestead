@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('DocMidTableSeeder');
 		$this->call('TaskMidTableSeeder');
 		$this->call('ToursTableSeeder');
+		$this->call('ContactTypesTableSeeder');
 	}
 
 }
@@ -202,5 +203,28 @@ class ToursTableSeeder extends Seeder {
 		    'listing_id' => $faker->numberBetween(1,10)
 		  ));
 		}
+    }
+}
+
+class ContactTypesTableSeeder extends Seeder {
+    public function run()
+    {
+        DB::table('contact_types')->truncate();
+        
+		$user = ContactType::create(array(
+			'title' => 'Loan Officer'
+		));
+
+		$user = ContactType::create(array(
+			'title' => 'Title Office'
+		));
+
+		$user = ContactType::create(array(
+			'title' => 'Appraiser'
+		));
+
+		$user = ContactType::create(array(
+			'title' => 'Home Inspector'
+		));
     }
 }

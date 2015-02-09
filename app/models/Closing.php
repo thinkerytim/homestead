@@ -7,6 +7,7 @@ class Closing extends Eloquent {
 	 */
 	protected $table 	= 'closings';
     protected $dates    = array('closes_at');
+    protected $fillable = array('title', 'user_id', 'closes_at');
 
 	// form validation rules
 

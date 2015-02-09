@@ -74,5 +74,6 @@
         {{ HTML::script("assets/javascript/modernizr.min.js") }}
         <!-- Simplify -->
         {{ HTML::script("assets/javascript/simplify/simplify.js") }}
+        @yield('extra_scripts')
     </body>
 </html>

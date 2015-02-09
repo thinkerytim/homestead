@@ -4,21 +4,24 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Laravel\Cashier\BillableTrait;
+use Laravel\Cashier\BillableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements UserInterface, RemindableInterface, BillableInterface {
 	// user.role:
 	// 0: basic user / client
 	// 1: agent
 	// 2: broker
 	// 3: admin
 
-	use UserTrait, RemindableTrait;
+	use UserTrait, RemindableTrait, BillableTrait;
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
 	protected $table = 'users';
+	protected $dates = ['trial_ends_at', 'subscription_ends_at'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -28,29 +31,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'password_confirmation','remember_token');
 	protected $guarded = array('id', 'role');
 
-	public static $signup_rules = array(
+	public static $rules = array(
     	'firstname'=>'required|alpha|min:2',
     	'lastname'=>'required|alpha|min:2',
     	'email'=>'required|email|unique:users',
-    	'password'=>'required|alpha_num|between:6,12|confirmed',
-    	'password_confirmation'=>'required|same:password',
-    	'recaptcha_response_field' => 'required|recaptcha',
-    	'agreement' => 'required|accepted'
-    );
+    	'password'=>'sometimes|required|alpha_num|between:6,12|confirmed',
+    	'password_confirmation'=>'sometimes|required|same:password',
+    	'recaptcha_response_field' => 'sometimes|required|recaptcha',
+    	'agreement' => 'sometimes|required|accepted',
+    	'website'=>'url',
+    	'facebook'=>'url',
+    	'twitter'=>'url',
+    	'pinterest'=>'url',
+    	'linkedin'=>'url',
+    	'icon' => 'image|max:3000'
 
-	public static function edit_rules($id) {
-		return array(
-	    	'firstname'=>'required|alpha|min:2',
-	    	'lastname'=>'required|alpha|min:2',
-	    	'email'=>'required|email|unique:users,email,'.$id,
-	    	'website'=>'url',
-	    	'facebook'=>'url',
-	    	'twitter'=>'url',
-	    	'pinterest'=>'url',
-	    	'linkedin'=>'url',
-	    	'icon' => 'image|max:3000'
-	    );
-	}
+    );
 
 	public function getRememberToken()
 	{
@@ -98,8 +94,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasOne('Subscription');
     }
 
-    public function own()
+    public function getParent()
     {
-    	
+    	return User::find($this->parent);
     }
 }
