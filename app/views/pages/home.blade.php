@@ -321,7 +321,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-6">
-							<img src="assets/images/mockup1.png" alt="" class="fadeInRight animation-element disabled">
+							<iframe class="fadeInRight animation-element disabled" width="560" height="400" src="https://www.youtube.com/embed/K0Vf14kMeZU" frameborder="0" allowfullscreen></iframe>
 						</div>
 						<div class="col-sm-6">
 							<h3 class="text-upper">THE FEATURES <span class="text-success">YOU WANT</span></h3>

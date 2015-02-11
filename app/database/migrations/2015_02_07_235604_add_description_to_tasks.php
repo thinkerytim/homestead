@@ -25,7 +25,10 @@ class AddDescriptionToTasks extends Migration {
 	 */
 	public function down()
 	{
-		$table->dropColumn('description');
+		Schema::table('tasks', function(Blueprint $table)
+		{
+			$table->dropColumn('description');
+		});
 	}
 
 }

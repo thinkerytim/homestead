@@ -24,7 +24,11 @@ class ClosingsController extends \BaseController {
 		} else {
 			$closings = Closing::where('id', '>', 0)->paginate(10);
 		}
-		return View::make('closings.index', array('closings' => $closings));
+		// set the agents and clients as arrays by id => name
+		$agents 	= DB::table('users')->select('id', 'email')->whereIn('role', array(1, 2))->get();
+		$clients 	= DB::table('users')->select('id', 'email')->where('role', '=', 0)->get();
+
+		return View::make('closings.index', array('closings' => $closings, 'agents' => $agents, 'clients' => $clients));
 	}
 
 

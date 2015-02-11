@@ -25,7 +25,10 @@ class AddStatusToUsers extends Migration {
 	 */
 	public function down()
 	{
-		$table->dropColumn('status');
+		Schema::table('users', function(Blueprint $table)
+		{
+			$table->dropColumn('status');
+		});
 	}
 
 }

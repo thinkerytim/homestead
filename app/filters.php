@@ -45,8 +45,6 @@ Route::filter('auth', function()
 		{
 			return Redirect::guest('users/login');
 		}
-	} else if (!Auth::user()->status) {
-		return Redirect::guest('signup')->with('message', 'Your subscription is expired or invalid.');
 	}
 });
 
@@ -102,8 +100,9 @@ Route::filter('csrf', function()
 
 Route::filter('subscribed', function()
 {
-    if (Auth::user() && ( !Auth::user()->subscribed() && !Auth::user()->getParent()->subscribed() ))
-    {
-        return Redirect::to('pages.signup');
-    }
+    //if (Auth::user() && ( !Auth::user()->subscribed() && !Auth::user()->getParent()->subscribed() ))
+    //{
+    //    return Redirect::to('pages.signup');
+    //}
+    return true;
 });

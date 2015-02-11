@@ -4,32 +4,27 @@
         <meta charset="utf-8">
         <title>ThinkClosing</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Real estate virtual tour and closing customer contact management solutions for use with Intellectual Property real estate component">
+        <meta name="author" content="The Thinkery LLC">
 
         <!-- Bootstrap core CSS -->
         {{ HTML::style("assets/bootstrap/css/bootstrap.min.css") }}
-        
         <!-- Font Awesome -->
         {{ HTML::style("css/font-awesome.css") }}
-
         <!-- ionicons -->
         {{ HTML::style("css/ionicons.min.css") }}
-        
         <!-- Simplify -->
         {{ HTML::style("css/simplify.min.css") }}
-
         <!-- set the footer to no left margin -->
         <style>
         footer.footer {
             margin-left: 0px;
-        } 
+        }
         #main_content {
             margin-right: 150px;
             margin-left: 150px;
-        } 
+        }
         </style>
-    
     </head>
 
     <body class="overflow-hidden light-background">

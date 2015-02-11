@@ -19,4 +19,9 @@ class Contact extends Eloquent {
     {
         return $this->hasOne('ContactType', 'role');
     }
+
+    public function company()
+    {
+        return $this->belongsTo('Company');
+    }
 }

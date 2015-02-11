@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('UserTableSeeder');
 		$this->call('TaskTableSeeder');
-		$this->call('SubscriptionTableSeeder');
 		$this->call('ClosingTableSeeder');
 		$this->call('DocumentTableSeeder');
 		$this->call('DocMidTableSeeder');
@@ -107,22 +106,6 @@ class TaskTableSeeder extends Seeder {
     }
 }
 
-class SubscriptionTableSeeder extends Seeder {
-    public function run()
-    {
-        DB::table('subscriptions')->truncate();
-        $faker = Faker\Factory::create();
-        for ($i = 0; $i < 6; $i++)
-		{
-		  $user = Subscription::create(array(
-		    'user_id' => $faker->numberBetween(1,5),
-		    'level_id' => $faker->numberBetween(1,5),
-		    'expires_at' => $faker->dateTimeBetween('now', '+6 months')
-		  ));
-		}
-    }
-}
-
 class ClosingTableSeeder extends Seeder {
     public function run()
     {
@@ -210,7 +193,7 @@ class ContactTypesTableSeeder extends Seeder {
     public function run()
     {
         DB::table('contact_types')->truncate();
-        
+
 		$user = ContactType::create(array(
 			'title' => 'Loan Officer'
 		));

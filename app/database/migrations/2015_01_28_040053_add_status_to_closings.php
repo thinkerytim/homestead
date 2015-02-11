@@ -25,7 +25,10 @@ class AddStatusToClosings extends Migration {
 	 */
 	public function down()
 	{
-		$table->dropColumn('status');
+		Schema::table('closings', function(Blueprint $table)
+		{
+			$table->dropColumn('status');
+		});
 	}
 
 }

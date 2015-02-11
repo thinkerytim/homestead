@@ -84,14 +84,24 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
         return $this->hasMany('Document');
     }
 
+    public function received_messages()
+    {
+        return $this->hasMany('Messages', 'to');
+    }
+
+    public function sent_messages()
+    {
+        return $this->hasMany('Messages', 'from');
+    }
+
     public function closings()
     {
         return $this->hasMany('Closing');
     }
 
-    public function subscription()
+    public function companies()
     {
-        return $this->hasOne('Subscription');
+        return $this->hasMany('Companies');
     }
 
     public function getParent()

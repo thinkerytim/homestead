@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubscriptionsTable extends Migration {
+class CreateCompaniesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,14 @@ class CreateSubscriptionsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('subscriptions', function($table)
+		Schema::create('companies', function($table)
 		{
 			$table->increments('id');
-		    $table->integer('user_id');
-		    $table->integer('level_id');
-		    $table->datetime('expires_at');
-		    $table->boolean('status')->default(0); // invalid: 0 / valid: 1
+		    $table->string('name', 50);
+		    $table->string('phone');
+		    $table->string('fax');
+		    $table->string('email');
+		    $table->string('user_id');
 		    $table->timestamps();
 		});
 	}
@@ -30,7 +31,7 @@ class CreateSubscriptionsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('subscriptions');
+		Schema::drop('companies');
 	}
 
 }

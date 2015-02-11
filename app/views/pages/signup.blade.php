@@ -1,6 +1,9 @@
 @extends('layouts.nomenu')
 
 @section('big_content')
+
+{{dd(Auth::user()->email)}}
+
 <div id="main_content" class="span8 center-block">
 	<div class="padding-md">
 		<div class="row">
@@ -95,7 +98,7 @@
 
 					<div class="text-center">
 						<h4>Unlimited</h4>
-						<h4 class="pricing-value">$99/Month</h4>
+						<h4 class="pricing-value">$149/Month</h4>
 					</div>
 
 					<ul class="pricing-service m-top-sm">
@@ -123,9 +126,9 @@
 (function ($) {
   var handler = StripeCheckout.configure({
     key: 'pk_test_r9dklGb4ky4bd5rVVcxYwrXZ',
-    image: '/square-image.png',
+    image: '{{asset('assets/images/lightbulb.png')}}',
     token: function(token) {
-		$.post( "test.php", { token: token.id, email: token.email })
+		$.post( "checkout", { token: token.id, email: token.email })
 			.done(function( data ) {
 				alert( "Data Loaded: " + data );
 			});
@@ -137,7 +140,11 @@
     handler.open({
       name: 'Basic Subscription',
       description: '',
-      amount: 0
+      amount: 0,
+      @if (Auth::user())
+	    email: {{ Auth::user()->email }},
+	  @endif
+      zipCode: true
     });
     e.preventDefault();
   });
@@ -147,7 +154,11 @@
     handler.open({
       name: 'Agent Subscription',
       description: '',
-      amount: 900
+      amount: 1200,
+      @if (Auth::user())
+	    email: {{ Auth::user()->email }},
+	  @endif
+	  zipCode: true
     });
     e.preventDefault();
   });
@@ -157,7 +168,11 @@
     handler.open({
       name: 'Broker Subscription',
       description: '',
-      amount: 4900
+      amount: 4900,
+      @if (Auth::user())
+	    email: {{ Auth::user()->email }},
+	  @endif
+      zipCode: true
     });
     e.preventDefault();
   });
@@ -167,7 +182,11 @@
     handler.open({
       name: 'Unlimited Subscription',
       description: '',
-      amount: 9900
+      amount: 14900,
+      @if (Auth::user())
+	    email: {{ Auth::user()->email }},
+	  @endif
+      zipCode: true
     });
     e.preventDefault();
   });
