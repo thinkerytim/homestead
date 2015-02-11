@@ -1,0 +1,1031 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"add",
+				"address2"
+			],
+			[
+				"jq",
+				"jQuery.isWindow	jQuery.isWindow"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"passowr",
+				"password_confirmation"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"Subs",
+				"subscriptions"
+			],
+			[
+				"number",
+				"numberBetween"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"buyer",
+				"buyer_id"
+			],
+			[
+				"el",
+				"else"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/pages/signup.blade.php",
+			"settings":
+			{
+				"buffer_size": 5867,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/profile.blade.php",
+			"settings":
+			{
+				"buffer_size": 9571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 19722,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/User.php",
+			"settings":
+			{
+				"buffer_size": 2452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/nomenu.blade.php",
+			"settings":
+			{
+				"buffer_size": 3320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/ContactType.php",
+			"settings":
+			{
+				"buffer_size": 292,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Contact.php",
+			"settings":
+			{
+				"buffer_size": 464,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 1010,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Company.php",
+			"settings":
+			{
+				"buffer_size": 431,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/UsersController.php",
+			"settings":
+			{
+				"buffer_size": 5815,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/filters.php",
+			"settings":
+			{
+				"buffer_size": 2709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/config/services.php",
+			"settings":
+			{
+				"buffer_size": 701,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/config/app.php",
+			"settings":
+			{
+				"buffer_size": 7901,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/tasks/edit.blade.php",
+			"settings":
+			{
+				"buffer_size": 1678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/tasks/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 2004,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Tour.php",
+			"settings":
+			{
+				"buffer_size": 398,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tim/Laravel",
+		"/Users/tim/Laravel/app/config",
+		"/Users/tim/Laravel/app/controllers",
+		"/Users/tim/Laravel/app/database",
+		"/Users/tim/Laravel/app/database/migrations",
+		"/Users/tim/Laravel/app/database/seeds",
+		"/Users/tim/Laravel/app/models",
+		"/Users/tim/Laravel/app/views",
+		"/Users/tim/Laravel/app/views/admin",
+		"/Users/tim/Laravel/app/views/includes",
+		"/Users/tim/Laravel/app/views/layouts",
+		"/Users/tim/Laravel/app/views/pages",
+		"/Users/tim/Laravel/app/views/partials",
+		"/Users/tim/Laravel/app/views/shared",
+		"/Users/tim/Laravel/app/views/tasks",
+		"/Users/tim/Laravel/app/views/users",
+		"/Users/tim/Laravel/public/assets"
+	],
+	"file_history":
+	[
+		"/Users/tim/Laravel/app/storage/views/ada786aa4ee855b2dc55a02850b3de90",
+		"/Users/tim/Laravel/app/storage/views/a0c8cc3fdb4dc5dc69c18fb8b0afd922",
+		"/Users/tim/Laravel/app/storage/views/.gitignore",
+		"/Users/tim/Laravel/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php",
+		"/Users/tim/Laravel/app/config/view.php",
+		"/Users/tim/Laravel/node_modules/grunt-contrib-less/node_modules/less/test/css/variables-in-at-rules.css",
+		"/Users/tim/Laravel/app/models/User.php",
+		"/Users/tim/Laravel/app/models/Closing.php",
+		"/Users/tim/Laravel/app/models/Task.php",
+		"/Users/tim/Laravel/app/controllers/UsersController.php",
+		"/Users/tim/Laravel/app/controllers/TasksController.php",
+		"/Users/tim/Laravel/app/database/seeds/DatabaseSeeder.php",
+		"/Users/tim/Laravel/app/views/partials/tasks.blade.php",
+		"/Users/tim/Laravel/app/views/pages/home.blade.php",
+		"/Users/tim/Laravel/app/views/includes/sidebar.blade.php",
+		"/Users/tim/Laravel/app/controllers/AgentsController.php",
+		"/Users/tim/Laravel/app/views/layouts/nomenu.blade.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_02_07_235604_add_description_to_tasks.php",
+		"/Users/tim/Laravel/public/assets/javascript/utility.js",
+		"/Users/tim/Laravel/app/routes.php",
+		"/Users/tim/Laravel/app/models/Contact.php",
+		"/Users/tim/Laravel/app/views/partials/task.blade.php",
+		"/Users/tim/Laravel/app/views/closings/new.blade.php",
+		"/Users/tim/Laravel/app/controllers/ClosingsController.php",
+		"/Users/tim/Laravel/app/views/includes/header.blade.php",
+		"/Users/tim/Laravel/app/views/shared/profile.blade.php",
+		"/Users/tim/Laravel/app/controllers/ContactsController.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_01_30_041238_create_contacts_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_01_30_043300_create_contact_types_table.php",
+		"/Users/tim/Laravel/app/views/partials/closings.blade.php",
+		"/Users/tim/Laravel/app/views/closings/index.blade.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_01_28_042308_create_levels_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_01_28_040053_add_status_to_closings.php",
+		"/Users/tim/Laravel/app/database/migrations/2015_01_24_214209_add_more_fields_to_users.php",
+		"/Users/tim/Laravel/app/config/app.php",
+		"/Users/tim/Laravel/composer.json",
+		"/Users/tim/Laravel/public/assets/bootstrap/css/bootstrap.css",
+		"/Users/tim/Laravel/public/css/font-awesome.css",
+		"/Users/tim/Laravel/public/assets/bootstrap/css/bootstrap.min.css",
+		"/Users/tim/Laravel/.git/MERGE_MSG",
+		"/private/var/folders/x2/86569sy52_52j3v2fw9_0x6h0000gn/T/fz3temp-1/functions.php",
+		"/Users/tim/Sites/joomla3/components/com_iproperty/views/allproperties/tmpl/default.php",
+		"/Users/tim/Sites/joomla3/components/com_iproperty/views/allproperties/view.html.php",
+		"/Users/tim/Sites/joomla3.6/.htaccess",
+		"/Users/tim/Sites/joomla3/.htaccess",
+		"/Users/tim/Sites/joomla3/language/en-GB/en-GB.mod_ip_zsearch.ini",
+		"/Users/tim/angular_tutorial/angular-phonecat/app/js/app.js",
+		"/Users/tim/angular_tutorial/angular-phonecat/app/js/controllers.js",
+		"/Users/tim/.bash_profile",
+		"/Users/tim/angular_tutorial/angular-phonecat/test/unit/controllersSpec.js",
+		"/Users/tim/Homestead/Homestead.yaml",
+		"/Users/tim/Laravel/app/views/admin/index.blade.php",
+		"/Users/tim/Laravel/app/views/includes/adminscripts.blade.php",
+		"/Users/tim/Laravel/app/views/layouts/admin.blade.php",
+		"/Users/tim/Laravel/app/views/agents/show.blade.php",
+		"/Users/tim/Laravel/app/controllers/MessagesController.php",
+		"/Users/tim/Laravel/app/models/Message.php",
+		"/Users/tim/Laravel/app/views/tasks/index.blade.php",
+		"/Users/tim/Laravel/app/views/partials/message.blade.php",
+		"/Users/tim/Laravel/app/views/users/login.blade.php",
+		"/Users/tim/Laravel/app/views/messages/index.blade.php",
+		"/Users/tim/Laravel/app/views/closings/show.blade.php",
+		"/Users/tim/Laravel/app/views/users/dashboard.blade.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_11_25_231011_create_subscriptions_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_11_25_224206_create_messages_table.php",
+		"/Users/tim/Laravel/app/views/agents/create.blade.php",
+		"/Users/tim/Laravel/app/views/agents/edit.blade.php",
+		"/Users/tim/Laravel/app/views/agents/agent.blade.php",
+		"/Users/tim/Laravel/app/views/includes/head.blade.php",
+		"/Users/tim/Laravel/app/start/global.php",
+		"/Users/tim/Laravel/app/config/facebook.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_11_21_225519_add_photo_to_users.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_11_21_223712_add_uid_to_users.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_11_21_224214_add_tokens_to_users.php",
+		"/Users/tim/Laravel/app/views/pages/tos.blade.php",
+		"/Users/tim/Laravel/app/views/password/reset.blade.php",
+		"/Users/tim/Laravel/app/views/password/remind.blade.php",
+		"/Users/tim/Laravel/app/views/includes/footer.blade.php",
+		"/Users/tim/Laravel/app/views/includes/sidebar_right.blade.php",
+		"/Users/tim/Laravel/app/views/errors/missing.blade.php",
+		"/Users/tim/Laravel/app/lang/en/validation.php",
+		"/Users/tim/Laravel/app/config/packages/greggilbert/recaptcha/config.php",
+		"/Users/tim/Laravel/app/views/users/register.blade.php",
+		"/Users/tim/Laravel/app/views/layouts/default.blade.php",
+		"/Users/tim/Laravel/public/css/smartadmin-production.min.css",
+		"/Users/tim/Laravel/app/inc/init.php",
+		"/Users/tim/Laravel/package.json",
+		"/Users/tim/Laravel/app/views/tasks/task.blade.php",
+		"/Users/tim/Laravel/app/inc/header.php",
+		"/Users/tim/Laravel/app/inc/ribbon.php",
+		"/Users/tim/Laravel/app/lib/func.global.php",
+		"/Users/tim/Laravel/app/inc/scripts.php",
+		"/Users/tim/Laravel/public/css/font-awesome.min.css",
+		"/Users/tim/Laravel/app/inc/footer.php",
+		"/Users/tim/Laravel/app/assets/javascript/frontend.js",
+		"/Users/tim/Laravel/public/assets/javascript/frontend.js",
+		"/Users/tim/.bash_prompt",
+		"/Users/tim/.aliases",
+		"/Users/tim/.functions",
+		"/Users/tim/Laravel/app/views/closings/closing.blade.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_13_035056_add_fields_to_task_mid.php",
+		"/Users/tim/Laravel/app/controllers/BaseController.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_13_035056_AddFieldsToTaskMid.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_03_005046_create_task_mid_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_11_205235_AddRoleToUser.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_06_034707_add_token_to_user_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_03_005145_create_document_mid_table.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_08_090112_rebuildDocMid.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_11_161140_renameDocMidAgain.php",
+		"/Users/tim/Laravel/app/models/Document.php",
+		"/Users/tim/Laravel/app/models/Subscription.php",
+		"/Users/tim/Laravel/app/database/migrations/2014_10_08_085621_rebuildTaskMid.php",
+		"/Users/tim/Laravel/app/views/layouts/closings.blade.php",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/views/leaderboards/_leader.html.erb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/mailers/user_message.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/views/user_message/send_update.html.erb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/models/user.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/controllers/leaderboards_controller.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/views/layouts/_header.html.erb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/views/leaderboards/show.html.erb",
+		"/Users/tim/GIT_REPOS/maztaplan2/log/development.log",
+		"/Users/tim/GIT_REPOS/maztaplan2/config/routes.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/controllers/offers_controller.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/lib/dataconnect.rb",
+		"/Users/tim/GIT_REPOS/maztaplan2/app/views/static_pages/terms.html.erb",
+		"/Users/tim/GIT_REPOS/IPROPERTY/site/views/property/tmpl/default_mapright.php",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Users/tim/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"rule",
+			"show",
+			"}}\n",
+			"my",
+			"show",
+			"action",
+			"admin",
+			"}}}",
+			"{{{",
+			"}}",
+			"{{",
+			"twitter",
+			"glyp",
+			"relation",
+			"Intellectual",
+			"intellectual",
+			"intelectual",
+			"page_heading",
+			"});\n",
+			"{{",
+			"broker",
+			"carousel-example-generic",
+			"weat",
+			"show",
+			"{{ app_path() }}.",
+			"app_path()",
+			"{{ app_path() }}",
+			"widget",
+			"../fonts",
+			"<?php echo app_path(); ?>",
+			"<?php app_path(); ?>",
+			"echo ASSETS_URL; ?>/js",
+			"<?php echo ASSETS_URL; ?>/js",
+			"font",
+			"fonta",
+			"../img/",
+			"../img/flags",
+			"../img/mybg.png",
+			"mybg",
+			"<?php echo ASSETS_URL; ?>img/blank.gif",
+			"sunny",
+			"<!--",
+			"-->",
+			"<!--",
+			"delete()",
+			"bootstrap",
+			"leader"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"}}",
+			"{{",
+			"}}}",
+			"{{{",
+			"carousel-index",
+			"app_path().",
+			"<?php app_path(); ?>",
+			"app_path()",
+			"../assets/fonts",
+			"/assets",
+			"<?php echo app_path(); ?>",
+			"app_path(); ?>/javascript",
+			"app_path().\"/assets/javascript",
+			"../assets/img/",
+			"../assets/img/flags",
+			"../assets/img/mybg.png",
+			"{{ URL::asset('assets/img/blank.gif') }}",
+			"{{--",
+			"--}}",
+			"{{--",
+			"truncate()"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/pages/signup.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/shared/profile.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1071,
+								1071
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/admin/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/User.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 960.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layouts/nomenu.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3177,
+								3177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 644.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/ContactType.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 292,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/Contact.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								430,
+								430
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 25.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/models/Company.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 431,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/controllers/UsersController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1265,
+								1269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/filters.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2580,
+								2580
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/config/services.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/config/app.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4574,
+								4574
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1523.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "app/views/tasks/edit.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "app/views/tasks/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/laravel-blade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "app/models/Tour.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								271,
+								271
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "thinkclosing.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"compos",
+				"composer.json"
+			],
+			[
+				"views/admin",
+				"app/views/admin/index.blade.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 393.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

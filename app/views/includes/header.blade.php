@@ -15,7 +15,7 @@
                   <li class="user-avatar">
                     <img src="" alt="" class="img-circle">
                     <div class="user-content">
-                      <h5 class="no-m-bottom">{{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}</h5>
+                      <h5 class="no-m-bottom">{{{ Auth::user()->present()->fullName }}}</h5>
                       <div class="m-top-xs">
                         <a href="{{ action('AdminController@getProfile', array()) }}" class="m-right-sm">Profile</a>
                         <a href="{{ action('UsersController@getLogout', array()) }}">Log out</a>

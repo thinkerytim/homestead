@@ -1,9 +1,6 @@
 @extends('layouts.nomenu')
 
 @section('big_content')
-
-{{dd(Auth::user()->email)}}
-
 <div id="main_content" class="span8 center-block">
 	<div class="padding-md">
 		<div class="row">

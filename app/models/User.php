@@ -6,6 +6,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Laravel\Cashier\BillableTrait;
 use Laravel\Cashier\BillableInterface;
+use Laracasts\Presenter\PresentableTrait;
 
 class User extends Eloquent implements UserInterface, RemindableInterface, BillableInterface {
 	// user.role:
@@ -14,7 +15,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
 	// 2: broker
 	// 3: admin
 
-	use UserTrait, RemindableTrait, BillableTrait;
+	use UserTrait, RemindableTrait, BillableTrait, PresentableTrait;
 	/**
 	 * The database table used by the model.
 	 *
@@ -22,6 +23,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
 	 */
 	protected $table = 'users';
 	protected $dates = ['trial_ends_at', 'subscription_ends_at'];
+	protected $presenter = 'UserPresenter';
 
 	/**
 	 * The attributes excluded from the model's JSON form.

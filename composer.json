@@ -10,7 +10,8 @@
 		"facebook/php-sdk": "~3.2",
 		"thomaswelton/laravel-gravatar": "0.1.x",
 		"intervention/image": "dev-master",
-		"laravel/cashier": "~2.0"
+		"laravel/cashier": "~2.0",
+		"laracasts/presenter": "0.1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -19,7 +20,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+			"app/presenters"
 		]
 	},
 	"scripts": {

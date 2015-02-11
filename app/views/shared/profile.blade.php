@@ -5,7 +5,7 @@
 	<h3 class="header-text m-bottom-md">
 		User Profile
 		<span class="sub-header">
-			Welcome back, {{{ Auth::user()->firstname.' '.Auth::user()->lastname }}}
+			Welcome back, {{{ $user->present()->fullName }}}
 		</span>
 	</h3>
 @if ($errors->has())
@@ -27,7 +27,7 @@
 						@endif
 						<div class="ribbon-wrapper">
 							<div class="ribbon-inner shadow-pulse bg-success">
-								Elite
+								{{{ $user->present()->authLevel }}}
 							</div>
 						</div>
 					</div>

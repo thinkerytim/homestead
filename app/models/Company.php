@@ -1,6 +1,6 @@
 <?php
 
-class Closing extends Eloquent {
+class Company extends Eloquent {
 	/**
 	 * The database table used by the model.
 	 * @var string
