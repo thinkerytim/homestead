@@ -56,7 +56,35 @@ class ToursController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$tour 		= Tour::find($id);
+
+		if (!$tour){
+			Log::warning('Tour not found for id: '.$id);
+			return Response::view('errors.missing', array(), 404);
+		}
+
+		$website	= $tour->user->website;
+		$url 		= 'http://'.$website.'/index.php?option=com_iproperty&format=raw&task=ajax.getJson&id='.$tour->listing_id;
+		$key		= md5($website.$id);
+
+		// check for cache value before grabbing data
+		if (Cache::has($key))
+		{
+			Log::info('Tour found in cache for tour: '.$id);
+			$contents = Cache::get($key);
+		} else {
+			Log::info('Tour not found in cache for tour: '.$id.'. Doing new request to '.$website);
+			$contents 	= file_get_contents($url);
+			if ($contents){
+				Cache::put($key, $contents, 2880); // default store for 48 hours
+			} else {
+				// listing not found-- return 404
+				Log::warning('Object not found for tour: '.$id.' at '.$website);
+				return Response::view('errors.missing', array(), 404);
+			}
+		}
+		$data = json_decode($contents);
+		return View::make('tours.show', array('data' => $data));
 	}
 
 

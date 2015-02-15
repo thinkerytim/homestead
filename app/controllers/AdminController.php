@@ -22,14 +22,19 @@ class AdminController extends BaseController {
 	public function getIndex()
 	{
 		View::share('title', 'ThinkClosing - Dashboard');
-		$closings = Closing::where('closes_at', '>=', 'now()')
+
+		if (Auth::user()->isAdmin()){
+			$closings = Closing::where('closes_at', '<', DB::raw('NOW()'))->get();	
+			$past_closings = Closing::where('closes_at', '>', DB::raw('NOW()'))->count();
+		} else {
+			$closings = Closing::where('closes_at', '>=', DB::raw('NOW()'))
 				->where('agent_id', '=', Auth::user()->id)
 				->orWhere('agent_id', '=', Auth::user()->parent)->get();
-		$past_closings = Closing::where('closes_at', '<=', 'now()')
+			$past_closings = Closing::where('closes_at', '<=', DB::raw('NOW()'))
 				->where('agent_id', '=', Auth::user()->id)
 				->orWhere('agent_id', '=', Auth::user()->parent)
 				->count();
-
+		}
 
 		$tours = 10;
 		$agents = 10;

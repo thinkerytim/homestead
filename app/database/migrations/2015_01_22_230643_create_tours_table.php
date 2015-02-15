@@ -17,7 +17,7 @@ class CreateToursTable extends Migration {
 			$table->increments('id');
 		    $table->integer('user_id');
 		    $table->string('listing_id');
-		    $table->boolean('published');
+		    $table->boolean('published')->default(true);
 		    $table->timestamps();
 		});
 	}

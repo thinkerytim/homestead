@@ -16,6 +16,6 @@ class Tour extends Eloquent {
     /* Define Relations */
     public function user()
     {
-        return $this->belongsToOne('User');
+        return $this->belongsTo('User');
     }
 }
