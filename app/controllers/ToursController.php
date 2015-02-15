@@ -61,6 +61,10 @@ class ToursController extends \BaseController {
 		if (!$tour){
 			Log::warning('Tour not found for id: '.$id);
 			return Response::view('errors.missing', array(), 404);
+		} else if ($tour && User::isSubscriber($tour->user_id)){
+			Log::warning('Tour found for id: '.$id.' but User not subscribed.');
+			App::abort(401, 'Unauthorized action-- tour owner not subscriber.');
+			//return Response::view('errors.missing', array(), 404);
 		}
 
 		$website	= $tour->user->website;
