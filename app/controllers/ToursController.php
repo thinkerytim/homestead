@@ -74,7 +74,7 @@ class ToursController extends \BaseController {
 		}
 
 		// we're subscribed and have a tour-- get it
-		$website	= $tour->user->website;
+		$website	= $tour->user->website;		
 		$url 		= 'http://'.$website.'/index.php?option=com_iproperty&format=raw&task=ajax.getJson&id='.$tour->listing_id;
 		$key		= md5($website.$id);
 
