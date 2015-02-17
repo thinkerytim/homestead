@@ -61,12 +61,19 @@ class ToursController extends \BaseController {
 		if (!$tour){
 			Log::warning('Tour not found for id: '.$id);
 			return Response::view('errors.missing', array(), 404);
-		} else if ($tour && User::isSubscriber($tour->user_id)){
-			Log::warning('Tour found for id: '.$id.' but User not subscribed.');
-			App::abort(401, 'Unauthorized action-- tour owner not subscriber.');
-			//return Response::view('errors.missing', array(), 404);
 		}
 
+		$user 		= User::find($tour->user_id);
+		$parent		= User::find($tour->parent);
+
+		// check if user is subscribed
+		$subscribed = $user->subscribed() ? true : isset($parent) ? $parent->subscribed() : false;
+		if (!$subscribed){
+			Log::warning('Tour found for id: '.$id.' but User not subscribed.');
+			App::abort(403, 'Unauthorized action-- tour owner not subscriber.');
+		}
+
+		// we're subscribed and have a tour-- get it
 		$website	= $tour->user->website;
 		$url 		= 'http://'.$website.'/index.php?option=com_iproperty&format=raw&task=ajax.getJson&id='.$tour->listing_id;
 		$key		= md5($website.$id);
