@@ -23,9 +23,10 @@ class AdminController extends BaseController {
 	{
 		View::share('title', 'ThinkClosing - Dashboard');
 
+		// get the closings for this user
 		if (Auth::user()->isAdmin()){
-			$closings = Closing::where('closes_at', '<', DB::raw('NOW()'))->get();	
-			$past_closings = Closing::where('closes_at', '>', DB::raw('NOW()'))->count();
+			$closings = Closing::where('closes_at', '>=', DB::raw('NOW()'))->get();	
+			$past_closings = Closing::where('closes_at', '<=', DB::raw('NOW()'))->count();
 		} else {
 			$closings = Closing::where('closes_at', '>=', DB::raw('NOW()'))
 				->where('agent_id', '=', Auth::user()->id)
@@ -36,10 +37,36 @@ class AdminController extends BaseController {
 				->count();
 		}
 
-		$tours = 10;
+		// get the tours for this user
+		if (Auth::user()->isAdmin()){
+			$tours = Tour::all()->count();
+			$tour_hits = Hit::all()->count();
+		} else {
+			$tours = Tour::where('user_id', '=', Auth::user()->id)
+				->orWhere('user_id', '=', Auth::user()->parent)->count();
+			$tour_hits = Hit::where('user_id', '=', Auth::user()->id)
+				->orWhere('user_id', '=', Auth::user()->parent)->count();
+		}
+
+		// get the tasks for this user
+		if (Auth::user()->isAdmin()){
+			$tasks = DB::table('closing_task')->select('id')
+						->where('status', '=', '0')->count();	
+			$overdue_tasks = DB::table('closing_task')->select('id')
+						->where('status', '=', '0')
+						->where('due_at', '<=', DB::raw('NOW()'))->count();
+		} else {
+			$tasks = DB::table('closing_task')->select('id')
+						->where('status', '=', '0')
+						->where(DB::raw('closing_id IN (SELECT id FROM closings WHERE agent_id = '.Auth::user()->id.')'))->count();	
+			$overdue_tasks = DB::table('closing_task')->select('id')
+						->where('status', '=', '0')
+						->where('due_at', '<=', DB::raw('NOW()'))
+						->where(DB::raw('closing_id IN (SELECT id FROM closings WHERE agent_id = '.Auth::user()->id.')'))->count();	
+			}
+
 		$agents = 10;
 		$clients = 10;
-		$tasks = 10;
 		$overdue_tasks = 10;
 		$messages = Message::where('to_id', Auth::id())->get()->groupBy('read');
 

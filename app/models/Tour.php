@@ -18,4 +18,9 @@ class Tour extends Eloquent {
     {
         return $this->belongsTo('User');
     }
+
+    public function hits()
+    {
+        return $this->hasMany('Hits');
+    }
 }
