@@ -69,9 +69,9 @@
 				padding: 15px;
 			}
 
-			.carousel-control .glyphicon-chevron-left, 
-			.carousel-control .glyphicon-chevron-right, 
-			.carousel-control .icon-prev, 
+			.carousel-control .glyphicon-chevron-left,
+			.carousel-control .glyphicon-chevron-right,
+			.carousel-control .icon-prev,
 			.carousel-control .icon-next {
 				position: absolute;
 				top: 45%;
@@ -326,7 +326,7 @@
 						<div class="col-sm-6">
 							<h3 class="text-upper">THE FEATURES <span class="text-success">YOU WANT</span></h3>
 							<p>No one knows real estate marketing like we do. Learn more!</p>
-							
+
 							<div class="feature-wrapper m-top-lg fadeInUp animation-element disabled">
 								<div class="feature-icon">
 									<div class="feature-icon-inner bg-danger text-white">
@@ -404,7 +404,7 @@
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
-									<a class="btn btn-info">Sign Up</a>
+									<a href="signup" class="btn btn-info">Sign Up</a>
 								</div>
 							</div><!-- ./pricing-widget -->
 						</div><!-- .col -->
@@ -416,7 +416,7 @@
 									<span class="value">$12</span>
 									/Month
 								</div>
-									
+
 								<ul class="pricing-service m-top-sm">
 									<li>Closings: <span class="font-semi-bold">5</span></li>
 									<li>Tasks:  <span class="font-semi-bold">50</span></li>
@@ -426,7 +426,7 @@
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
-									<a class="btn btn-danger">Sign Up</a>
+									<a href="signup" class="btn btn-danger">Sign Up</a>
 								</div>
 							</div><!-- ./pricing-widget -->
 						</div><!-- .col -->
@@ -438,7 +438,7 @@
 									<span class="value">$49</span>
 									/Month
 								</div>
-									
+
 								<ul class="pricing-service m-top-sm">
 									<li>Closings: <span class="font-semi-bold">25</span></li>
 									<li>Tasks:  <span class="font-semi-bold">Unlimited</span></li>
@@ -448,7 +448,7 @@
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
-									<a class="btn btn-purple">Sign Up</a>
+									<a href="signup" class="btn btn-purple">Sign Up</a>
 								</div>
 							</div><!-- ./pricing-widget -->
 						</div><!-- .col -->
@@ -460,7 +460,7 @@
 									<span class="value">$99</span>
 									/Month
 								</div>
-									
+
 								<ul class="pricing-service m-top-sm">
 									<li>Closings: <span class="font-semi-bold">Unlimited</span></li>
 									<li>Tasks:  <span class="font-semi-bold">Unlimited</span></li>
@@ -470,13 +470,13 @@
 								</ul>
 
 								<div class="m-top-md m-bottom-md text-center">
-									<a class="btn btn-success">Sign Up</a>
+									<a href="signup" class="btn btn-success">Sign Up</a>
 								</div>
 							</div><!-- ./pricing-widget -->
 						</div><!-- .col -->
 					</div><!-- ./row -->
 				</div><!-- ./container -->
-			</div><!-- section -->	
+			</div><!-- section -->
 
 			<div class="section bg-white section-padding" id="contact">
 				<div class="container text-center">
@@ -495,7 +495,7 @@
 					</div><!-- ./row -->
 				</div>
 			</div><!-- ./section -->
-		
+
 			<footer class="front-end-footer">
 				<div class="container">
 					<div class="row">
@@ -550,7 +550,7 @@
 
 		<script type="text/javascript">
 
-		jQuery(document).ready(function() {		
+		jQuery(document).ready(function() {
 
 			//Section Animation
 			if (Modernizr.mq('(min-width: 1349px)')) {
@@ -584,9 +584,8 @@
 	          duration:800,
 	          offset: -100
 	        });
-		});	
-		
+		});
+
 	</script>
-					
 	</body>
 </html>

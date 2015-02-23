@@ -41,7 +41,7 @@ class TasksController extends \BaseController {
 			$task->user_id = Auth::user()->id;
 			$task->save();
 
-			if ($task) {			
+			if ($task) {
 		    	return Redirect::to('tasks')->with('message', 'Task added.');
 		    }
 		    // fallback	

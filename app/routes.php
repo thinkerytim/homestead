@@ -4,14 +4,14 @@
 * FILTERS
 *
 */
-// check that the user owns the resource
+/*// check that the user owns the resource
 Route::filter('own', function($route, $request, $response)
 {
     if (Auth::user()->id)
     {
         return Redirect::to('home');
     }
-});
+});*/
 
 // END FILTERS
 
@@ -32,7 +32,12 @@ Route::get('privacy', array('as' => 'privacy', function()
 
 Route::get('signup', array('as' => 'signup', function()
 {
-    return View::make('pages.signup');
+    // only allow signed in users to create subscriptions
+    if (Auth::user()){
+        return View::make('pages.signup');
+    } else {
+        return Redirect::guest('users/login')->with('message', 'Please sign up or log in before creating a subscription.');
+    }
 }));
 
 /* Admin controller routes */

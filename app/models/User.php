@@ -36,7 +36,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
 	public static $rules = array(
     	'firstname'=>'required|alpha|min:2',
     	'lastname'=>'required|alpha|min:2',
-    	'email'=>'required|email|unique:users',
+    	'email'=>'required|email|unique:users,email,%1$s',
     	'password'=>'sometimes|required|alpha_num|between:6,12|confirmed',
     	'password_confirmation'=>'sometimes|required|same:password',
     	'recaptcha_response_field' => 'sometimes|required|recaptcha',
@@ -49,6 +49,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface, Billa
     	'icon' => 'image|max:3000'
 
     );
+
+    public static function getRules($id = 'NULL') {
+        $rules = self::$rules;
+        $rules['email'] = sprintf($rules['email'], $id);
+        return $rules;
+    }
 
 	public function getRememberToken()
 	{

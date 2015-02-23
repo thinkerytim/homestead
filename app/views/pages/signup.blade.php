@@ -121,25 +121,27 @@
 {{ HTML::script("https://checkout.stripe.com/checkout.js") }}
 <script>
 (function ($) {
+  var plan_id = false;
   var handler = StripeCheckout.configure({
     key: 'pk_test_r9dklGb4ky4bd5rVVcxYwrXZ',
-    image: '{{asset('assets/images/lightbulb.png')}}',
+    image: '{{secure_asset('assets/images/lightbulb.png')}}',
     token: function(token) {
-		$.post( "checkout", { token: token.id, email: token.email })
+		$.post( "{{action('UsersController@postSubscribe')}}", { token: token.id, plan: plan_id })
 			.done(function( data ) {
-				alert( "Data Loaded: " + data );
+				window.location('admin/profile');
 			});
     }
   });
 
   $('#basic-subscription').on('click', function(e) {
+  	plan_id = 'basic';
     // Open Checkout with further options
     handler.open({
       name: 'Basic Subscription',
       description: '',
       amount: 0,
       @if (Auth::user())
-	    email: {{ Auth::user()->email }},
+	    email: '{{ Auth::user()->email }}',
 	  @endif
       zipCode: true
     });
@@ -147,13 +149,14 @@
   });
 
   $('#agent-subscription').on('click', function(e) {
+  	plan_id = 'agent';
     // Open Checkout with further options
     handler.open({
       name: 'Agent Subscription',
       description: '',
       amount: 1200,
       @if (Auth::user())
-	    email: {{ Auth::user()->email }},
+	    email: '{{ Auth::user()->email }}',
 	  @endif
 	  zipCode: true
     });
@@ -161,13 +164,14 @@
   });
 
   $('#broker-subscription').on('click', function(e) {
+  	plan_id = 'broker';
     // Open Checkout with further options
     handler.open({
       name: 'Broker Subscription',
       description: '',
       amount: 4900,
       @if (Auth::user())
-	    email: {{ Auth::user()->email }},
+	    email: '{{ Auth::user()->email }}',
 	  @endif
       zipCode: true
     });
@@ -175,13 +179,14 @@
   });
 
   $('#unlimited-subscription').on('click', function(e) {
+  	plan_id = 'unlimited';
     // Open Checkout with further options
     handler.open({
       name: 'Unlimited Subscription',
       description: '',
       amount: 14900,
       @if (Auth::user())
-	    email: {{ Auth::user()->email }},
+	    email: '{{ Auth::user()->email }}',
 	  @endif
       zipCode: true
     });
@@ -192,6 +197,6 @@
   $(window).on('popstate', function() {
     handler.close();
   });
-})(jQuery);  
+})(jQuery);
 </script>
 @stop

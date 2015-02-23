@@ -68,9 +68,23 @@
 		<div class="col-md-9">
 			<div class="smart-widget">
 				<div class="smart-widget-inner">
+					<ul class="nav nav-tabs tab-style2 tab-right bg-grey">
+				  		<li>
+				  			<a href="#profileTab2" data-toggle="tab">
+				  				<span class="icon-wrapper"><i class="fa fa-credit-card"></i></span>
+				  				<span class="text-wrapper">Subscription</span>
+				  			</a>
+				  		</li>
+				  		<li class="active">
+				  			<a href="#profileTab1" data-toggle="tab">
+				  				<span class="icon-wrapper"><i class="fa fa-book"></i></span>
+				  				<span class="text-wrapper">Profile</span>
+				  			</a>
+				  		</li>
+					</ul>
 					<div class="smart-widget-body">
 						<div class="tab-content">
-							<div class="tab-pane fade in active" id="profileTab2">
+							<div class="tab-pane fade in active" id="profileTab1">
 								<h4 class="header-text m-top-md">Profile Information</h4>
 								{{ Form::model($user, array('action' => array('UsersController@putUpdate', $user->id), 'class' => 'form-horizontal m-top-md', 'files' => true, 'method' => 'put' )) }}
 									<div class="form-group">
@@ -230,8 +244,15 @@
 									      	<a class="btn btn-info m-left-xs">Cancel</a>
 									    </div>
 									</div>
-									{{ Form::token() }}			
+									{{ Form::token() }}
 								{{ Form::close() }}
+							</div><!-- ./tab-pane -->
+							<div class="tab-pane fade" id="profileTab2">
+								<div class="profile-follower-list clearfix">
+									Cancel subscription
+									Change subscription level: 
+									
+								</div><!-- ./profile-follower-list -->
 							</div><!-- ./tab-pane -->
 						</div><!-- ./tab-content -->
 					</div><!-- ./smart-widget-body -->

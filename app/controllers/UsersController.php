@@ -81,8 +81,8 @@ class UsersController extends \BaseController {
 
 	public function putUpdate($id)
 	{
-		$rules = User::edit_rules(Auth::user()->id);
-		$validator = Validator::make(Input::all(), $rules);
+		$rules		= User::getRules($id);
+		$validator 	= Validator::make(Input::all(), $rules);
 		$destinationPath = 'assets/images/profile';
 
 	    if ($validator->passes()) {
@@ -141,7 +141,7 @@ class UsersController extends \BaseController {
 		    	->with('message', 'User updated.')
 		    	->with('user', $user);
 		    }
-		    // fallback	
+		    // fallback
 		    return Redirect::to('admin/profile')
 		    	->with('message', 'User update failed.')
 		    	->withErrors($validator)
@@ -154,7 +154,7 @@ class UsersController extends \BaseController {
 		    	->withErrors($validator)
 		    	->withInput();
 		}
-	}	
+	}
 
 	public function postSignin()
 	{
@@ -166,7 +166,7 @@ class UsersController extends \BaseController {
 			{
 		    	return Redirect::to('admin')->with('message', 'You are now logged in, admin!');
 		    } else {
-		    	return Redirect::to('admin')->with('message', 'You are now logged in!');
+		    	return Redirect::intended();
 		    }
 		} else {
 		    return Redirect::to('users/login')
@@ -184,5 +184,21 @@ class UsersController extends \BaseController {
 	public function getReminder()
 	{
 		return View::make('password.remind');
+	}
+
+	/* Subscription / Stripe methods */
+	public function postSubscribe()
+	{
+		$token 	= Input::get('token');
+		$plan 	= Input::get('plan');
+		// grab the user
+		$user 	= Auth::user();
+
+		Log::info('subscription inbound: '.$user->email.' - '.$token.': '.$plan);
+		if (!$user){
+			return Redirect::to('users/login')->with('message', 'Please log in to create a subscription.');
+		} else {
+			$user->subscription($plan)->create($token);
+		}
 	}
 }

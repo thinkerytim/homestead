@@ -19,7 +19,7 @@ class UserPresenter extends Presenter {
     	if ($this->role == 3) {
     		return 'Admin';
     	}
-        return ucfirst($this->stripe_subscription);
+        return ucfirst($this->stripe_plan);
     }
 
 }
