@@ -92,14 +92,16 @@ class AdminController extends BaseController {
 			$closings = Closing::where('agent_id', '=', Auth::user()->id)
 				->orWhere('agent_id', '=', Auth::user()->parent)
 				->paginate(10);
+			$invoices = [];
 		} else {
+			$invoices = $user->invoices();
 			$closings = Closing::where('id', '>', 0)->paginate(10);
 		}
 
 		// get the user object
 		$user = User::find(Auth::id());
 
-		return View::make('shared.profile')->with('closings', $closings)->with('user', $user);
+		return View::make('shared.profile')->with('closings', $closings)->with('user', $user)->with('invoices', $invoices);
 	}
 
 }

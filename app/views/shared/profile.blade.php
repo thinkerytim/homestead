@@ -249,9 +249,16 @@
 							</div><!-- ./tab-pane -->
 							<div class="tab-pane fade" id="profileTab2">
 								<div class="profile-follower-list clearfix">
+									<h4 class="header-text m-top-md">Modify Subscription</h4>
 									Cancel subscription
 									Change subscription level: 
-									
+									<hr />
+									<h4 class="header-text m-top-md">Invoices</h4>
+									@forelse($invoices as $invoice)
+									    {{ HTML::linkRoute('login', $invoice->id .': '.$invoice->dollars.' on '.$invoice->dateString()) }}
+									@empty
+									    <p>No invoices.</p>
+									@endforelse
 								</div><!-- ./profile-follower-list -->
 							</div><!-- ./tab-pane -->
 						</div><!-- ./tab-content -->

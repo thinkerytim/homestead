@@ -109,3 +109,16 @@ Route::get('login/fb/callback', function() {
     Auth::login($user);
     return Redirect::to('/')->with('message', 'Logged in with Facebook');
 });
+
+// invoice download link
+Route::get('invoice', array('as' => 'download_invoice', function(){
+    if (Auth::user()){
+        $invoice = Input::get('invoice_id');
+        return $user->downloadInvoice($invoice->id, [
+            'vendor'  => 'The Thinkery LLC',
+            'product' => 'Think Closing Subscription',
+        ]);
+    } else {
+        return Redirect::guest('users/login')->with('message', 'Please sign up or log in before downloading invoice.');
+    }
+});
