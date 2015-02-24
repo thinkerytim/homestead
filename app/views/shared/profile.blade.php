@@ -58,10 +58,10 @@
 					<p>
 
 					<h4 class="m-top-md m-bottom-sm">Get Social</h4>	
-					<a class="social-link facebook-hover" href="{{{ $user->facebook }}}" target="_blank"><i class="fa fa-facebook"></i></a>
-					<a class="social-link twitter-hover" href="{{{ $user->twitter }}}" target="_blank"><i class="fa fa-twitter"></i></a>
-					<a class="social-link pinterest-hover" href="{{{ $user->pinterest }}}" target="_blank"><i class="fa fa-pinterest"></i></a>
-					<a class="social-link linkedin-hover" href="{{{ $user->facebook }}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a class="social-link {{{ $user->facebook ? 'facebook-hover' : '' }}}" href="{{{ $user->facebook }}}" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a class="social-link {{{ $user->twitter ? 'twitter-hover' : '' }}}" href="{{{ $user->twitter }}}" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a class="social-link {{{ $user->pinterest ? 'pinterest-hover' : '' }}}" href="{{{ $user->pinterest }}}" target="_blank"><i class="fa fa-pinterest"></i></a>
+					<a class="social-link {{{ $user->linkedin ? 'linkedin-hover' : '' }}}" href="{{{ $user->linkedin }}}" target="_blank"><i class="fa fa-linkedin"></i></a>
 				</div>
 			</div><!-- ./row -->
 		</div><!-- ./col -->

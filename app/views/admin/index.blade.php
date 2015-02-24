@@ -24,8 +24,6 @@
 				@endforelse
 			  </ul>
 			</div>
-
-			<a class="btn btn-default"><i class="fa fa-cog"></i></a>
 		</div>
 	</div>
 

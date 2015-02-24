@@ -4,14 +4,6 @@ class AdminController extends BaseController {
 	public function __construct()
     {
         $this->beforeFilter('auth');
-        $this->beforeFilter(function()
-        {
-        	if(!Auth::check())
-			{
-				return Redirect::to('users/login')
-		        ->with('message', 'Please login!');
-			}
-        });
     }
 
 	/**

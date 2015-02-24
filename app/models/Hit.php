@@ -6,7 +6,6 @@ class Hit extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'hits';
-    protected $fillable = array();
 
 	// form validation rules
 

@@ -121,4 +121,4 @@ Route::get('invoice', array('as' => 'download_invoice', function(){
     } else {
         return Redirect::guest('users/login')->with('message', 'Please sign up or log in before downloading invoice.');
     }
-});
+}));

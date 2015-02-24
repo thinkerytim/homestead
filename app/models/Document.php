@@ -6,6 +6,7 @@ class Document extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'documents';
+    protected $fillable = array('title', 'description');
 
 	// form validation rules
 

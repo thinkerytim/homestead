@@ -2,6 +2,7 @@
 <thead>
 	<td>ID</td>
     <td>MLS ID</td>
+    <td>Notes</td>
     <td>Published</td>
     <td>Delete</td>
 </thead>
@@ -10,7 +11,8 @@
 	<tr id="row{{ $tour->id }}">
     	<td>{{{ $tour->id }}}</td>
         <td>{{ $tour->listing_id }}</td>
-    	<td>{{ $tour->published }}</td>
+        <td>{{ $tour->notes }}</td>
+    	<td>{{ $tour->present()->isPublished }}</td>
     	<td>
         {{ Form::open(['data-remote', 'method' => 'DELETE', 'action' => ['ToursController@destroy', $tour->id] ]) }}
             {{ HTML::decode(Form::button('<i class="glyphicon glyphicon-trash"></i>', array('class' => 'btn btn-xs btn-danger', 'type' => 'submit', 'data-confirm' => 'Are you sure?'))) }}
@@ -19,7 +21,7 @@
     </tr>
 @empty
     <tr>
-    	<td colspan="4">No tours!</td>
+    	<td colspan="5">No tours!</td>
     </tr>
 @endforelse
 </tbody>

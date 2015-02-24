@@ -6,6 +6,7 @@ class Contact extends Eloquent {
 	 * @var string
 	 */
 	protected $table 	= 'contacts';
+    protected $fillable = array('name', 'phone', 'fax', 'mobile', 'email');
 
 	// form validation rules
 

@@ -128,7 +128,7 @@
     token: function(token) {
 		$.post( "{{action('UsersController@postSubscribe')}}", { token: token.id, plan: plan_id })
 			.done(function( data ) {
-				window.location('admin/profile');
+				window.location.href = {{action('AdminController@getProfile')}};
 			});
     }
   });
